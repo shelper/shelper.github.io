@@ -68,7 +68,233 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/the-sword-of-wisdom/" class="u-url">the sword of wisdom</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/install-pyqt-on-mac-for-matplotlib/" class="u-url">install pyqt on mac for matplotlib</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Your Name
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/install-pyqt-on-mac-for-matplotlib/" rel="bookmark">
+            <time class="published dt-published" datetime="2016-06-13T10:05:28Z" itemprop="datePublished" title="2016-06-13 10:05">2016-06-13 10:05</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/install-pyqt-on-mac-for-matplotlib/#disqus_thread" data-disqus-identifier="cache/posts/install-pyqt-on-mac-for-matplotlib.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>so i was trying to use matplotlib for fast image ploting and updating, and I found a post <a href="http://bastibe.de/2013-05-30-speeding-up-matplotlib.html">here</a>. 
+the matplotlib uses different backend to render the images, and due to the differences between different backend, some functions are only available for specific backend, for instance, the <code>fig.canvas.update()</code> is a fast way to render new images to the axes, but is only availabe to PyQt4.</p>
+<p>so i was trying to install pyqt4 using homebrew, it failed by saying the osx version is pre-released version and is not supported, and arises 2 errors during make process.</p>
+<p>this is due to the cached info for homebrew is not up-to-date, so you need to run brew update. </p>
+<p>however, this also arises an error of "not writable  directory: /usr/local, so you need to <code>sudo chown - $user:admin /usr/local</code>, then update shall work, then run <code>brew install pyqt (add --with-python3 if need to support python3.x)</code>.</p>
+<p>now the remaining problem is the pyqt package cannot be imported in python shell because homebrew gives the below message:</p>
+<blockquote>
+<p>Python modules have been installed and Homebrew's site-packages is not
+in your Python sys.path, so you will not be able to import the modules
+this formula installed. If you plan to develop with these modules,
+please run:
+echo 'import site; site.addsitedir("/usr/local/lib/python2.7/site-packages")'  &gt;&gt; /path/to/your/python/folder/site-packages/homebrew.pth</p>
+</blockquote>
+<p>you may run <code>import site; site.getsitepackages()</code> to find out the path to your python site-packages folder, 
+of course, you need to change python2.7 to python3.x for python3 support.</p>
+<p>Another thing is use <code>python3 -m pip</code> instead of <code>pip</code> so to ensure the package will be installed in the default site-packages folder, actually <code>python3 -m pip install pyside</code> successfully installed pyside for python3</p>
+<p>however, i found pyside 1.2.4 does not work due to the @rpath issue, cannot find a solution for it. so i installed pyside 1.2.2 and downloaded [https://raw.githubusercontent.com/PySide/pyside-setup/1.2.2/pyside_postinstall.py], after running this script, the pyside is succesfully installed and can be imported</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/setup-babun-on-windows-for-git-and-ssh/" class="u-url">setup babun on windows for git and ssh</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Your Name
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/setup-babun-on-windows-for-git-and-ssh/" rel="bookmark">
+            <time class="published dt-published" datetime="2016-06-09T21:47:28Z" itemprop="datePublished" title="2016-06-09 21:47">2016-06-09 21:47</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/setup-babun-on-windows-for-git-and-ssh/#disqus_thread" data-disqus-identifier="cache/posts/setup-babun-on-windows-for-git-and-ssh.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<ol>
+<li>
+<p>remove %HOME% (you can put it back later)</p>
+</li>
+<li>
+<p>download and install babun</p>
+</li>
+<li>
+<p>setup ssh, if you already have ssh keys in the ~/.ssh, copy to the ~ of babun shell and do</p>
+</li>
+</ol>
+<pre class="code literal-block"><span></span>eval `ssh-agent -s`
+ssh-add 
+</pre>
+
+
+<p>if not, copy the ssh pub and private keys to ~/.ssh or use </p>
+<pre class="code literal-block"><span></span>ssh-add path/to/keys
+</pre>
+
+
+<ol>
+<li>if you are using proxy behind firewall you need:
+add proxy for babun and change the user -agent (dont know why, but works)</li>
+</ol>
+<pre class="code literal-block"><span></span>export http_proxy=http://gateway.zscaler.net:80
+export https_proxy=$http_proxy
+export ftp_proxy=$http_proxy
+export no_proxy=localhost
+...
+export USER_AGENT="Chrome/47.0.2526.111"
+</pre>
+
+
+<p>then you can use pact to install packages</p>
+<pre class="code literal-block"><span></span>pact install connect-proxy
+</pre>
+
+
+<p>if ssh need to go through proxy, add the line below to the ~/.ssh/config file</p>
+<pre class="code literal-block"><span></span>ProxyCommand connect-proxy.exe -H gateway.zscaler.net:80 %h %p
+</pre>
+
+
+<p>then add the lines below to .gitconfig </p>
+<pre class="code literal-block"><span></span><span class="k">[http]</span>
+    <span class="na">proxy</span> <span class="o">=</span> <span class="s">http://gateway.zscaler.net:80</span>
+</pre>
+
+
+<p>However, this still cannot work for run <code>git push</code> etc., in emacs shell.. No solution yet, a question of this is asked at <a href="http://stackoverflow.com/questions/34009160/unable-to-use-git-push-in-emacs-shell-under-windows">stackoverflow</a></p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/ipython-and-pip-issues/" class="u-url">ipython and pip issues</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Your Name
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/ipython-and-pip-issues/" rel="bookmark">
+            <time class="published dt-published" datetime="2016-06-09T18:31:41Z" itemprop="datePublished" title="2016-06-09 18:31">2016-06-09 18:31</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/ipython-and-pip-issues/#disqus_thread" data-disqus-identifier="cache/posts/ipython-and-pip-issues.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>so I am trying to use ipython as my python shell under emacs, since i started using python in emacs, i always encounter different issues, again and again, so i will use this post as a collection of issues and solutions. </p>
+<p><strong>issue1:</strong></p>
+<p>ipython shell imports quite some packages/modules/functions and as you may know, <code>import</code> searches current folder as well as the subfolders of the registered module, if there are file with the same name under the current folder, it overrides the file in the registered module, apparently, this causes problems of "import error, could not find ..."</p>
+<p>so,watch out how you name your files, and if it does happen, consider to rename or remove the files</p>
+<p><strong>issue2:</strong></p>
+<p>pip install, i once encountered that pip keeps reinstall packages, without aware of the package is already installed. 
+the issue is in the pip config file (usually in <code>~/pip/pip.ini</code>) i have following line</p>
+<pre class="code literal-block"><span></span>ignore-installed = true
+</pre>
+
+
+<p>apparently, that is what this for, so remove this line solves the problem</p>
+<p><strong>issue3:</strong></p>
+<p>how to setup proxy when you are behind a corporation firewall?
+goto the config file again, and put </p>
+<pre class="code literal-block"><span></span><span class="k">[global]</span>
+<span class="na">proxy</span> <span class="o">=</span> <span class="s">url:port</span>
+</pre>
+
+
+<p>this works for many other python based packages/software as well</p>
+<p><strong>issue4</strong></p>
+<p>when using emacs, calling <code>git</code> using shell-command seems not working well, you might want to use magit instead.</p>
+<p>PS: I will keep updating this post if I find new issues and solutions. </p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/design-of-a-framework-for-scientific-data-processing/" class="u-url">design of a framework for scientific data processing</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Your Name
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/design-of-a-framework-for-scientific-data-processing/" rel="bookmark">
+            <time class="published dt-published" datetime="2016-05-29T01:25:39Z" itemprop="datePublished" title="2016-05-29 01:25">2016-05-29 01:25</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/design-of-a-framework-for-scientific-data-processing/#disqus_thread" data-disqus-identifier="cache/posts/design-of-a-framework-for-scientific-data-processing.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>I have beening thinking of building such a framework for a while, I started a little project called <a href="http://github.com/shelper/pypeline">pypeline</a>. The code on github is not up-to-date.
+And I have some new thoughts on the framework design. So this article serves as a design documents
+and welcomes any comments or suggestions. </p>
+<p>Based on my own experience, I often want to process some data or image at multiple stage. 
+Often, I want to change some parameters of certian algorithm to see how the outcomes are changed. 
+It becomes cumbersome and difficult to check after saving a lot of intermedia data, with file names like
+<code>para1_value1_para1_value2...</code>. </p>
+<p>I then thought about it, and decide to write a framework like a pipeline. for a multi-step process, 
+I can connect the processing function of each step and form a pipeline. I decided to use async module
+in python and if needed, use a generate as the input, so if I want to check the outcome of a multi-step process,
+I can simply write a generate to feed in the input repeatedly, and with the async feature, 
+I can change the parameters in realtime, and the outcome will change instantaneously or even real time as well. </p>
+<p>then the next thing is to make this pipeline easier to use, e.g.,
+I used decorator to claim funtions that can be inserted into the pipeline by a single line of code. 
+I made a pipeline class with implementations of <code>pop()</code> and <code>insert()</code> for adding and removing functions in the pipeline
+I also plan to add input and output check for each functions, so that when I connect two functions, 
+the framework will check if the output of the first matches the input of the second. I am thinking of 
+using a separate file like the header file in <code>c/c++</code> to describe the input and output of each function.</p>
+<p>for instance, I have two functions to connect:</p>
+<pre class="code literal-block"><span></span><span class="c1"># functions.py</span>
+<span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
+
+<span class="k">def</span> <span class="nf">f2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre>
+
+
+<p>and <code>x, y, a, b</code> are all integers, </p>
+<p>so I can have a separate file with same name but different extension:</p>
+<pre class="code literal-block"><span></span># functions.dsc
+f1 = {'input': [int, int], 'output': [int, int]}
+f2 = {'input': [int, int], 'output': [int]}
+</pre>
+
+
+<p>then when connect these two functions I can do:</p>
+<pre class="code literal-block"><span></span># pseudo code:
+if f1['output'] == f2['input']:
+    connect f1 and f2
+else:
+    raise FuncInputOutputMismatch()
+</pre>
+
+
+<p>for more complicated cases, the pipeline might have branches and inter-connections within branches. 
+it of course should be one way data flow. it further reminds me the frontend library from facebook that uses one way data flow: 
+the <a href="https://facebook.github.io/react/">React</a>. There is also a <a href="https://www.youtube.com/watch?v=xsSnOQynTHs">video</a> on this.</p>
+<p>then I did some research and found something called <a href="https://github.com/gaearon/react-hot-loader"><code>hot loading</code></a>
+it also reminds me the <a href="https://www.youtube.com/watch?v=PUv66718DII">talk</a> given by Bret Victor.
+it would be such a fantastic tool if some tool like this can be used for scientific data processing...</p>
+<p>So I just wonder if there is already something similar or at least some that i can borrow code/ideas from?
+or is this kind of design idea new? i tend to think it is not, I would like to read more to get a better understanding of
+such design before i go ahead coding the framework. </p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/the-sword-of-wisdom/" class="u-url">the sword of wisdom</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Your Name

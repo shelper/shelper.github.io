@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://example.com/</loc>
-  <lastmod>2019-02-18T02:26:00Z</lastmod>
+  <lastmod>2019-02-18T03:04:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/2016/</loc>
@@ -18,8 +18,12 @@
   <lastmod>2019-02-18T02:26:00Z</lastmod>
  </url>
  <url>
+  <loc>https://example.com/2018/</loc>
+  <lastmod>2019-02-18T03:04:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://example.com/archive.html</loc>
-  <lastmod>2019-02-18T02:26:00Z</lastmod>
+  <lastmod>2019-02-18T03:04:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/categories/</loc>
@@ -95,7 +99,11 @@
  </url>
  <url>
   <loc>https://example.com/index-1.html</loc>
-  <lastmod>2019-02-18T02:26:00Z</lastmod>
+  <lastmod>2019-02-18T03:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/posts/best-practise-for-jupyter-and-ipython/</loc>
+  <lastmod>2019-02-18T03:04:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/posts/design-of-a-framework-for-scientific-data-processing/</loc>
@@ -122,8 +130,16 @@
   <lastmod>2019-02-18T02:26:00Z</lastmod>
  </url>
  <url>
+  <loc>https://example.com/posts/jupyter-skills-and-tricks/</loc>
+  <lastmod>2019-02-18T03:04:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://example.com/posts/matplotlib-backend-issue/</loc>
   <lastmod>2019-02-18T02:26:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/posts/orgmode-for-nikola-post/</loc>
+  <lastmod>2019-02-18T03:04:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/posts/python-module-and-packaging/</loc>
@@ -136,6 +152,10 @@
  <url>
   <loc>https://example.com/posts/setup-babun-on-windows-for-git-and-ssh/</loc>
   <lastmod>2019-02-18T02:26:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/posts/switch-recent-two-buffer-alterantively/</loc>
+  <lastmod>2019-02-18T03:04:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/posts/the-sword-of-wisdom/</loc>

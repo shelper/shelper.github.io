@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>best-practise-for-jupyter-and-ipython | Demo Site</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://example.com/posts/best-practise-for-jupyter-and-ipython/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Your Name">
+<link rel="prev" href="../switch-recent-two-buffer-alterantively/" title="switch-recent-two-buffer-alterantively" type="text/html">
+<link rel="next" href="../jupyter-skills-and-tricks/" title="jupyter-skills-and-tricks" type="text/html">
+<meta property="og:site_name" content="Demo Site">
+<meta property="og:title" content="best-practise-for-jupyter-and-ipython">
+<meta property="og:url" content="https://example.com/posts/best-practise-for-jupyter-and-ipython/">
+<meta property="og:description" content="A few things to setup the IPython and Jupyter for a best practise.
+IPython configuration
+Change ~/.ipython/profile_default/startup/init.ipy for their usage
+respectively
+
+To enable versioning of the py">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-05-24T02:01:03Z">
+<meta property="article:tag" content="meditation">
+<meta property="article:tag" content="private">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="https://example.com/">
+
+            <span id="blog-title">Demo Site</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item">
+    <a href="index.md" id="sourcelink" class="nav-link">Source</a>
+    </li>
+
+
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="../../archive.html" class="nav-link">Archives</a>
+                </li>
+<li class="nav-item">
+<a href="../../categories/index.html" class="nav-link">Tags</a>
+                </li>
+<li class="nav-item">
+<a href="../../rss.xml" class="nav-link">RSS feed</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">best-practise-for-jupyter-and-ipython</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    Your Name
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2018-05-24T02:01:03Z" itemprop="datePublished" title="2018-05-24 02:01">2018-05-24 02:01</time></a>
+            </p>
+                <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/best-practise-for-jupyter-and-ipython.html">Comments</a>
+
+
+            
+        </p>
+<p class="sourceline"><a href="index.md" class="sourcelink">Source</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>A few things to setup the IPython and Jupyter for a best practise.</p>
+<h4>IPython configuration</h4>
+<p>Change <code>~/.ipython/profile_default/startup/init.ipy</code> for their usage
+respectively</p>
+<ul>
+<li>To enable versioning of the python/jupyter environment, you need to
+    <code>pip install version_information</code> and then add below, afterward for
+    each IPython notebook file I put
+    <code>%version_information numpy, scipy, matplotlib, pandas</code> to display
+    my python environment version information</li>
+</ul>
+<p>``` {.python .rundoc-block rundoc-language="python" rundoc-session="yes" rundoc-tangle="yes"}
+%load_ext version_information</p>
+<pre class="code literal-block"><span></span><span class="o">-</span>   <span class="n">To</span> <span class="n">enable</span> <span class="n">autoloading</span> <span class="n">of</span> <span class="n">modified</span> <span class="n">modules</span> <span class="n">in</span> <span class="n">IPython</span><span class="p">,</span> <span class="n">add</span> <span class="n">below</span>
+
+<span class="err">```</span> <span class="p">{.</span><span class="n">python</span> <span class="p">.</span><span class="n">rundoc</span><span class="o">-</span><span class="n">block</span> <span class="n">rundoc</span><span class="o">-</span><span class="n">language</span><span class="o">=</span><span class="s">"python"</span> <span class="n">rundoc</span><span class="o">-</span><span class="n">session</span><span class="o">=</span><span class="s">"yes"</span> <span class="n">rundoc</span><span class="o">-</span><span class="n">tangle</span><span class="o">=</span><span class="s">"yes"</span><span class="p">}</span>
+<span class="nf">%load_ext</span> <span class="n">version_information</span>
+<span class="nf">%load_ext</span> <span class="n">autoreload</span>
+<span class="nf">%autoreload</span> <span class="mi">2</span>
+</pre>
+
+
+<ul>
+<li>I also added the lines below just because I use them everytime I
+    open IPython</li>
+</ul>
+<p>``` {.python .rundoc-block rundoc-language="python" rundoc-session="yes" rundoc-tangle="yes"}
+import numpy as np
+import matplotlib.pyplot as plt
+plt.ion()</p>
+<pre class="code literal-block"><span></span><span class="c1">### Modify Jupyter notebook settings:</span>
+
+<span class="o">-</span>   <span class="n">To</span> <span class="n">enable</span> <span class="n">auto</span> <span class="n">conversion</span> <span class="ow">and</span> <span class="n">saving</span> <span class="n">of</span> <span class="sb">`.py`</span> <span class="ow">and</span> <span class="sb">`.html`</span> <span class="n">files</span> <span class="kn">from</span>
+    <span class="nn">the</span> <span class="nn">notebook</span><span class="p">,</span> <span class="n">put</span> <span class="n">the</span> <span class="n">following</span> <span class="n">script</span> <span class="n">to</span> <span class="n">your</span> <span class="n">Jupyter</span>
+    <span class="n">configuration</span><span class="p">:</span> <span class="sb">`~/.jupyter/jupyter_notebook_config.py`</span><span class="p">,</span> <span class="n">more</span> <span class="n">details</span>
+    <span class="n">can</span> <span class="n">be</span> <span class="n">found</span> <span class="n">at</span>
+    <span class="p">[</span><span class="n">here</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">jupyter</span><span class="o">-</span><span class="n">notebook</span><span class="o">.</span><span class="n">readthedocs</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">en</span><span class="o">/</span><span class="n">latest</span><span class="o">/</span><span class="n">extending</span><span class="o">/</span><span class="n">savehooks</span><span class="o">.</span><span class="n">html</span><span class="p">)</span>
+
+<span class="sb">``</span><span class="err">`</span> <span class="p">{</span><span class="o">.</span><span class="n">python</span> <span class="o">.</span><span class="n">rundoc</span><span class="o">-</span><span class="n">block</span> <span class="n">rundoc</span><span class="o">-</span><span class="n">language</span><span class="o">=</span><span class="s2">"python"</span> <span class="n">rundoc</span><span class="o">-</span><span class="n">session</span><span class="o">=</span><span class="s2">"yes"</span> <span class="n">rundoc</span><span class="o">-</span><span class="n">tangle</span><span class="o">=</span><span class="s2">"yes"</span><span class="p">}</span>
+
+<span class="c1"># make a script equivalent whenever the notebook is saved</span>
+<span class="kn">import</span> <span class="nn">io</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">notebook.utils</span> <span class="kn">import</span> <span class="n">to_api_path</span>
+
+<span class="n">_script_exporter</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">_html_exporter</span> <span class="o">=</span> <span class="bp">None</span>
+
+<span class="k">def</span> <span class="nf">script_post_save</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">os_path</span><span class="p">,</span> <span class="n">contents_manager</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">"""convert notebooks to Python script after save with nbconvert</span>
+
+<span class="sd">    replaces `ipython notebook --script`</span>
+<span class="sd">    """</span>
+    <span class="kn">from</span> <span class="nn">nbconvert.exporters.script</span> <span class="kn">import</span> <span class="n">ScriptExporter</span>
+    <span class="kn">from</span> <span class="nn">nbconvert.exporters.html</span> <span class="kn">import</span> <span class="n">HTMLExporter</span>
+
+    <span class="k">if</span> <span class="n">model</span><span class="p">[</span><span class="s1">'type'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'notebook'</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="k">global</span> <span class="n">_script_exporter</span>
+
+    <span class="k">if</span> <span class="n">_script_exporter</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">_script_exporter</span> <span class="o">=</span> <span class="n">ScriptExporter</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="n">contents_manager</span><span class="p">)</span>
+
+    <span class="n">log</span> <span class="o">=</span> <span class="n">contents_manager</span><span class="o">.</span><span class="n">log</span>
+
+    <span class="n">base</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">os_path</span><span class="p">)</span>
+    <span class="c1"># py_fname = base + '.py'</span>
+    <span class="n">script</span><span class="p">,</span> <span class="n">resources</span> <span class="o">=</span> <span class="n">_script_exporter</span><span class="o">.</span><span class="n">from_filename</span><span class="p">(</span><span class="n">os_path</span><span class="p">)</span>
+    <span class="n">script_fname</span> <span class="o">=</span> <span class="n">base</span> <span class="o">+</span> <span class="n">resources</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'output_extension'</span><span class="p">,</span> <span class="s1">'.txt'</span><span class="p">)</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"Saving script /</span><span class="si">%s</span><span class="s2">"</span><span class="p">,</span> <span class="n">to_api_path</span><span class="p">(</span><span class="n">script_fname</span><span class="p">,</span> <span class="n">contents_manager</span><span class="o">.</span><span class="n">root_dir</span><span class="p">))</span>
+
+    <span class="k">with</span> <span class="n">io</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">script_fname</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">script</span><span class="p">)</span>
+
+    <span class="k">global</span> <span class="n">_html_exporter</span>
+    <span class="k">if</span> <span class="n">_html_exporter</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">_html_exporter</span> <span class="o">=</span> <span class="n">HTMLExporter</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="n">contents_manager</span><span class="p">)</span>
+    <span class="n">html</span><span class="p">,</span> <span class="n">resources</span> <span class="o">=</span> <span class="n">_html_exporter</span><span class="o">.</span><span class="n">from_filename</span><span class="p">(</span><span class="n">os_path</span><span class="p">)</span>
+    <span class="n">html_fname</span> <span class="o">=</span> <span class="n">base</span> <span class="o">+</span> <span class="n">resources</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'output_extension'</span><span class="p">,</span> <span class="s1">'.txt'</span><span class="p">)</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"Saving html /</span><span class="si">%s</span><span class="s2">"</span><span class="p">,</span> <span class="n">to_api_path</span><span class="p">(</span><span class="n">html_fname</span><span class="p">,</span> <span class="n">contents_manager</span><span class="o">.</span><span class="n">root_dir</span><span class="p">))</span>
+
+    <span class="k">with</span> <span class="n">io</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">html_fname</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+
+<span class="n">c</span><span class="o">.</span><span class="n">FileContentsManager</span><span class="o">.</span><span class="n">post_save_hook</span> <span class="o">=</span> <span class="n">script_post_save</span>
+</pre>
+
+
+<h4>For better visualization and vim keybindings</h4>
+<ul>
+<li>Jupyter theme can be added following
+    <a href="https://github.com/dunovank/jupyter-themes">here</a>, I prefer to use
+    onedork with different fonts for text and code blocks, so basically
+    want you can do is</li>
+</ul>
+<p><code>{.bash .rundoc-block rundoc-language="sh" rundoc-session="yes" rundoc-tangle="yes"}
+pip install --upgrade jupyterthemes
+jt -t onedork -tf georgiaserif -nf droidsans -vim</code></p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/meditation/" rel="tag">meditation</a></li>
+            <li><a class="tag p-category" href="../../categories/private/" rel="tag">private</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../switch-recent-two-buffer-alterantively/" rel="prev" title="switch-recent-two-buffer-alterantively">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../jupyter-skills-and-tricks/" rel="next" title="jupyter-skills-and-tricks">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="nikolademo",
+            disqus_url="https://example.com/posts/best-practise-for-jupyter-and-ipython/",
+        disqus_title="best-practise-for-jupyter-and-ipython",
+        disqus_identifier="cache/posts/best-practise-for-jupyter-and-ipython.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="nikolademo";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
+            Contents © 2019         <a href="mailto:joe@demo.site">Your Name</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

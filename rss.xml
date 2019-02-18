@@ -1,5 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Demo Site</title><link>https://example.com/</link><description>This is a demo site for Nikola.</description><atom:link href="https://example.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:joe@demo.site"&gt;Your Name&lt;/a&gt; </copyright><lastBuildDate>Mon, 18 Feb 2019 02:26:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>using travis CI for github repo</title><link>https://example.com/posts/using-travis-ci-for-github-repo/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;using Nikola with Travis CI on github.io pages
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Demo Site</title><link>https://example.com/</link><description>This is a demo site for Nikola.</description><atom:link href="https://example.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:joe@demo.site"&gt;Your Name&lt;/a&gt; </copyright><lastBuildDate>Mon, 18 Feb 2019 03:04:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>orgmode-for-nikola-post</title><link>https://example.com/posts/orgmode-for-nikola-post/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;first need to setup the orgmode plugin for nikola refer to
+&lt;a href="https://plugins.getnikola.com/v7/orgmode/"&gt;here&lt;/a&gt;, then put this into
+init.el&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;;;; set up new nikola new post directly in emacs
+;; does not work on windows
+(defun publish-blog-post ()
+  "nikola github-deploy"
+  (interactive)
+  (save-buffer)
+  (let ((my-blog-repo  "path to your blog repo")))
+  ;; (let (my-blog-repo))
+  ;; (setq my-blog-repo "~/shelper.github.io")
+  (cd my-blog-repo)
+  (shell-command "nikola github_deploy"))
+
+(defun new-blog-post (title)
+  "new blog post to shelper.github.io"
+  (interactive "sEnter post title: ")
+  (let ((my-blog-repo  "path to your blog repo")))
+  (cd my-blog-repo)
+  (setq new-post-cmd (concat "nikola new_post -f orgmode -t " "\"" title "\""))
+  (shell-command new-post-cmd)
+  (setq new-post-file (concat my-blog-repo "/posts/" (replace-regexp-in-string " " "-" title) ".org"))
+  (find-file new-post-file))
+&lt;/pre&gt;
+
+
+&lt;p&gt;however, it seems mac does not work for org in nikola
+refer to: &lt;a href="https://github.com/getnikola/plugins/issues/124"&gt;here&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>meditation</category><category>private</category><guid>https://example.com/posts/orgmode-for-nikola-post/</guid><pubDate>Tue, 29 May 2018 02:01:03 GMT</pubDate></item><item><title>jupyter-skills-and-tricks</title><link>https://example.com/posts/jupyter-skills-and-tricks/</link><dc:creator>Your Name</dc:creator><description>&lt;ol&gt;
+&lt;li&gt;use jupyterlab&lt;/li&gt;
+&lt;li&gt;use &lt;code&gt;interact&lt;/code&gt; for interactive widget&lt;/li&gt;
+&lt;li&gt;use qgrid for better dataframe display within ipython notebook,
+    follow instructions
+    &lt;a href="http://nbviewer.jupyter.org/github/quantopian/qgrid/blob/master/qgrid_demo.ipynb"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%load_ext sql&lt;/code&gt; for sql query within the notebook, refer to
+    &lt;a href="https://github.com/catherinedevlin/ipython-sql"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description><category>meditation</category><category>private</category><guid>https://example.com/posts/jupyter-skills-and-tricks/</guid><pubDate>Mon, 28 May 2018 02:01:03 GMT</pubDate></item><item><title>best-practise-for-jupyter-and-ipython</title><link>https://example.com/posts/best-practise-for-jupyter-and-ipython/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;A few things to setup the IPython and Jupyter for a best practise.&lt;/p&gt;
+&lt;h4&gt;IPython configuration&lt;/h4&gt;
+&lt;p&gt;Change &lt;code&gt;~/.ipython/profile_default/startup/init.ipy&lt;/code&gt; for their usage
+respectively&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To enable versioning of the python/jupyter environment, you need to
+    &lt;code&gt;pip install version_information&lt;/code&gt; and then add below, afterward for
+    each IPython notebook file I put
+    &lt;code&gt;%version_information numpy, scipy, matplotlib, pandas&lt;/code&gt; to display
+    my python environment version information&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;``` {.python .rundoc-block rundoc-language="python" rundoc-session="yes" rundoc-tangle="yes"}
+%load_ext version_information&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;   &lt;span class="n"&gt;To&lt;/span&gt; &lt;span class="n"&gt;enable&lt;/span&gt; &lt;span class="n"&gt;autoloading&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;modified&lt;/span&gt; &lt;span class="n"&gt;modules&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;IPython&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;below&lt;/span&gt;
+
+&lt;span class="err"&gt;```&lt;/span&gt; &lt;span class="p"&gt;{.&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rundoc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt; &lt;span class="n"&gt;rundoc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;language&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"python"&lt;/span&gt; &lt;span class="n"&gt;rundoc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;session&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"yes"&lt;/span&gt; &lt;span class="n"&gt;rundoc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;tangle&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"yes"&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nf"&gt;%load_ext&lt;/span&gt; &lt;span class="n"&gt;version_information&lt;/span&gt;
+&lt;span class="nf"&gt;%load_ext&lt;/span&gt; &lt;span class="n"&gt;autoreload&lt;/span&gt;
+&lt;span class="nf"&gt;%autoreload&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;I also added the lines below just because I use them everytime I
+    open IPython&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;``` {.python .rundoc-block rundoc-language="python" rundoc-session="yes" rundoc-tangle="yes"}
+import numpy as np
+import matplotlib.pyplot as plt
+plt.ion()&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;### Modify Jupyter notebook settings:&lt;/span&gt;
+
+&lt;span class="o"&gt;-&lt;/span&gt;   &lt;span class="n"&gt;To&lt;/span&gt; &lt;span class="n"&gt;enable&lt;/span&gt; &lt;span class="n"&gt;auto&lt;/span&gt; &lt;span class="n"&gt;conversion&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;saving&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="sb"&gt;`.py`&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="sb"&gt;`.html`&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt;
+    &lt;span class="nn"&gt;the&lt;/span&gt; &lt;span class="nn"&gt;notebook&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;put&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;following&lt;/span&gt; &lt;span class="n"&gt;script&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;Jupyter&lt;/span&gt;
+    &lt;span class="n"&gt;configuration&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="sb"&gt;`~/.jupyter/jupyter_notebook_config.py`&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;more&lt;/span&gt; &lt;span class="n"&gt;details&lt;/span&gt;
+    &lt;span class="n"&gt;can&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;found&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;here&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;jupyter&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;notebook&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;readthedocs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;en&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;latest&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;extending&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;savehooks&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="sb"&gt;``&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rundoc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt; &lt;span class="n"&gt;rundoc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;language&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"python"&lt;/span&gt; &lt;span class="n"&gt;rundoc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;session&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"yes"&lt;/span&gt; &lt;span class="n"&gt;rundoc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;tangle&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"yes"&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="c1"&gt;# make a script equivalent whenever the notebook is saved&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;io&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;notebook.utils&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;to_api_path&lt;/span&gt;
+
+&lt;span class="n"&gt;_script_exporter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
+&lt;span class="n"&gt;_html_exporter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;script_post_save&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;os_path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;contents_manager&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;"""convert notebooks to Python script after save with nbconvert&lt;/span&gt;
+
+&lt;span class="sd"&gt;    replaces `ipython notebook --script`&lt;/span&gt;
+&lt;span class="sd"&gt;    """&lt;/span&gt;
+    &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;nbconvert.exporters.script&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;ScriptExporter&lt;/span&gt;
+    &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;nbconvert.exporters.html&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;HTMLExporter&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'type'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s1"&gt;'notebook'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt;
+
+    &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;_script_exporter&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;_script_exporter&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;_script_exporter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ScriptExporter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parent&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;contents_manager&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;log&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;contents_manager&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;
+
+    &lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ext&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;splitext&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os_path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="c1"&gt;# py_fname = base + '.py'&lt;/span&gt;
+    &lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;resources&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;_script_exporter&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_filename&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os_path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;script_fname&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;base&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;resources&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'output_extension'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'.txt'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Saving script /&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;to_api_path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;script_fname&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;contents_manager&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;root_dir&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;script_fname&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'w'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;encoding&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'utf-8'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;_html_exporter&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;_html_exporter&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;_html_exporter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;HTMLExporter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parent&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;contents_manager&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;resources&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;_html_exporter&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_filename&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os_path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;html_fname&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;base&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;resources&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'output_extension'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'.txt'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Saving html /&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;to_api_path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;html_fname&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;contents_manager&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;root_dir&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;html_fname&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'w'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;encoding&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'utf-8'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;FileContentsManager&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;post_save_hook&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;script_post_save&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;h4&gt;For better visualization and vim keybindings&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Jupyter theme can be added following
+    &lt;a href="https://github.com/dunovank/jupyter-themes"&gt;here&lt;/a&gt;, I prefer to use
+    onedork with different fonts for text and code blocks, so basically
+    want you can do is&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;{.bash .rundoc-block rundoc-language="sh" rundoc-session="yes" rundoc-tangle="yes"}
+pip install --upgrade jupyterthemes
+jt -t onedork -tf georgiaserif -nf droidsans -vim&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;</description><category>meditation</category><category>private</category><guid>https://example.com/posts/best-practise-for-jupyter-and-ipython/</guid><pubDate>Thu, 24 May 2018 02:01:03 GMT</pubDate></item><item><title>switch-recent-two-buffer-alterantively</title><link>https://example.com/posts/switch-recent-two-buffer-alterantively/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;so there is a post &lt;a href="http://emacsredux.com/blog/2013/04/28/switch-to-previous-buffer/"&gt;described using key chord for fast buffer switching
+between most recent two
+buffers&lt;/a&gt;.
+it works for most cases, but if you are using org babel mode and editing
+source code in the *org src ... * buffer, then this *org src ... *
+buffer cannot be accessed by the method described here.&lt;/p&gt;
+&lt;p&gt;so I made another function to solve this issue, and here it is:&lt;/p&gt;
+&lt;p&gt;``` {.commonlisp .rundoc-block rundoc-language="emacs-lisp" rundoc-tangle="yes"}
+(defun get-next-buffer ()
+  (interactive)
+  (if (string= (car (helm-buffer-list)) " &lt;em&gt;Minibuf-1&lt;/em&gt;")
+      (switch-to-buffer (car (cdr (helm-buffer-list))))
+    (switch-to-buffer (car (helm-buffer-list)))))
+(key-chord-define-global "jk" 'get-next-buffer)&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;strangely when switching buffer using \`helm-buffer-lists\`, and if you
+exit without selecting any buffer, you gets \`\*Minibuf-1\*\` into the
+buffer list and will switch to minibuffer... so here I compared the
+first buffer name in the list to \`\*Minibuf-1\*\` and remove it if it
+is for \`Minibuf-1\`
+
+in addition i added the function and key binding below to enable:
+
+1.  always change to normal mode when switch-to-buffer
+2.  always move to the end of buffer for comint-mode and eshell mode
+
+the code is here:
+
+``` {.commonlisp .rundoc-block rundoc-language="emacs-lisp" rundoc-tangle="yes"}
+;; goto buffer end and use insert mode if switch to a shell or comint mode
+(defvar last-buffer nil)
+(defun post-switch-buffer-func ()
+  (if (not (eq (current-buffer) last-buffer))
+      (progn
+        (setq last-buffer (current-buffer))
+        (if (derived-mode-p 'eshell-mode 'comint-mode)
+            (progn
+              ;; (evil-insert-state) ;uncomment for insert mode when switched to
+              (end-of-buffer)))
+        (if (derived-mode-p 'prog-mode)
+            (evil-normal-state)))))
+(add-hook 'post-command-hook 'post-switch-buffer-func)
+&lt;/pre&gt;&lt;/div&gt;</description><category>meditation</category><category>private</category><guid>https://example.com/posts/switch-recent-two-buffer-alterantively/</guid><pubDate>Wed, 23 May 2018 02:01:03 GMT</pubDate></item><item><title>using travis CI for github repo</title><link>https://example.com/posts/using-travis-ci-for-github-repo/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;using Nikola with Travis CI on github.io pages
 major reference &lt;a href="https://getnikola.com/blog/automating-nikola-rebuilds-with-travis-ci.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;it is noticeable that instead of running &lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;travis login
@@ -130,146 +305,4 @@ line 2319, in draw_artist
 &lt;li&gt;exclude the test using &lt;code&gt;packages=setuptools.find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"])&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;to include upper level modules, e.g., dir1/dir2/module2.py wants to include dir1/module1.py, do &lt;code&gt;from .. import module1&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;then use &lt;code&gt;python setup.py sdist&lt;/code&gt; to generate the zip and egg file and then use &lt;code&gt;python setup.py install&lt;/code&gt; to install the package&lt;/p&gt;&lt;/div&gt;</description><category>python</category><guid>https://example.com/posts/python-module-and-packaging/</guid><pubDate>Mon, 13 Jun 2016 10:06:28 GMT</pubDate></item><item><title>install pyqt on mac for matplotlib</title><link>https://example.com/posts/install-pyqt-on-mac-for-matplotlib/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;so i was trying to use matplotlib for fast image ploting and updating, and I found a post &lt;a href="http://bastibe.de/2013-05-30-speeding-up-matplotlib.html"&gt;here&lt;/a&gt;. 
-the matplotlib uses different backend to render the images, and due to the differences between different backend, some functions are only available for specific backend, for instance, the &lt;code&gt;fig.canvas.update()&lt;/code&gt; is a fast way to render new images to the axes, but is only availabe to PyQt4.&lt;/p&gt;
-&lt;p&gt;so i was trying to install pyqt4 using homebrew, it failed by saying the osx version is pre-released version and is not supported, and arises 2 errors during make process.&lt;/p&gt;
-&lt;p&gt;this is due to the cached info for homebrew is not up-to-date, so you need to run brew update. &lt;/p&gt;
-&lt;p&gt;however, this also arises an error of "not writable  directory: /usr/local, so you need to &lt;code&gt;sudo chown - $user:admin /usr/local&lt;/code&gt;, then update shall work, then run &lt;code&gt;brew install pyqt (add --with-python3 if need to support python3.x)&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;now the remaining problem is the pyqt package cannot be imported in python shell because homebrew gives the below message:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Python modules have been installed and Homebrew's site-packages is not
-in your Python sys.path, so you will not be able to import the modules
-this formula installed. If you plan to develop with these modules,
-please run:
-echo 'import site; site.addsitedir("/usr/local/lib/python2.7/site-packages")'  &amp;gt;&amp;gt; /path/to/your/python/folder/site-packages/homebrew.pth&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;you may run &lt;code&gt;import site; site.getsitepackages()&lt;/code&gt; to find out the path to your python site-packages folder, 
-of course, you need to change python2.7 to python3.x for python3 support.&lt;/p&gt;
-&lt;p&gt;Another thing is use &lt;code&gt;python3 -m pip&lt;/code&gt; instead of &lt;code&gt;pip&lt;/code&gt; so to ensure the package will be installed in the default site-packages folder, actually &lt;code&gt;python3 -m pip install pyside&lt;/code&gt; successfully installed pyside for python3&lt;/p&gt;
-&lt;p&gt;however, i found pyside 1.2.4 does not work due to the @rpath issue, cannot find a solution for it. so i installed pyside 1.2.2 and downloaded [https://raw.githubusercontent.com/PySide/pyside-setup/1.2.2/pyside_postinstall.py], after running this script, the pyside is succesfully installed and can be imported&lt;/p&gt;&lt;/div&gt;</description><category>matplotlib</category><category>pyqt</category><category>python</category><guid>https://example.com/posts/install-pyqt-on-mac-for-matplotlib/</guid><pubDate>Mon, 13 Jun 2016 10:05:28 GMT</pubDate></item><item><title>setup babun on windows for git and ssh</title><link>https://example.com/posts/setup-babun-on-windows-for-git-and-ssh/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;remove %HOME% (you can put it back later)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;download and install babun&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;setup ssh, if you already have ssh keys in the ~/.ssh, copy to the ~ of babun shell and do&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;eval `ssh-agent -s`
-ssh-add 
-&lt;/pre&gt;
-
-
-&lt;p&gt;if not, copy the ssh pub and private keys to ~/.ssh or use &lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;ssh-add path/to/keys
-&lt;/pre&gt;
-
-
-&lt;ol&gt;
-&lt;li&gt;if you are using proxy behind firewall you need:
-add proxy for babun and change the user -agent (dont know why, but works)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;export http_proxy=http://gateway.zscaler.net:80
-export https_proxy=$http_proxy
-export ftp_proxy=$http_proxy
-export no_proxy=localhost
-...
-export USER_AGENT="Chrome/47.0.2526.111"
-&lt;/pre&gt;
-
-
-&lt;p&gt;then you can use pact to install packages&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pact install connect-proxy
-&lt;/pre&gt;
-
-
-&lt;p&gt;if ssh need to go through proxy, add the line below to the ~/.ssh/config file&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;ProxyCommand connect-proxy.exe -H gateway.zscaler.net:80 %h %p
-&lt;/pre&gt;
-
-
-&lt;p&gt;then add the lines below to .gitconfig &lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[http]&lt;/span&gt;
-    &lt;span class="na"&gt;proxy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;http://gateway.zscaler.net:80&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;However, this still cannot work for run &lt;code&gt;git push&lt;/code&gt; etc., in emacs shell.. No solution yet, a question of this is asked at &lt;a href="http://stackoverflow.com/questions/34009160/unable-to-use-git-push-in-emacs-shell-under-windows"&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>babun</category><category>emacs</category><category>git</category><category>ssh</category><category>windows</category><guid>https://example.com/posts/setup-babun-on-windows-for-git-and-ssh/</guid><pubDate>Thu, 09 Jun 2016 21:47:28 GMT</pubDate></item><item><title>ipython and pip issues</title><link>https://example.com/posts/ipython-and-pip-issues/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;so I am trying to use ipython as my python shell under emacs, since i started using python in emacs, i always encounter different issues, again and again, so i will use this post as a collection of issues and solutions. &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;issue1:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;ipython shell imports quite some packages/modules/functions and as you may know, &lt;code&gt;import&lt;/code&gt; searches current folder as well as the subfolders of the registered module, if there are file with the same name under the current folder, it overrides the file in the registered module, apparently, this causes problems of "import error, could not find ..."&lt;/p&gt;
-&lt;p&gt;so,watch out how you name your files, and if it does happen, consider to rename or remove the files&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;issue2:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;pip install, i once encountered that pip keeps reinstall packages, without aware of the package is already installed. 
-the issue is in the pip config file (usually in &lt;code&gt;~/pip/pip.ini&lt;/code&gt;) i have following line&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;ignore-installed = true
-&lt;/pre&gt;
-
-
-&lt;p&gt;apparently, that is what this for, so remove this line solves the problem&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;issue3:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;how to setup proxy when you are behind a corporation firewall?
-goto the config file again, and put &lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[global]&lt;/span&gt;
-&lt;span class="na"&gt;proxy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;url:port&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;this works for many other python based packages/software as well&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;issue4&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;when using emacs, calling &lt;code&gt;git&lt;/code&gt; using shell-command seems not working well, you might want to use magit instead.&lt;/p&gt;
-&lt;p&gt;PS: I will keep updating this post if I find new issues and solutions. &lt;/p&gt;&lt;/div&gt;</description><category>ipython</category><category>python</category><guid>https://example.com/posts/ipython-and-pip-issues/</guid><pubDate>Thu, 09 Jun 2016 18:31:41 GMT</pubDate></item><item><title>design of a framework for scientific data processing</title><link>https://example.com/posts/design-of-a-framework-for-scientific-data-processing/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;I have beening thinking of building such a framework for a while, I started a little project called &lt;a href="http://github.com/shelper/pypeline"&gt;pypeline&lt;/a&gt;. The code on github is not up-to-date.
-And I have some new thoughts on the framework design. So this article serves as a design documents
-and welcomes any comments or suggestions. &lt;/p&gt;
-&lt;p&gt;Based on my own experience, I often want to process some data or image at multiple stage. 
-Often, I want to change some parameters of certian algorithm to see how the outcomes are changed. 
-It becomes cumbersome and difficult to check after saving a lot of intermedia data, with file names like
-&lt;code&gt;para1_value1_para1_value2...&lt;/code&gt;. &lt;/p&gt;
-&lt;p&gt;I then thought about it, and decide to write a framework like a pipeline. for a multi-step process, 
-I can connect the processing function of each step and form a pipeline. I decided to use async module
-in python and if needed, use a generate as the input, so if I want to check the outcome of a multi-step process,
-I can simply write a generate to feed in the input repeatedly, and with the async feature, 
-I can change the parameters in realtime, and the outcome will change instantaneously or even real time as well. &lt;/p&gt;
-&lt;p&gt;then the next thing is to make this pipeline easier to use, e.g.,
-I used decorator to claim funtions that can be inserted into the pipeline by a single line of code. 
-I made a pipeline class with implementations of &lt;code&gt;pop()&lt;/code&gt; and &lt;code&gt;insert()&lt;/code&gt; for adding and removing functions in the pipeline
-I also plan to add input and output check for each functions, so that when I connect two functions, 
-the framework will check if the output of the first matches the input of the second. I am thinking of 
-using a separate file like the header file in &lt;code&gt;c/c++&lt;/code&gt; to describe the input and output of each function.&lt;/p&gt;
-&lt;p&gt;for instance, I have two functions to connect:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# functions.py&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f1&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
-
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f2&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;and &lt;code&gt;x, y, a, b&lt;/code&gt; are all integers, &lt;/p&gt;
-&lt;p&gt;so I can have a separate file with same name but different extension:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;# functions.dsc
-f1 = {'input': [int, int], 'output': [int, int]}
-f2 = {'input': [int, int], 'output': [int]}
-&lt;/pre&gt;
-
-
-&lt;p&gt;then when connect these two functions I can do:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;# pseudo code:
-if f1['output'] == f2['input']:
-    connect f1 and f2
-else:
-    raise FuncInputOutputMismatch()
-&lt;/pre&gt;
-
-
-&lt;p&gt;for more complicated cases, the pipeline might have branches and inter-connections within branches. 
-it of course should be one way data flow. it further reminds me the frontend library from facebook that uses one way data flow: 
-the &lt;a href="https://facebook.github.io/react/"&gt;React&lt;/a&gt;. There is also a &lt;a href="https://www.youtube.com/watch?v=xsSnOQynTHs"&gt;video&lt;/a&gt; on this.&lt;/p&gt;
-&lt;p&gt;then I did some research and found something called &lt;a href="https://github.com/gaearon/react-hot-loader"&gt;&lt;code&gt;hot loading&lt;/code&gt;&lt;/a&gt;
-it also reminds me the &lt;a href="https://www.youtube.com/watch?v=PUv66718DII"&gt;talk&lt;/a&gt; given by Bret Victor.
-it would be such a fantastic tool if some tool like this can be used for scientific data processing...&lt;/p&gt;
-&lt;p&gt;So I just wonder if there is already something similar or at least some that i can borrow code/ideas from?
-or is this kind of design idea new? i tend to think it is not, I would like to read more to get a better understanding of
-such design before i go ahead coding the framework. &lt;/p&gt;&lt;/div&gt;</description><category>javascript</category><category>python</category><category>research</category><guid>https://example.com/posts/design-of-a-framework-for-scientific-data-processing/</guid><pubDate>Sun, 29 May 2016 01:25:39 GMT</pubDate></item></channel></rss>
+&lt;p&gt;then use &lt;code&gt;python setup.py sdist&lt;/code&gt; to generate the zip and egg file and then use &lt;code&gt;python setup.py install&lt;/code&gt; to install the package&lt;/p&gt;&lt;/div&gt;</description><category>python</category><guid>https://example.com/posts/python-module-and-packaging/</guid><pubDate>Mon, 13 Jun 2016 10:06:28 GMT</pubDate></item></channel></rss>

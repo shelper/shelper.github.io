@@ -1,5 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Demo Site (Posts about private)</title><link>https://example.com/</link><description></description><atom:link href="https://example.com/categories/private.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:joe@demo.site"&gt;Your Name&lt;/a&gt; </copyright><lastBuildDate>Mon, 18 Feb 2019 02:26:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>the sword of wisdom</title><link>https://example.com/posts/the-sword-of-wisdom/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;It is quite often that sometimes you just could not stop yourself doing something.
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Demo Site (Posts about private)</title><link>https://example.com/</link><description></description><atom:link href="https://example.com/categories/private.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:joe@demo.site"&gt;Your Name&lt;/a&gt; </copyright><lastBuildDate>Mon, 18 Feb 2019 03:04:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>orgmode-for-nikola-post</title><link>https://example.com/posts/orgmode-for-nikola-post/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;first need to setup the orgmode plugin for nikola refer to
+&lt;a href="https://plugins.getnikola.com/v7/orgmode/"&gt;here&lt;/a&gt;, then put this into
+init.el&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;;;; set up new nikola new post directly in emacs
+;; does not work on windows
+(defun publish-blog-post ()
+  "nikola github-deploy"
+  (interactive)
+  (save-buffer)
+  (let ((my-blog-repo  "path to your blog repo")))
+  ;; (let (my-blog-repo))
+  ;; (setq my-blog-repo "~/shelper.github.io")
+  (cd my-blog-repo)
+  (shell-command "nikola github_deploy"))
+
+(defun new-blog-post (title)
+  "new blog post to shelper.github.io"
+  (interactive "sEnter post title: ")
+  (let ((my-blog-repo  "path to your blog repo")))
+  (cd my-blog-repo)
+  (setq new-post-cmd (concat "nikola new_post -f orgmode -t " "\"" title "\""))
+  (shell-command new-post-cmd)
+  (setq new-post-file (concat my-blog-repo "/posts/" (replace-regexp-in-string " " "-" title) ".org"))
+  (find-file new-post-file))
+&lt;/pre&gt;
+
+
+&lt;p&gt;however, it seems mac does not work for org in nikola
+refer to: &lt;a href="https://github.com/getnikola/plugins/issues/124"&gt;here&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>meditation</category><category>private</category><guid>https://example.com/posts/orgmode-for-nikola-post/</guid><pubDate>Tue, 29 May 2018 02:01:03 GMT</pubDate></item><item><title>jupyter-skills-and-tricks</title><link>https://example.com/posts/jupyter-skills-and-tricks/</link><dc:creator>Your Name</dc:creator><description>&lt;ol&gt;
+&lt;li&gt;use jupyterlab&lt;/li&gt;
+&lt;li&gt;use &lt;code&gt;interact&lt;/code&gt; for interactive widget&lt;/li&gt;
+&lt;li&gt;use qgrid for better dataframe display within ipython notebook,
+    follow instructions
+    &lt;a href="http://nbviewer.jupyter.org/github/quantopian/qgrid/blob/master/qgrid_demo.ipynb"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%load_ext sql&lt;/code&gt; for sql query within the notebook, refer to
+    &lt;a href="https://github.com/catherinedevlin/ipython-sql"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description><category>meditation</category><category>private</category><guid>https://example.com/posts/jupyter-skills-and-tricks/</guid><pubDate>Mon, 28 May 2018 02:01:03 GMT</pubDate></item><item><title>best-practise-for-jupyter-and-ipython</title><link>https://example.com/posts/best-practise-for-jupyter-and-ipython/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;A few things to setup the IPython and Jupyter for a best practise.&lt;/p&gt;
+&lt;h4&gt;IPython configuration&lt;/h4&gt;
+&lt;p&gt;Change &lt;code&gt;~/.ipython/profile_default/startup/init.ipy&lt;/code&gt; for their usage
+respectively&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To enable versioning of the python/jupyter environment, you need to
+    &lt;code&gt;pip install version_information&lt;/code&gt; and then add below, afterward for
+    each IPython notebook file I put
+    &lt;code&gt;%version_information numpy, scipy, matplotlib, pandas&lt;/code&gt; to display
+    my python environment version information&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;``` {.python .rundoc-block rundoc-language="python" rundoc-session="yes" rundoc-tangle="yes"}
+%load_ext version_information&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;   &lt;span class="n"&gt;To&lt;/span&gt; &lt;span class="n"&gt;enable&lt;/span&gt; &lt;span class="n"&gt;autoloading&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;modified&lt;/span&gt; &lt;span class="n"&gt;modules&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;IPython&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;below&lt;/span&gt;
+
+&lt;span class="err"&gt;```&lt;/span&gt; &lt;span class="p"&gt;{.&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rundoc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt; &lt;span class="n"&gt;rundoc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;language&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"python"&lt;/span&gt; &lt;span class="n"&gt;rundoc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;session&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"yes"&lt;/span&gt; &lt;span class="n"&gt;rundoc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;tangle&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"yes"&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nf"&gt;%load_ext&lt;/span&gt; &lt;span class="n"&gt;version_information&lt;/span&gt;
+&lt;span class="nf"&gt;%load_ext&lt;/span&gt; &lt;span class="n"&gt;autoreload&lt;/span&gt;
+&lt;span class="nf"&gt;%autoreload&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;I also added the lines below just because I use them everytime I
+    open IPython&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;``` {.python .rundoc-block rundoc-language="python" rundoc-session="yes" rundoc-tangle="yes"}
+import numpy as np
+import matplotlib.pyplot as plt
+plt.ion()&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;### Modify Jupyter notebook settings:&lt;/span&gt;
+
+&lt;span class="o"&gt;-&lt;/span&gt;   &lt;span class="n"&gt;To&lt;/span&gt; &lt;span class="n"&gt;enable&lt;/span&gt; &lt;span class="n"&gt;auto&lt;/span&gt; &lt;span class="n"&gt;conversion&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;saving&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="sb"&gt;`.py`&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="sb"&gt;`.html`&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt;
+    &lt;span class="nn"&gt;the&lt;/span&gt; &lt;span class="nn"&gt;notebook&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;put&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;following&lt;/span&gt; &lt;span class="n"&gt;script&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;Jupyter&lt;/span&gt;
+    &lt;span class="n"&gt;configuration&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="sb"&gt;`~/.jupyter/jupyter_notebook_config.py`&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;more&lt;/span&gt; &lt;span class="n"&gt;details&lt;/span&gt;
+    &lt;span class="n"&gt;can&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;found&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;here&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;jupyter&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;notebook&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;readthedocs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;en&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;latest&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;extending&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;savehooks&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="sb"&gt;``&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rundoc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt; &lt;span class="n"&gt;rundoc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;language&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"python"&lt;/span&gt; &lt;span class="n"&gt;rundoc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;session&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"yes"&lt;/span&gt; &lt;span class="n"&gt;rundoc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;tangle&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"yes"&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="c1"&gt;# make a script equivalent whenever the notebook is saved&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;io&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;notebook.utils&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;to_api_path&lt;/span&gt;
+
+&lt;span class="n"&gt;_script_exporter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
+&lt;span class="n"&gt;_html_exporter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;script_post_save&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;os_path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;contents_manager&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;"""convert notebooks to Python script after save with nbconvert&lt;/span&gt;
+
+&lt;span class="sd"&gt;    replaces `ipython notebook --script`&lt;/span&gt;
+&lt;span class="sd"&gt;    """&lt;/span&gt;
+    &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;nbconvert.exporters.script&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;ScriptExporter&lt;/span&gt;
+    &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;nbconvert.exporters.html&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;HTMLExporter&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'type'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s1"&gt;'notebook'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt;
+
+    &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;_script_exporter&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;_script_exporter&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;_script_exporter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ScriptExporter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parent&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;contents_manager&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;log&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;contents_manager&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;
+
+    &lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ext&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;splitext&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os_path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="c1"&gt;# py_fname = base + '.py'&lt;/span&gt;
+    &lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;resources&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;_script_exporter&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_filename&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os_path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;script_fname&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;base&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;resources&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'output_extension'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'.txt'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Saving script /&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;to_api_path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;script_fname&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;contents_manager&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;root_dir&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;script_fname&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'w'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;encoding&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'utf-8'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;_html_exporter&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;_html_exporter&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;_html_exporter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;HTMLExporter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parent&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;contents_manager&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;resources&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;_html_exporter&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_filename&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os_path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;html_fname&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;base&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;resources&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'output_extension'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'.txt'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Saving html /&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;to_api_path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;html_fname&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;contents_manager&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;root_dir&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;html_fname&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'w'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;encoding&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'utf-8'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;FileContentsManager&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;post_save_hook&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;script_post_save&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;h4&gt;For better visualization and vim keybindings&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Jupyter theme can be added following
+    &lt;a href="https://github.com/dunovank/jupyter-themes"&gt;here&lt;/a&gt;, I prefer to use
+    onedork with different fonts for text and code blocks, so basically
+    want you can do is&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;{.bash .rundoc-block rundoc-language="sh" rundoc-session="yes" rundoc-tangle="yes"}
+pip install --upgrade jupyterthemes
+jt -t onedork -tf georgiaserif -nf droidsans -vim&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;</description><category>meditation</category><category>private</category><guid>https://example.com/posts/best-practise-for-jupyter-and-ipython/</guid><pubDate>Thu, 24 May 2018 02:01:03 GMT</pubDate></item><item><title>switch-recent-two-buffer-alterantively</title><link>https://example.com/posts/switch-recent-two-buffer-alterantively/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;so there is a post &lt;a href="http://emacsredux.com/blog/2013/04/28/switch-to-previous-buffer/"&gt;described using key chord for fast buffer switching
+between most recent two
+buffers&lt;/a&gt;.
+it works for most cases, but if you are using org babel mode and editing
+source code in the *org src ... * buffer, then this *org src ... *
+buffer cannot be accessed by the method described here.&lt;/p&gt;
+&lt;p&gt;so I made another function to solve this issue, and here it is:&lt;/p&gt;
+&lt;p&gt;``` {.commonlisp .rundoc-block rundoc-language="emacs-lisp" rundoc-tangle="yes"}
+(defun get-next-buffer ()
+  (interactive)
+  (if (string= (car (helm-buffer-list)) " &lt;em&gt;Minibuf-1&lt;/em&gt;")
+      (switch-to-buffer (car (cdr (helm-buffer-list))))
+    (switch-to-buffer (car (helm-buffer-list)))))
+(key-chord-define-global "jk" 'get-next-buffer)&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;strangely when switching buffer using \`helm-buffer-lists\`, and if you
+exit without selecting any buffer, you gets \`\*Minibuf-1\*\` into the
+buffer list and will switch to minibuffer... so here I compared the
+first buffer name in the list to \`\*Minibuf-1\*\` and remove it if it
+is for \`Minibuf-1\`
+
+in addition i added the function and key binding below to enable:
+
+1.  always change to normal mode when switch-to-buffer
+2.  always move to the end of buffer for comint-mode and eshell mode
+
+the code is here:
+
+``` {.commonlisp .rundoc-block rundoc-language="emacs-lisp" rundoc-tangle="yes"}
+;; goto buffer end and use insert mode if switch to a shell or comint mode
+(defvar last-buffer nil)
+(defun post-switch-buffer-func ()
+  (if (not (eq (current-buffer) last-buffer))
+      (progn
+        (setq last-buffer (current-buffer))
+        (if (derived-mode-p 'eshell-mode 'comint-mode)
+            (progn
+              ;; (evil-insert-state) ;uncomment for insert mode when switched to
+              (end-of-buffer)))
+        (if (derived-mode-p 'prog-mode)
+            (evil-normal-state)))))
+(add-hook 'post-command-hook 'post-switch-buffer-func)
+&lt;/pre&gt;&lt;/div&gt;</description><category>meditation</category><category>private</category><guid>https://example.com/posts/switch-recent-two-buffer-alterantively/</guid><pubDate>Wed, 23 May 2018 02:01:03 GMT</pubDate></item><item><title>the sword of wisdom</title><link>https://example.com/posts/the-sword-of-wisdom/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;It is quite often that sometimes you just could not stop yourself doing something.
 for instance, I often sit in chair and do not want to go the bathroom until i could not hold it any more...
 that happens especially when i try to solve a problem, resolving a program bug...&lt;/p&gt;
 &lt;p&gt;so, how can we change this? use the sword of wisdom!

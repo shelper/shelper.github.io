@@ -1,0 +1,15 @@
+#+BEGIN_COMMENT
+.. title: jupyter skills and tricks
+.. slug: jupyter-skills-and-tricks
+.. date: 2017-03-20 21:00:30 UTC-04:00
+.. tags: python, ipython, jupyter
+.. category: programming
+.. link:
+.. description:
+.. type: text
+#+END_COMMENT
+
+1. use jupyterlab
+2. use =interact= for interactive widget
+3. use qgrid for better dataframe display within ipython notebook, follow instructions [[http://nbviewer.jupyter.org/github/quantopian/qgrid/blob/master/qgrid_demo.ipynb][here]]
+4. =%load_ext sql= for sql query within the notebook, refer to [[https://github.com/catherinedevlin/ipython-sql][here]]

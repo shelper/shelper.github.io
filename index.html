@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="This is a demo site for Nikola.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo Site</title>
+<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+<link rel="canonical" href="https://example.com/">
+<link rel="next" href="index-1.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/using-travis-ci-for-github-repo/" type="text/html">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="https://example.com/">
+
+            <span id="blog-title">Demo Site</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav"></ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="archive.html" class="nav-link">Archives</a>
+                </li>
+<li class="nav-item">
+<a href="categories/index.html" class="nav-link">Tags</a>
+                </li>
+<li class="nav-item">
+<a href="rss.xml" class="nav-link">RSS feed</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+    
+        
+
+    
+        
+    <div class="postindex">
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/using-travis-ci-for-github-repo/" class="u-url">using travis CI for github repo</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Your Name
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/using-travis-ci-for-github-repo/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-10-06T10:56:45-04:00" itemprop="datePublished" title="2017-10-06 10:56">2017-10-06 10:56</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/using-travis-ci-for-github-repo/#disqus_thread" data-disqus-identifier="cache/posts/using-travis-ci-for-github-repo.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>using Nikola with Travis CI on github.io pages
+major reference <a href="https://getnikola.com/blog/automating-nikola-rebuilds-with-travis-ci.html">here</a></p>
+<p>it is noticeable that instead of running </p>
+<pre class="code literal-block"><span></span>travis login
+travis enable
+travis encrypt-file id_rsa --add
+</pre>
+
+
+<p>we should run </p>
+<pre class="code literal-block"><span></span>travis login
+travis encrypt-file id_rsa --add
+travis enable
+</pre>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/set-up-nikola-for-markdown/" class="u-url">set up nikola for markdown</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Your Name
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/set-up-nikola-for-markdown/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-02-09T21:42:03-05:00" itemprop="datePublished" title="2017-02-09 21:42">2017-02-09 21:42</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/set-up-nikola-for-markdown/#disqus_thread" data-disqus-identifier="cache/posts/set-up-nikola-for-markdown.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>to use nikola you need to install it with some other packages as well
+<code>pip instal nikola markdown ws4py watchdog</code></p>
+<p>then to enable markdown, you need to change the <code>conf.py</code> variable <code>POSTS</code> and <code>PAGES</code></p>
+<pre class="code literal-block"><span></span><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s2">"posts/*.md"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"posts/*.rst"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"posts/*.txt"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"posts/*.html"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="n">PAGES</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s2">"pages/*.md"</span><span class="p">,</span> <span class="s2">"pages"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"pages/*.rst"</span><span class="p">,</span> <span class="s2">"pages"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"pages/*.txt"</span><span class="p">,</span> <span class="s2">"pages"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"pages/*.html"</span><span class="p">,</span> <span class="s2">"pages"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
+<span class="p">)</span>
+</pre>
+
+
+<p>you may also need to change the github settings for easy github deploy</p>
+<p>Then new post can be added using markdown format by
+<code>nikola new_post -f markdown</code></p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/elisp-notes1/" class="u-url">elisp notes1</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Your Name
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/elisp-notes1/" rel="bookmark">
+            <time class="published dt-published" datetime="2016-06-13T10:15:28Z" itemprop="datePublished" title="2016-06-13 10:15">2016-06-13 10:15</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/elisp-notes1/#disqus_thread" data-disqus-identifier="cache/posts/elisp-notes1.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<h2>quote for symbols:</h2>
+<pre class="code literal-block"><span></span><span class="p">(</span><span class="k">setq</span> <span class="nv">symbol</span><span class="p">)</span>
+<span class="c1">;; is equivelent to</span>
+<span class="p">(</span><span class="nf">set</span> <span class="ss">'symbol</span><span class="p">)</span>
+</pre>
+
+
+<p>the quote means; keep as it is, dont try to evaluate, so if no quote, the lisp processor will try to evaluate it, means the symbol (or the first element of the list) has to be evaluatable as either a function, or a defined variable</p>
+<h2>let vs. let*:</h2>
+<pre class="code literal-block"><span></span><span class="p">(</span><span class="k">setq</span> <span class="nv">y</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">y</span> <span class="mi">1</span><span class="p">)</span>
+      <span class="p">(</span><span class="nv">z</span> <span class="nv">y</span><span class="p">))</span>
+  <span class="p">(</span><span class="nf">list</span> <span class="nv">y</span> <span class="nv">z</span><span class="p">))</span> <span class="err">⇒</span> <span class="p">(</span><span class="mi">1</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="p">(</span><span class="k">setq</span> <span class="nv">y</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="k">let*</span> <span class="p">((</span><span class="nv">y</span> <span class="mi">1</span><span class="p">)</span>
+      <span class="p">(</span><span class="nv">z</span> <span class="nv">y</span><span class="p">))</span>
+  <span class="p">(</span><span class="nf">list</span> <span class="nv">y</span> <span class="nv">z</span><span class="p">))</span> <span class="err">⇒</span> <span class="p">(</span><span class="mi">1</span> <span class="mi">1</span><span class="p">)</span>
+</pre>
+
+
+<p><code>let*</code> binds 1 to y immediately, while <code>let</code> evaluate old y as 2, then <code>list</code> binds 1 to the new y and pring it out </p>
+<h2>colon <code>:</code> and <code>#</code>:</h2>
+<p><code>:</code> is used for constant symboles, it is commonly used as attributes for faces 
+<code>#</code> with quote, i.e., <code>#'</code> is equal to <code>'</code>, the only difference is with <code>#</code>, it provides compiling information once the code is compiled.</p>
+<p>TO BE CONTINUED</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/how-to-start-python-project-on-github/" class="u-url">how to start python project on github</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Your Name
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/how-to-start-python-project-on-github/" rel="bookmark">
+            <time class="published dt-published" datetime="2016-06-13T10:06:28Z" itemprop="datePublished" title="2016-06-13 10:06">2016-06-13 10:06</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/how-to-start-python-project-on-github/#disqus_thread" data-disqus-identifier="cache/posts/how-to-start-python-project-on-github.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>steps are:</p>
+<ol>
+<li>install cookiecutter: <code>python -m pip install cookiecutter</code>
+</li>
+<li>run cookiecutter to initiate a project: <code>cookiecutter('https://github.com/audreyr/cookiecutter-pypackage.git')</code> under the project folder</li>
+<li>on github, start a new repo <code>python_prj</code>
+</li>
+<li>run <code>git init</code> in the local project folder and commit</li>
+<li>run <code>git remote add origin git@github.com:username/projectname.git</code><ul>
+<li>using git@git requires to setup the ssh key pair, this can be found by easily google it or under FAQ of github</li>
+</ul>
+</li>
+<li>run <code>git push -u origin master</code>
+</li>
+</ol>
+<p>that is it, enjoy.</p>
+<p>if you use pycharm it will add a folder called .idea under the root folder, this should also add to git repor if needed.</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/matplotlib-backend-issue/" class="u-url">matplotlib backend issue</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Your Name
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/matplotlib-backend-issue/" rel="bookmark">
+            <time class="published dt-published" datetime="2016-06-13T10:06:28Z" itemprop="datePublished" title="2016-06-13 10:06">2016-06-13 10:06</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/matplotlib-backend-issue/#disqus_thread" data-disqus-identifier="cache/posts/matplotlib-backend-issue.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>using different backends for matplotlib might cause some unexpected issues:
+today, i am trying to run a program that uses the following function: </p>
+<pre class="code literal-block"><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">figManager</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_current_fig_manager</span><span class="p">()</span>
+<span class="n">figManager</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">showMaximized</span><span class="p">()</span>
+</pre>
+
+
+<p>however, i found when using the backend of Tk, it gives error, saying get_current_fig_manager is not available, so when i switch to qt4egg, everything works well. </p>
+<p>how to switch the backend for matplotlib? first find the configure directory for matplotlib on your computer</p>
+<pre class="code literal-block"><span></span><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">get_configdir</span><span class="p">()</span>
+</pre>
+
+
+<p>then find/generate a file named matplotlibrc, add line: </p>
+<pre class="code literal-block"><span></span><span class="n">backend</span>      <span class="o">:</span> <span class="n">qt4agg</span>
+</pre>
+
+
+<p>reference <a href="http://matplotlib.org/users/customizing.html">here</a></p>
+<p>another issue with using qt4 as backend is below from <a href="http://stackoverflow.com/questions/33984798/matplotlib-using-qt4-backend-has-issue-with-cached-renderer">stackoverflow</a>
+I was trying to use matplotlib to replot an image in a faster way, so instead of replotting everything, I use set_data method of the AxesImage class as below:</p>
+<pre class="code literal-block"><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+
+<span class="n">img</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">draw_artist</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">patch</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">draw_artist</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">flush_events</span><span class="p">()</span>
+</pre>
+
+
+<p>I encountered this error:</p>
+<blockquote>
+<p>Traceback (most recent call last):  ...
+    ax.draw_artist(ax.patch)   File "/Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/matplotlib/axes/_base.py",
+line 2319, in draw_artist
+    raise AttributeError(msg) AttributeError: draw_artist can only be used after an initial draw which caches the render</p>
+</blockquote>
+<p>However, if I run the script line by line in python shell (IPython), it works and nothing is wrong. So what is the mystery behind this cached renderer? </p>
+<p>EDIT: add a line <code>fig.canvas.draw()</code> solves the problem, now the remaining question is why running it line by line in IPython shell does not cause the same error?</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/python-module-and-packaging/" class="u-url">python module and packaging</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Your Name
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/python-module-and-packaging/" rel="bookmark">
+            <time class="published dt-published" datetime="2016-06-13T10:06:28Z" itemprop="datePublished" title="2016-06-13 10:06">2016-06-13 10:06</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/python-module-and-packaging/#disqus_thread" data-disqus-identifier="cache/posts/python-module-and-packaging.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>several things:</p>
+<ol>
+<li>when using <code>setuptools.find_packages</code>, only packages with <code>__init__.py</code> in its folder will be found</li>
+<li>only modules imported in the <code>__init__.py</code> will be indexed, means the modules will be added into the dir(module)
+   and accessable by .module_name</li>
+<li>for python 3, if one modules(py file) in the same folder of another module and relies on that module, 
+  you need to put <code>from . import module</code> at the top</li>
+<li>package name is specified in the setup.py, while the module name can be different from the package name. 
+  e.g. if you have a structure package/setup.py and  package/module/<code>__init__.py</code>, and in setup.py you set package name to be <code>package</code> then after you install that, you <code>import module</code> 
+  rather than <code>import package</code>, it is better to keep the package and module name the same.</li>
+<li>try to use template with cookiecutter to make your life easier, and at the same time, modify the <code>__init__.py</code> when needed</li>
+<li>exclude the test using <code>packages=setuptools.find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"])</code>
+</li>
+<li>to include upper level modules, e.g., dir1/dir2/module2.py wants to include dir1/module1.py, do <code>from .. import module1</code>
+</li>
+</ol>
+<p>then use <code>python setup.py sdist</code> to generate the zip and egg file and then use <code>python setup.py install</code> to install the package</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/install-pyqt-on-mac-for-matplotlib/" class="u-url">install pyqt on mac for matplotlib</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Your Name
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/install-pyqt-on-mac-for-matplotlib/" rel="bookmark">
+            <time class="published dt-published" datetime="2016-06-13T10:05:28Z" itemprop="datePublished" title="2016-06-13 10:05">2016-06-13 10:05</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/install-pyqt-on-mac-for-matplotlib/#disqus_thread" data-disqus-identifier="cache/posts/install-pyqt-on-mac-for-matplotlib.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>so i was trying to use matplotlib for fast image ploting and updating, and I found a post <a href="http://bastibe.de/2013-05-30-speeding-up-matplotlib.html">here</a>. 
+the matplotlib uses different backend to render the images, and due to the differences between different backend, some functions are only available for specific backend, for instance, the <code>fig.canvas.update()</code> is a fast way to render new images to the axes, but is only availabe to PyQt4.</p>
+<p>so i was trying to install pyqt4 using homebrew, it failed by saying the osx version is pre-released version and is not supported, and arises 2 errors during make process.</p>
+<p>this is due to the cached info for homebrew is not up-to-date, so you need to run brew update. </p>
+<p>however, this also arises an error of "not writable  directory: /usr/local, so you need to <code>sudo chown - $user:admin /usr/local</code>, then update shall work, then run <code>brew install pyqt (add --with-python3 if need to support python3.x)</code>.</p>
+<p>now the remaining problem is the pyqt package cannot be imported in python shell because homebrew gives the below message:</p>
+<blockquote>
+<p>Python modules have been installed and Homebrew's site-packages is not
+in your Python sys.path, so you will not be able to import the modules
+this formula installed. If you plan to develop with these modules,
+please run:
+echo 'import site; site.addsitedir("/usr/local/lib/python2.7/site-packages")'  &gt;&gt; /path/to/your/python/folder/site-packages/homebrew.pth</p>
+</blockquote>
+<p>you may run <code>import site; site.getsitepackages()</code> to find out the path to your python site-packages folder, 
+of course, you need to change python2.7 to python3.x for python3 support.</p>
+<p>Another thing is use <code>python3 -m pip</code> instead of <code>pip</code> so to ensure the package will be installed in the default site-packages folder, actually <code>python3 -m pip install pyside</code> successfully installed pyside for python3</p>
+<p>however, i found pyside 1.2.4 does not work due to the @rpath issue, cannot find a solution for it. so i installed pyside 1.2.2 and downloaded [https://raw.githubusercontent.com/PySide/pyside-setup/1.2.2/pyside_postinstall.py], after running this script, the pyside is succesfully installed and can be imported</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/setup-babun-on-windows-for-git-and-ssh/" class="u-url">setup babun on windows for git and ssh</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Your Name
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/setup-babun-on-windows-for-git-and-ssh/" rel="bookmark">
+            <time class="published dt-published" datetime="2016-06-09T21:47:28Z" itemprop="datePublished" title="2016-06-09 21:47">2016-06-09 21:47</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/setup-babun-on-windows-for-git-and-ssh/#disqus_thread" data-disqus-identifier="cache/posts/setup-babun-on-windows-for-git-and-ssh.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<ol>
+<li>
+<p>remove %HOME% (you can put it back later)</p>
+</li>
+<li>
+<p>download and install babun</p>
+</li>
+<li>
+<p>setup ssh, if you already have ssh keys in the ~/.ssh, copy to the ~ of babun shell and do</p>
+</li>
+</ol>
+<pre class="code literal-block"><span></span>eval `ssh-agent -s`
+ssh-add 
+</pre>
+
+
+<p>if not, copy the ssh pub and private keys to ~/.ssh or use </p>
+<pre class="code literal-block"><span></span>ssh-add path/to/keys
+</pre>
+
+
+<ol>
+<li>if you are using proxy behind firewall you need:
+add proxy for babun and change the user -agent (dont know why, but works)</li>
+</ol>
+<pre class="code literal-block"><span></span>export http_proxy=http://gateway.zscaler.net:80
+export https_proxy=$http_proxy
+export ftp_proxy=$http_proxy
+export no_proxy=localhost
+...
+export USER_AGENT="Chrome/47.0.2526.111"
+</pre>
+
+
+<p>then you can use pact to install packages</p>
+<pre class="code literal-block"><span></span>pact install connect-proxy
+</pre>
+
+
+<p>if ssh need to go through proxy, add the line below to the ~/.ssh/config file</p>
+<pre class="code literal-block"><span></span>ProxyCommand connect-proxy.exe -H gateway.zscaler.net:80 %h %p
+</pre>
+
+
+<p>then add the lines below to .gitconfig </p>
+<pre class="code literal-block"><span></span><span class="k">[http]</span>
+    <span class="na">proxy</span> <span class="o">=</span> <span class="s">http://gateway.zscaler.net:80</span>
+</pre>
+
+
+<p>However, this still cannot work for run <code>git push</code> etc., in emacs shell.. No solution yet, a question of this is asked at <a href="http://stackoverflow.com/questions/34009160/unable-to-use-git-push-in-emacs-shell-under-windows">stackoverflow</a></p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/ipython-and-pip-issues/" class="u-url">ipython and pip issues</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Your Name
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/ipython-and-pip-issues/" rel="bookmark">
+            <time class="published dt-published" datetime="2016-06-09T18:31:41Z" itemprop="datePublished" title="2016-06-09 18:31">2016-06-09 18:31</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/ipython-and-pip-issues/#disqus_thread" data-disqus-identifier="cache/posts/ipython-and-pip-issues.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>so I am trying to use ipython as my python shell under emacs, since i started using python in emacs, i always encounter different issues, again and again, so i will use this post as a collection of issues and solutions. </p>
+<p><strong>issue1:</strong></p>
+<p>ipython shell imports quite some packages/modules/functions and as you may know, <code>import</code> searches current folder as well as the subfolders of the registered module, if there are file with the same name under the current folder, it overrides the file in the registered module, apparently, this causes problems of "import error, could not find ..."</p>
+<p>so,watch out how you name your files, and if it does happen, consider to rename or remove the files</p>
+<p><strong>issue2:</strong></p>
+<p>pip install, i once encountered that pip keeps reinstall packages, without aware of the package is already installed. 
+the issue is in the pip config file (usually in <code>~/pip/pip.ini</code>) i have following line</p>
+<pre class="code literal-block"><span></span>ignore-installed = true
+</pre>
+
+
+<p>apparently, that is what this for, so remove this line solves the problem</p>
+<p><strong>issue3:</strong></p>
+<p>how to setup proxy when you are behind a corporation firewall?
+goto the config file again, and put </p>
+<pre class="code literal-block"><span></span><span class="k">[global]</span>
+<span class="na">proxy</span> <span class="o">=</span> <span class="s">url:port</span>
+</pre>
+
+
+<p>this works for many other python based packages/software as well</p>
+<p><strong>issue4</strong></p>
+<p>when using emacs, calling <code>git</code> using shell-command seems not working well, you might want to use magit instead.</p>
+<p>PS: I will keep updating this post if I find new issues and solutions. </p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/design-of-a-framework-for-scientific-data-processing/" class="u-url">design of a framework for scientific data processing</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Your Name
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/design-of-a-framework-for-scientific-data-processing/" rel="bookmark">
+            <time class="published dt-published" datetime="2016-05-29T01:25:39Z" itemprop="datePublished" title="2016-05-29 01:25">2016-05-29 01:25</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/design-of-a-framework-for-scientific-data-processing/#disqus_thread" data-disqus-identifier="cache/posts/design-of-a-framework-for-scientific-data-processing.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>I have beening thinking of building such a framework for a while, I started a little project called <a href="http://github.com/shelper/pypeline">pypeline</a>. The code on github is not up-to-date.
+And I have some new thoughts on the framework design. So this article serves as a design documents
+and welcomes any comments or suggestions. </p>
+<p>Based on my own experience, I often want to process some data or image at multiple stage. 
+Often, I want to change some parameters of certian algorithm to see how the outcomes are changed. 
+It becomes cumbersome and difficult to check after saving a lot of intermedia data, with file names like
+<code>para1_value1_para1_value2...</code>. </p>
+<p>I then thought about it, and decide to write a framework like a pipeline. for a multi-step process, 
+I can connect the processing function of each step and form a pipeline. I decided to use async module
+in python and if needed, use a generate as the input, so if I want to check the outcome of a multi-step process,
+I can simply write a generate to feed in the input repeatedly, and with the async feature, 
+I can change the parameters in realtime, and the outcome will change instantaneously or even real time as well. </p>
+<p>then the next thing is to make this pipeline easier to use, e.g.,
+I used decorator to claim funtions that can be inserted into the pipeline by a single line of code. 
+I made a pipeline class with implementations of <code>pop()</code> and <code>insert()</code> for adding and removing functions in the pipeline
+I also plan to add input and output check for each functions, so that when I connect two functions, 
+the framework will check if the output of the first matches the input of the second. I am thinking of 
+using a separate file like the header file in <code>c/c++</code> to describe the input and output of each function.</p>
+<p>for instance, I have two functions to connect:</p>
+<pre class="code literal-block"><span></span><span class="c1"># functions.py</span>
+<span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
+
+<span class="k">def</span> <span class="nf">f2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre>
+
+
+<p>and <code>x, y, a, b</code> are all integers, </p>
+<p>so I can have a separate file with same name but different extension:</p>
+<pre class="code literal-block"><span></span># functions.dsc
+f1 = {'input': [int, int], 'output': [int, int]}
+f2 = {'input': [int, int], 'output': [int]}
+</pre>
+
+
+<p>then when connect these two functions I can do:</p>
+<pre class="code literal-block"><span></span># pseudo code:
+if f1['output'] == f2['input']:
+    connect f1 and f2
+else:
+    raise FuncInputOutputMismatch()
+</pre>
+
+
+<p>for more complicated cases, the pipeline might have branches and inter-connections within branches. 
+it of course should be one way data flow. it further reminds me the frontend library from facebook that uses one way data flow: 
+the <a href="https://facebook.github.io/react/">React</a>. There is also a <a href="https://www.youtube.com/watch?v=xsSnOQynTHs">video</a> on this.</p>
+<p>then I did some research and found something called <a href="https://github.com/gaearon/react-hot-loader"><code>hot loading</code></a>
+it also reminds me the <a href="https://www.youtube.com/watch?v=PUv66718DII">talk</a> given by Bret Victor.
+it would be such a fantastic tool if some tool like this can be used for scientific data processing...</p>
+<p>So I just wonder if there is already something similar or at least some that i can borrow code/ideas from?
+or is this kind of design idea new? i tend to think it is not, I would like to read more to get a better understanding of
+such design before i go ahead coding the framework. </p>
+</div>
+                </div>
+            </article>
+</div>
+    
+        <ul class="pager postindexpager clearfix">
+<li class="next"><a href="index-1.html" rel="next">Older posts</a></li>
+        </ul>
+<script>var disqus_shortname="nikolademo";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
+            Contents © 2019         <a href="mailto:joe@demo.site">Your Name</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

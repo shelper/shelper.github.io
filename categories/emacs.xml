@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Demo Site (Posts about emacs)</title><link>https://example.com/</link><description></description><atom:link href="https://example.com/categories/emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:joe@demo.site"&gt;Your Name&lt;/a&gt; </copyright><lastBuildDate>Mon, 18 Feb 2019 02:26:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>elisp notes1</title><link>https://example.com/posts/elisp-notes1/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;h2&gt;quote for symbols:&lt;/h2&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;symbol&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;;; is equivelent to&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;set&lt;/span&gt; &lt;span class="ss"&gt;'symbol&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;the quote means; keep as it is, dont try to evaluate, so if no quote, the lisp processor will try to evaluate it, means the symbol (or the first element of the list) has to be evaluatable as either a function, or a defined variable&lt;/p&gt;
+&lt;h2&gt;let vs. let*:&lt;/h2&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;y&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nv"&gt;y&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+      &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;z&lt;/span&gt; &lt;span class="nv"&gt;y&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;list&lt;/span&gt; &lt;span class="nv"&gt;y&lt;/span&gt; &lt;span class="nv"&gt;z&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="err"&gt;⇒&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;y&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;let*&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nv"&gt;y&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+      &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;z&lt;/span&gt; &lt;span class="nv"&gt;y&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;list&lt;/span&gt; &lt;span class="nv"&gt;y&lt;/span&gt; &lt;span class="nv"&gt;z&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="err"&gt;⇒&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;code&gt;let*&lt;/code&gt; binds 1 to y immediately, while &lt;code&gt;let&lt;/code&gt; evaluate old y as 2, then &lt;code&gt;list&lt;/code&gt; binds 1 to the new y and pring it out &lt;/p&gt;
+&lt;h2&gt;colon &lt;code&gt;:&lt;/code&gt; and &lt;code&gt;#&lt;/code&gt;:&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;:&lt;/code&gt; is used for constant symboles, it is commonly used as attributes for faces 
+&lt;code&gt;#&lt;/code&gt; with quote, i.e., &lt;code&gt;#'&lt;/code&gt; is equal to &lt;code&gt;'&lt;/code&gt;, the only difference is with &lt;code&gt;#&lt;/code&gt;, it provides compiling information once the code is compiled.&lt;/p&gt;
+&lt;p&gt;TO BE CONTINUED&lt;/p&gt;&lt;/div&gt;</description><category>elisp</category><category>emacs</category><guid>https://example.com/posts/elisp-notes1/</guid><pubDate>Mon, 13 Jun 2016 10:15:28 GMT</pubDate></item><item><title>setup babun on windows for git and ssh</title><link>https://example.com/posts/setup-babun-on-windows-for-git-and-ssh/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;remove %HOME% (you can put it back later)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;download and install babun&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;setup ssh, if you already have ssh keys in the ~/.ssh, copy to the ~ of babun shell and do&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;eval `ssh-agent -s`
+ssh-add 
+&lt;/pre&gt;
+
+
+&lt;p&gt;if not, copy the ssh pub and private keys to ~/.ssh or use &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;ssh-add path/to/keys
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;if you are using proxy behind firewall you need:
+add proxy for babun and change the user -agent (dont know why, but works)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;export http_proxy=http://gateway.zscaler.net:80
+export https_proxy=$http_proxy
+export ftp_proxy=$http_proxy
+export no_proxy=localhost
+...
+export USER_AGENT="Chrome/47.0.2526.111"
+&lt;/pre&gt;
+
+
+&lt;p&gt;then you can use pact to install packages&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pact install connect-proxy
+&lt;/pre&gt;
+
+
+&lt;p&gt;if ssh need to go through proxy, add the line below to the ~/.ssh/config file&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;ProxyCommand connect-proxy.exe -H gateway.zscaler.net:80 %h %p
+&lt;/pre&gt;
+
+
+&lt;p&gt;then add the lines below to .gitconfig &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[http]&lt;/span&gt;
+    &lt;span class="na"&gt;proxy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;http://gateway.zscaler.net:80&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;However, this still cannot work for run &lt;code&gt;git push&lt;/code&gt; etc., in emacs shell.. No solution yet, a question of this is asked at &lt;a href="http://stackoverflow.com/questions/34009160/unable-to-use-git-push-in-emacs-shell-under-windows"&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>babun</category><category>emacs</category><category>git</category><category>ssh</category><category>windows</category><guid>https://example.com/posts/setup-babun-on-windows-for-git-and-ssh/</guid><pubDate>Thu, 09 Jun 2016 21:47:28 GMT</pubDate></item><item><title>using emacs for blog post using nikola and github pages</title><link>https://example.com/posts/using-emacs-for-blog-post-using-nikola-and-github-pages/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;so it is a long story, to make it short, here is how it works step by step:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;install nikola using &lt;code&gt;pip install nikola markdown webassets&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;init nikola site by &lt;code&gt;nikola init --quiet folder_name&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;change the configurations of the default to your configurations just like below diff file shows:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gd"&gt;--- default conf.py&lt;/span&gt;
+&lt;span class="gi"&gt;+++ customized conf.py&lt;/span&gt;
+&lt;span class="gu"&gt;@@ -17,16 +17,16 @@ import time&lt;/span&gt;
+
+
+# Data about this site
+&lt;span class="gd"&gt;-BLOG_AUTHOR = "Your Name"  # (translatable)&lt;/span&gt;
+&lt;span class="gd"&gt;-BLOG_TITLE = "Demo Site"  # (translatable)&lt;/span&gt;
+&lt;span class="gi"&gt;+BLOG_AUTHOR = "Shelper"  # (translatable)&lt;/span&gt;
+&lt;span class="gi"&gt;+BLOG_TITLE = "The Way As It Is"  # (translatable)&lt;/span&gt;
+# This is the main URL for your site. It will be used
+# in a prominent link. Don't forget the protocol (http/https)!
+&lt;span class="gd"&gt;-SITE_URL = "https://example.com/"&lt;/span&gt;
+&lt;span class="gi"&gt;+SITE_URL = "http://shelper.github.io/"&lt;/span&gt;
+# This is the URL where Nikola's output will be deployed.
+# If not set, defaults to SITE_URL
+# BASE_URL = "https://example.com/"
+&lt;span class="gd"&gt;-BLOG_EMAIL = "joe@demo.site"&lt;/span&gt;
+&lt;span class="gd"&gt;-BLOG_DESCRIPTION = "This is a demo site for Nikola."  # (translatable)&lt;/span&gt;
+&lt;span class="gi"&gt;+BLOG_EMAIL = "shelper@github"&lt;/span&gt;
+&lt;span class="gi"&gt;+BLOG_DESCRIPTION = "A Site for Meaningful Things"  # (translatable)&lt;/span&gt;
+
+# Nikola is multilingual!
+#
+&lt;span class="gu"&gt;@@ -171,11 +171,13 @@ POSTS = (&lt;/span&gt;
+    ("posts/*.rst", "posts", "post.tmpl"),
+    ("posts/*.txt", "posts", "post.tmpl"),
+    ("posts/*.html", "posts", "post.tmpl"),
+&lt;span class="gi"&gt;+    ("posts/*.md", "posts", "post.tmpl"),&lt;/span&gt;
+)
+PAGES = (
+    ("stories/*.rst", "stories", "story.tmpl"),
+    ("stories/*.txt", "stories", "story.tmpl"),
+    ("stories/*.html", "stories", "story.tmpl"),
+&lt;span class="gi"&gt;+    ("stories/*.md", "stories", "story.tmpl"),&lt;/span&gt;
+)
+
+
+&lt;span class="gu"&gt;@@ -546,11 +548,11 @@ REDIRECTIONS = []&lt;/span&gt;
+# https://getnikola.com/handbook.html#deploying-to-github
+# For user.github.io OR organization.github.io pages, the DEPLOY branch
+# MUST be 'master', and 'gh-pages' for other repositories.
+&lt;span class="gd"&gt;-# GITHUB_SOURCE_BRANCH = 'master'&lt;/span&gt;
+&lt;span class="gd"&gt;-# GITHUB_DEPLOY_BRANCH = 'gh-pages'&lt;/span&gt;
+&lt;span class="gi"&gt;+GITHUB_SOURCE_BRANCH = 'source'&lt;/span&gt;
+&lt;span class="gi"&gt;+GITHUB_DEPLOY_BRANCH = 'master'&lt;/span&gt;
+
+# The name of the remote where you wish to push to, using github_deploy.
+&lt;span class="gd"&gt;-# GITHUB_REMOTE_NAME = 'origin'&lt;/span&gt;
+&lt;span class="gi"&gt;+GITHUB_REMOTE_NAME = 'origin'&lt;/span&gt;
+
+# Whether or not github_deploy should commit to the source branch automatically
+# before deploying.
+&lt;span class="gu"&gt;@@ -829,7 +831,7 @@ COMMENT_SYSTEM = "disqus"&lt;/span&gt;
+# depends on what comment system you use. The default is
+# "nikolademo" which is a test account for Disqus. More information
+# is in the manual.
+&lt;span class="gd"&gt;-COMMENT_SYSTEM_ID = "nikolademo"&lt;/span&gt;
+&lt;span class="gi"&gt;+COMMENT_SYSTEM_ID = "shelper"&lt;/span&gt;
+
+# Enable annotations using annotateit.org?
+# If set to False, you can still enable them for individual posts and pages
+&lt;/pre&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;follow nikola handbook on how to use github pages &lt;a href="https://getnikola.com/handbook.html#id44"&gt;deploy to github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;setup emacs to edit your post and here is my functions:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;my-blog-repo&lt;/span&gt; &lt;span class="s"&gt;"~/develop/shelper.github.io"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;defun&lt;/span&gt; &lt;span class="nv"&gt;my-new-blog-post&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;title&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="s"&gt;"new blog post to shelper.github.io"&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;interactive&lt;/span&gt; &lt;span class="s"&gt;"sEnter post title: "&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;cd&lt;/span&gt; &lt;span class="nv"&gt;my-blog-repo&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;new-post-cmd&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;concat&lt;/span&gt; &lt;span class="s"&gt;"nikola new_post -f markdown -t "&lt;/span&gt; &lt;span class="s"&gt;"\""&lt;/span&gt; &lt;span class="nv"&gt;title&lt;/span&gt; &lt;span class="s"&gt;"\""&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;shell-command&lt;/span&gt; &lt;span class="nv"&gt;new-post-cmd&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;new-post-file&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;concat&lt;/span&gt; &lt;span class="nv"&gt;my-blog-repo&lt;/span&gt; 
+                          &lt;span class="s"&gt;"/posts/"&lt;/span&gt;
+                          &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;replace-regexp-in-string&lt;/span&gt; &lt;span class="s"&gt;" "&lt;/span&gt; &lt;span class="s"&gt;"-"&lt;/span&gt; &lt;span class="nv"&gt;title&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                          &lt;span class="s"&gt;".md"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;find-file&lt;/span&gt; &lt;span class="nv"&gt;new-post-file&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;global-set-key&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;kbd&lt;/span&gt; &lt;span class="s"&gt;"C-c C-p"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ss"&gt;'my-new-blog-post&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;realtime .md file html preview using &lt;a href="https://github.com/mola-T/flymd"&gt;flymd&lt;/a&gt;, I setup the flymd as below:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;;;; realtime markdown rendering&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;defun&lt;/span&gt; &lt;span class="nv"&gt;my-flymd-browser-function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;string-equal&lt;/span&gt; &lt;span class="nv"&gt;system-type&lt;/span&gt; &lt;span class="s"&gt;"windows-nt"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+      &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;url&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;concat&lt;/span&gt; &lt;span class="s"&gt;"file:/"&lt;/span&gt; &lt;span class="nv"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;string-equal&lt;/span&gt; &lt;span class="nv"&gt;system-type&lt;/span&gt; &lt;span class="s"&gt;"darwin"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+      &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nv"&gt;process-environment&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;browse-url-process-environment&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+        &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;apply&lt;/span&gt; &lt;span class="ss"&gt;'start-process&lt;/span&gt;
+                &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;concat&lt;/span&gt; &lt;span class="s"&gt;"firefox "&lt;/span&gt; &lt;span class="nv"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="no"&gt;nil&lt;/span&gt;
+                &lt;span class="s"&gt;"/usr/bin/open"&lt;/span&gt;
+                &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;list&lt;/span&gt; &lt;span class="s"&gt;"-a"&lt;/span&gt; &lt;span class="s"&gt;"firefox"&lt;/span&gt; &lt;span class="nv"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nv"&gt;browse-url-browser-function&lt;/span&gt; &lt;span class="ss"&gt;'browse-url-firefox&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+      &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;browse-url&lt;/span&gt; &lt;span class="nv"&gt;url&lt;/span&gt;&lt;span class="p"&gt;))))&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;flymd-browser-open-function&lt;/span&gt; &lt;span class="ss"&gt;'my-flymd-browser-function&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;add-hook&lt;/span&gt; &lt;span class="ss"&gt;'markdown-mode-hook&lt;/span&gt; &lt;span class="ss"&gt;'flymd-flyit&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;another thing that needs your attention is that you cannot indent code blocks, so code blocks have to start with no heading spaces or TABs&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://example.com/posts/using-emacs-for-blog-post-using-nikola-and-github-pages/</guid><pubDate>Mon, 23 May 2016 16:06:05 GMT</pubDate></item></channel></rss>

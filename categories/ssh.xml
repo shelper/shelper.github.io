@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Demo Site (Posts about ssh)</title><link>https://example.com/</link><description></description><atom:link href="https://example.com/categories/ssh.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:joe@demo.site"&gt;Your Name&lt;/a&gt; </copyright><lastBuildDate>Mon, 18 Feb 2019 02:26:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>setup babun on windows for git and ssh</title><link>https://example.com/posts/setup-babun-on-windows-for-git-and-ssh/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;remove %HOME% (you can put it back later)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;download and install babun&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;setup ssh, if you already have ssh keys in the ~/.ssh, copy to the ~ of babun shell and do&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;eval `ssh-agent -s`
+ssh-add 
+&lt;/pre&gt;
+
+
+&lt;p&gt;if not, copy the ssh pub and private keys to ~/.ssh or use &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;ssh-add path/to/keys
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;if you are using proxy behind firewall you need:
+add proxy for babun and change the user -agent (dont know why, but works)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;export http_proxy=http://gateway.zscaler.net:80
+export https_proxy=$http_proxy
+export ftp_proxy=$http_proxy
+export no_proxy=localhost
+...
+export USER_AGENT="Chrome/47.0.2526.111"
+&lt;/pre&gt;
+
+
+&lt;p&gt;then you can use pact to install packages&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pact install connect-proxy
+&lt;/pre&gt;
+
+
+&lt;p&gt;if ssh need to go through proxy, add the line below to the ~/.ssh/config file&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;ProxyCommand connect-proxy.exe -H gateway.zscaler.net:80 %h %p
+&lt;/pre&gt;
+
+
+&lt;p&gt;then add the lines below to .gitconfig &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[http]&lt;/span&gt;
+    &lt;span class="na"&gt;proxy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;http://gateway.zscaler.net:80&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;However, this still cannot work for run &lt;code&gt;git push&lt;/code&gt; etc., in emacs shell.. No solution yet, a question of this is asked at &lt;a href="http://stackoverflow.com/questions/34009160/unable-to-use-git-push-in-emacs-shell-under-windows"&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>babun</category><category>emacs</category><category>git</category><category>ssh</category><category>windows</category><guid>https://example.com/posts/setup-babun-on-windows-for-git-and-ssh/</guid><pubDate>Thu, 09 Jun 2016 21:47:28 GMT</pubDate></item></channel></rss>

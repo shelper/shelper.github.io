@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Demo Site (Posts about programming)</title><link>https://example.com/</link><description></description><atom:link href="https://example.com/categories/cat_programming.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:joe@demo.site"&gt;Your Name&lt;/a&gt; </copyright><lastBuildDate>Mon, 18 Feb 2019 02:26:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>set up nikola for markdown</title><link>https://example.com/posts/set-up-nikola-for-markdown/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;to use nikola you need to install it with some other packages as well
+&lt;code&gt;pip instal nikola markdown ws4py watchdog&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;then to enable markdown, you need to change the &lt;code&gt;conf.py&lt;/code&gt; variable &lt;code&gt;POSTS&lt;/code&gt; and &lt;code&gt;PAGES&lt;/code&gt;&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;POSTS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.md"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.rst"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.txt"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.html"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;PAGES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"pages/*.md"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"pages"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"story.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"pages/*.rst"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"pages"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"story.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"pages/*.txt"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"pages"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"story.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"pages/*.html"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"pages"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"story.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;you may also need to change the github settings for easy github deploy&lt;/p&gt;
+&lt;p&gt;Then new post can be added using markdown format by
+&lt;code&gt;nikola new_post -f markdown&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;</description><category>nikola</category><guid>https://example.com/posts/set-up-nikola-for-markdown/</guid><pubDate>Fri, 10 Feb 2017 02:42:03 GMT</pubDate></item><item><title>elisp notes1</title><link>https://example.com/posts/elisp-notes1/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;h2&gt;quote for symbols:&lt;/h2&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;symbol&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;;; is equivelent to&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;set&lt;/span&gt; &lt;span class="ss"&gt;'symbol&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;the quote means; keep as it is, dont try to evaluate, so if no quote, the lisp processor will try to evaluate it, means the symbol (or the first element of the list) has to be evaluatable as either a function, or a defined variable&lt;/p&gt;
+&lt;h2&gt;let vs. let*:&lt;/h2&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;y&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nv"&gt;y&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+      &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;z&lt;/span&gt; &lt;span class="nv"&gt;y&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;list&lt;/span&gt; &lt;span class="nv"&gt;y&lt;/span&gt; &lt;span class="nv"&gt;z&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="err"&gt;⇒&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;y&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;let*&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nv"&gt;y&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+      &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;z&lt;/span&gt; &lt;span class="nv"&gt;y&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;list&lt;/span&gt; &lt;span class="nv"&gt;y&lt;/span&gt; &lt;span class="nv"&gt;z&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="err"&gt;⇒&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;code&gt;let*&lt;/code&gt; binds 1 to y immediately, while &lt;code&gt;let&lt;/code&gt; evaluate old y as 2, then &lt;code&gt;list&lt;/code&gt; binds 1 to the new y and pring it out &lt;/p&gt;
+&lt;h2&gt;colon &lt;code&gt;:&lt;/code&gt; and &lt;code&gt;#&lt;/code&gt;:&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;:&lt;/code&gt; is used for constant symboles, it is commonly used as attributes for faces 
+&lt;code&gt;#&lt;/code&gt; with quote, i.e., &lt;code&gt;#'&lt;/code&gt; is equal to &lt;code&gt;'&lt;/code&gt;, the only difference is with &lt;code&gt;#&lt;/code&gt;, it provides compiling information once the code is compiled.&lt;/p&gt;
+&lt;p&gt;TO BE CONTINUED&lt;/p&gt;&lt;/div&gt;</description><category>elisp</category><category>emacs</category><guid>https://example.com/posts/elisp-notes1/</guid><pubDate>Mon, 13 Jun 2016 10:15:28 GMT</pubDate></item><item><title>how to start python project on github</title><link>https://example.com/posts/how-to-start-python-project-on-github/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;steps are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;install cookiecutter: &lt;code&gt;python -m pip install cookiecutter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;run cookiecutter to initiate a project: &lt;code&gt;cookiecutter('https://github.com/audreyr/cookiecutter-pypackage.git')&lt;/code&gt; under the project folder&lt;/li&gt;
+&lt;li&gt;on github, start a new repo &lt;code&gt;python_prj&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;run &lt;code&gt;git init&lt;/code&gt; in the local project folder and commit&lt;/li&gt;
+&lt;li&gt;run &lt;code&gt;git remote add origin git@github.com:username/projectname.git&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;using git@git requires to setup the ssh key pair, this can be found by easily google it or under FAQ of github&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;run &lt;code&gt;git push -u origin master&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;that is it, enjoy.&lt;/p&gt;
+&lt;p&gt;if you use pycharm it will add a folder called .idea under the root folder, this should also add to git repor if needed.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>github</category><category>python</category><guid>https://example.com/posts/how-to-start-python-project-on-github/</guid><pubDate>Mon, 13 Jun 2016 10:06:28 GMT</pubDate></item><item><title>matplotlib backend issue</title><link>https://example.com/posts/matplotlib-backend-issue/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;using different backends for matplotlib might cause some unexpected issues:
+today, i am trying to run a program that uses the following function: &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;figManager&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_current_fig_manager&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;figManager&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;showMaximized&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;however, i found when using the backend of Tk, it gives error, saying get_current_fig_manager is not available, so when i switch to qt4egg, everything works well. &lt;/p&gt;
+&lt;p&gt;how to switch the backend for matplotlib? first find the configure directory for matplotlib on your computer&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_configdir&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;then find/generate a file named matplotlibrc, add line: &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;backend&lt;/span&gt;      &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;qt4agg&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;reference &lt;a href="http://matplotlib.org/users/customizing.html"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;another issue with using qt4 as backend is below from &lt;a href="http://stackoverflow.com/questions/33984798/matplotlib-using-qt4-backend-has-issue-with-cached-renderer"&gt;stackoverflow&lt;/a&gt;
+I was trying to use matplotlib to replot an image in a faster way, so instead of replotting everything, I use set_data method of the AxesImage class as below:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
+
+&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;img&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;imshow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rand&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="n"&gt;img&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_data&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rand&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;draw_artist&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;patch&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;draw_artist&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;img&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;canvas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;canvas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;flush_events&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;I encountered this error:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Traceback (most recent call last):  ...
+    ax.draw_artist(ax.patch)   File "/Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/matplotlib/axes/_base.py",
+line 2319, in draw_artist
+    raise AttributeError(msg) AttributeError: draw_artist can only be used after an initial draw which caches the render&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;However, if I run the script line by line in python shell (IPython), it works and nothing is wrong. So what is the mystery behind this cached renderer? &lt;/p&gt;
+&lt;p&gt;EDIT: add a line &lt;code&gt;fig.canvas.draw()&lt;/code&gt; solves the problem, now the remaining question is why running it line by line in IPython shell does not cause the same error?&lt;/p&gt;&lt;/div&gt;</description><category>matplotlib</category><category>python</category><guid>https://example.com/posts/matplotlib-backend-issue/</guid><pubDate>Mon, 13 Jun 2016 10:06:28 GMT</pubDate></item><item><title>python module and packaging</title><link>https://example.com/posts/python-module-and-packaging/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;several things:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;when using &lt;code&gt;setuptools.find_packages&lt;/code&gt;, only packages with &lt;code&gt;__init__.py&lt;/code&gt; in its folder will be found&lt;/li&gt;
+&lt;li&gt;only modules imported in the &lt;code&gt;__init__.py&lt;/code&gt; will be indexed, means the modules will be added into the dir(module)
+   and accessable by .module_name&lt;/li&gt;
+&lt;li&gt;for python 3, if one modules(py file) in the same folder of another module and relies on that module, 
+  you need to put &lt;code&gt;from . import module&lt;/code&gt; at the top&lt;/li&gt;
+&lt;li&gt;package name is specified in the setup.py, while the module name can be different from the package name. 
+  e.g. if you have a structure package/setup.py and  package/module/&lt;code&gt;__init__.py&lt;/code&gt;, and in setup.py you set package name to be &lt;code&gt;package&lt;/code&gt; then after you install that, you &lt;code&gt;import module&lt;/code&gt; 
+  rather than &lt;code&gt;import package&lt;/code&gt;, it is better to keep the package and module name the same.&lt;/li&gt;
+&lt;li&gt;try to use template with cookiecutter to make your life easier, and at the same time, modify the &lt;code&gt;__init__.py&lt;/code&gt; when needed&lt;/li&gt;
+&lt;li&gt;exclude the test using &lt;code&gt;packages=setuptools.find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"])&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;to include upper level modules, e.g., dir1/dir2/module2.py wants to include dir1/module1.py, do &lt;code&gt;from .. import module1&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;then use &lt;code&gt;python setup.py sdist&lt;/code&gt; to generate the zip and egg file and then use &lt;code&gt;python setup.py install&lt;/code&gt; to install the package&lt;/p&gt;&lt;/div&gt;</description><category>python</category><guid>https://example.com/posts/python-module-and-packaging/</guid><pubDate>Mon, 13 Jun 2016 10:06:28 GMT</pubDate></item><item><title>install pyqt on mac for matplotlib</title><link>https://example.com/posts/install-pyqt-on-mac-for-matplotlib/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;so i was trying to use matplotlib for fast image ploting and updating, and I found a post &lt;a href="http://bastibe.de/2013-05-30-speeding-up-matplotlib.html"&gt;here&lt;/a&gt;. 
+the matplotlib uses different backend to render the images, and due to the differences between different backend, some functions are only available for specific backend, for instance, the &lt;code&gt;fig.canvas.update()&lt;/code&gt; is a fast way to render new images to the axes, but is only availabe to PyQt4.&lt;/p&gt;
+&lt;p&gt;so i was trying to install pyqt4 using homebrew, it failed by saying the osx version is pre-released version and is not supported, and arises 2 errors during make process.&lt;/p&gt;
+&lt;p&gt;this is due to the cached info for homebrew is not up-to-date, so you need to run brew update. &lt;/p&gt;
+&lt;p&gt;however, this also arises an error of "not writable  directory: /usr/local, so you need to &lt;code&gt;sudo chown - $user:admin /usr/local&lt;/code&gt;, then update shall work, then run &lt;code&gt;brew install pyqt (add --with-python3 if need to support python3.x)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;now the remaining problem is the pyqt package cannot be imported in python shell because homebrew gives the below message:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Python modules have been installed and Homebrew's site-packages is not
+in your Python sys.path, so you will not be able to import the modules
+this formula installed. If you plan to develop with these modules,
+please run:
+echo 'import site; site.addsitedir("/usr/local/lib/python2.7/site-packages")'  &amp;gt;&amp;gt; /path/to/your/python/folder/site-packages/homebrew.pth&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;you may run &lt;code&gt;import site; site.getsitepackages()&lt;/code&gt; to find out the path to your python site-packages folder, 
+of course, you need to change python2.7 to python3.x for python3 support.&lt;/p&gt;
+&lt;p&gt;Another thing is use &lt;code&gt;python3 -m pip&lt;/code&gt; instead of &lt;code&gt;pip&lt;/code&gt; so to ensure the package will be installed in the default site-packages folder, actually &lt;code&gt;python3 -m pip install pyside&lt;/code&gt; successfully installed pyside for python3&lt;/p&gt;
+&lt;p&gt;however, i found pyside 1.2.4 does not work due to the @rpath issue, cannot find a solution for it. so i installed pyside 1.2.2 and downloaded [https://raw.githubusercontent.com/PySide/pyside-setup/1.2.2/pyside_postinstall.py], after running this script, the pyside is succesfully installed and can be imported&lt;/p&gt;&lt;/div&gt;</description><category>matplotlib</category><category>pyqt</category><category>python</category><guid>https://example.com/posts/install-pyqt-on-mac-for-matplotlib/</guid><pubDate>Mon, 13 Jun 2016 10:05:28 GMT</pubDate></item><item><title>setup babun on windows for git and ssh</title><link>https://example.com/posts/setup-babun-on-windows-for-git-and-ssh/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;remove %HOME% (you can put it back later)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;download and install babun&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;setup ssh, if you already have ssh keys in the ~/.ssh, copy to the ~ of babun shell and do&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;eval `ssh-agent -s`
+ssh-add 
+&lt;/pre&gt;
+
+
+&lt;p&gt;if not, copy the ssh pub and private keys to ~/.ssh or use &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;ssh-add path/to/keys
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;if you are using proxy behind firewall you need:
+add proxy for babun and change the user -agent (dont know why, but works)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;export http_proxy=http://gateway.zscaler.net:80
+export https_proxy=$http_proxy
+export ftp_proxy=$http_proxy
+export no_proxy=localhost
+...
+export USER_AGENT="Chrome/47.0.2526.111"
+&lt;/pre&gt;
+
+
+&lt;p&gt;then you can use pact to install packages&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pact install connect-proxy
+&lt;/pre&gt;
+
+
+&lt;p&gt;if ssh need to go through proxy, add the line below to the ~/.ssh/config file&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;ProxyCommand connect-proxy.exe -H gateway.zscaler.net:80 %h %p
+&lt;/pre&gt;
+
+
+&lt;p&gt;then add the lines below to .gitconfig &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[http]&lt;/span&gt;
+    &lt;span class="na"&gt;proxy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;http://gateway.zscaler.net:80&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;However, this still cannot work for run &lt;code&gt;git push&lt;/code&gt; etc., in emacs shell.. No solution yet, a question of this is asked at &lt;a href="http://stackoverflow.com/questions/34009160/unable-to-use-git-push-in-emacs-shell-under-windows"&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>babun</category><category>emacs</category><category>git</category><category>ssh</category><category>windows</category><guid>https://example.com/posts/setup-babun-on-windows-for-git-and-ssh/</guid><pubDate>Thu, 09 Jun 2016 21:47:28 GMT</pubDate></item><item><title>ipython and pip issues</title><link>https://example.com/posts/ipython-and-pip-issues/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;so I am trying to use ipython as my python shell under emacs, since i started using python in emacs, i always encounter different issues, again and again, so i will use this post as a collection of issues and solutions. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;issue1:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;ipython shell imports quite some packages/modules/functions and as you may know, &lt;code&gt;import&lt;/code&gt; searches current folder as well as the subfolders of the registered module, if there are file with the same name under the current folder, it overrides the file in the registered module, apparently, this causes problems of "import error, could not find ..."&lt;/p&gt;
+&lt;p&gt;so,watch out how you name your files, and if it does happen, consider to rename or remove the files&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;issue2:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;pip install, i once encountered that pip keeps reinstall packages, without aware of the package is already installed. 
+the issue is in the pip config file (usually in &lt;code&gt;~/pip/pip.ini&lt;/code&gt;) i have following line&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;ignore-installed = true
+&lt;/pre&gt;
+
+
+&lt;p&gt;apparently, that is what this for, so remove this line solves the problem&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;issue3:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;how to setup proxy when you are behind a corporation firewall?
+goto the config file again, and put &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[global]&lt;/span&gt;
+&lt;span class="na"&gt;proxy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;url:port&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;this works for many other python based packages/software as well&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;issue4&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;when using emacs, calling &lt;code&gt;git&lt;/code&gt; using shell-command seems not working well, you might want to use magit instead.&lt;/p&gt;
+&lt;p&gt;PS: I will keep updating this post if I find new issues and solutions. &lt;/p&gt;&lt;/div&gt;</description><category>ipython</category><category>python</category><guid>https://example.com/posts/ipython-and-pip-issues/</guid><pubDate>Thu, 09 Jun 2016 18:31:41 GMT</pubDate></item><item><title>design of a framework for scientific data processing</title><link>https://example.com/posts/design-of-a-framework-for-scientific-data-processing/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;I have beening thinking of building such a framework for a while, I started a little project called &lt;a href="http://github.com/shelper/pypeline"&gt;pypeline&lt;/a&gt;. The code on github is not up-to-date.
+And I have some new thoughts on the framework design. So this article serves as a design documents
+and welcomes any comments or suggestions. &lt;/p&gt;
+&lt;p&gt;Based on my own experience, I often want to process some data or image at multiple stage. 
+Often, I want to change some parameters of certian algorithm to see how the outcomes are changed. 
+It becomes cumbersome and difficult to check after saving a lot of intermedia data, with file names like
+&lt;code&gt;para1_value1_para1_value2...&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;I then thought about it, and decide to write a framework like a pipeline. for a multi-step process, 
+I can connect the processing function of each step and form a pipeline. I decided to use async module
+in python and if needed, use a generate as the input, so if I want to check the outcome of a multi-step process,
+I can simply write a generate to feed in the input repeatedly, and with the async feature, 
+I can change the parameters in realtime, and the outcome will change instantaneously or even real time as well. &lt;/p&gt;
+&lt;p&gt;then the next thing is to make this pipeline easier to use, e.g.,
+I used decorator to claim funtions that can be inserted into the pipeline by a single line of code. 
+I made a pipeline class with implementations of &lt;code&gt;pop()&lt;/code&gt; and &lt;code&gt;insert()&lt;/code&gt; for adding and removing functions in the pipeline
+I also plan to add input and output check for each functions, so that when I connect two functions, 
+the framework will check if the output of the first matches the input of the second. I am thinking of 
+using a separate file like the header file in &lt;code&gt;c/c++&lt;/code&gt; to describe the input and output of each function.&lt;/p&gt;
+&lt;p&gt;for instance, I have two functions to connect:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# functions.py&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f1&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f2&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;and &lt;code&gt;x, y, a, b&lt;/code&gt; are all integers, &lt;/p&gt;
+&lt;p&gt;so I can have a separate file with same name but different extension:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;# functions.dsc
+f1 = {'input': [int, int], 'output': [int, int]}
+f2 = {'input': [int, int], 'output': [int]}
+&lt;/pre&gt;
+
+
+&lt;p&gt;then when connect these two functions I can do:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;# pseudo code:
+if f1['output'] == f2['input']:
+    connect f1 and f2
+else:
+    raise FuncInputOutputMismatch()
+&lt;/pre&gt;
+
+
+&lt;p&gt;for more complicated cases, the pipeline might have branches and inter-connections within branches. 
+it of course should be one way data flow. it further reminds me the frontend library from facebook that uses one way data flow: 
+the &lt;a href="https://facebook.github.io/react/"&gt;React&lt;/a&gt;. There is also a &lt;a href="https://www.youtube.com/watch?v=xsSnOQynTHs"&gt;video&lt;/a&gt; on this.&lt;/p&gt;
+&lt;p&gt;then I did some research and found something called &lt;a href="https://github.com/gaearon/react-hot-loader"&gt;&lt;code&gt;hot loading&lt;/code&gt;&lt;/a&gt;
+it also reminds me the &lt;a href="https://www.youtube.com/watch?v=PUv66718DII"&gt;talk&lt;/a&gt; given by Bret Victor.
+it would be such a fantastic tool if some tool like this can be used for scientific data processing...&lt;/p&gt;
+&lt;p&gt;So I just wonder if there is already something similar or at least some that i can borrow code/ideas from?
+or is this kind of design idea new? i tend to think it is not, I would like to read more to get a better understanding of
+such design before i go ahead coding the framework. &lt;/p&gt;&lt;/div&gt;</description><category>javascript</category><category>python</category><category>research</category><guid>https://example.com/posts/design-of-a-framework-for-scientific-data-processing/</guid><pubDate>Sun, 29 May 2016 01:25:39 GMT</pubDate></item><item><title>using emacs for blog post using nikola and github pages</title><link>https://example.com/posts/using-emacs-for-blog-post-using-nikola-and-github-pages/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;so it is a long story, to make it short, here is how it works step by step:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;install nikola using &lt;code&gt;pip install nikola markdown webassets&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;init nikola site by &lt;code&gt;nikola init --quiet folder_name&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;change the configurations of the default to your configurations just like below diff file shows:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gd"&gt;--- default conf.py&lt;/span&gt;
+&lt;span class="gi"&gt;+++ customized conf.py&lt;/span&gt;
+&lt;span class="gu"&gt;@@ -17,16 +17,16 @@ import time&lt;/span&gt;
+
+
+# Data about this site
+&lt;span class="gd"&gt;-BLOG_AUTHOR = "Your Name"  # (translatable)&lt;/span&gt;
+&lt;span class="gd"&gt;-BLOG_TITLE = "Demo Site"  # (translatable)&lt;/span&gt;
+&lt;span class="gi"&gt;+BLOG_AUTHOR = "Shelper"  # (translatable)&lt;/span&gt;
+&lt;span class="gi"&gt;+BLOG_TITLE = "The Way As It Is"  # (translatable)&lt;/span&gt;
+# This is the main URL for your site. It will be used
+# in a prominent link. Don't forget the protocol (http/https)!
+&lt;span class="gd"&gt;-SITE_URL = "https://example.com/"&lt;/span&gt;
+&lt;span class="gi"&gt;+SITE_URL = "http://shelper.github.io/"&lt;/span&gt;
+# This is the URL where Nikola's output will be deployed.
+# If not set, defaults to SITE_URL
+# BASE_URL = "https://example.com/"
+&lt;span class="gd"&gt;-BLOG_EMAIL = "joe@demo.site"&lt;/span&gt;
+&lt;span class="gd"&gt;-BLOG_DESCRIPTION = "This is a demo site for Nikola."  # (translatable)&lt;/span&gt;
+&lt;span class="gi"&gt;+BLOG_EMAIL = "shelper@github"&lt;/span&gt;
+&lt;span class="gi"&gt;+BLOG_DESCRIPTION = "A Site for Meaningful Things"  # (translatable)&lt;/span&gt;
+
+# Nikola is multilingual!
+#
+&lt;span class="gu"&gt;@@ -171,11 +171,13 @@ POSTS = (&lt;/span&gt;
+    ("posts/*.rst", "posts", "post.tmpl"),
+    ("posts/*.txt", "posts", "post.tmpl"),
+    ("posts/*.html", "posts", "post.tmpl"),
+&lt;span class="gi"&gt;+    ("posts/*.md", "posts", "post.tmpl"),&lt;/span&gt;
+)
+PAGES = (
+    ("stories/*.rst", "stories", "story.tmpl"),
+    ("stories/*.txt", "stories", "story.tmpl"),
+    ("stories/*.html", "stories", "story.tmpl"),
+&lt;span class="gi"&gt;+    ("stories/*.md", "stories", "story.tmpl"),&lt;/span&gt;
+)
+
+
+&lt;span class="gu"&gt;@@ -546,11 +548,11 @@ REDIRECTIONS = []&lt;/span&gt;
+# https://getnikola.com/handbook.html#deploying-to-github
+# For user.github.io OR organization.github.io pages, the DEPLOY branch
+# MUST be 'master', and 'gh-pages' for other repositories.
+&lt;span class="gd"&gt;-# GITHUB_SOURCE_BRANCH = 'master'&lt;/span&gt;
+&lt;span class="gd"&gt;-# GITHUB_DEPLOY_BRANCH = 'gh-pages'&lt;/span&gt;
+&lt;span class="gi"&gt;+GITHUB_SOURCE_BRANCH = 'source'&lt;/span&gt;
+&lt;span class="gi"&gt;+GITHUB_DEPLOY_BRANCH = 'master'&lt;/span&gt;
+
+# The name of the remote where you wish to push to, using github_deploy.
+&lt;span class="gd"&gt;-# GITHUB_REMOTE_NAME = 'origin'&lt;/span&gt;
+&lt;span class="gi"&gt;+GITHUB_REMOTE_NAME = 'origin'&lt;/span&gt;
+
+# Whether or not github_deploy should commit to the source branch automatically
+# before deploying.
+&lt;span class="gu"&gt;@@ -829,7 +831,7 @@ COMMENT_SYSTEM = "disqus"&lt;/span&gt;
+# depends on what comment system you use. The default is
+# "nikolademo" which is a test account for Disqus. More information
+# is in the manual.
+&lt;span class="gd"&gt;-COMMENT_SYSTEM_ID = "nikolademo"&lt;/span&gt;
+&lt;span class="gi"&gt;+COMMENT_SYSTEM_ID = "shelper"&lt;/span&gt;
+
+# Enable annotations using annotateit.org?
+# If set to False, you can still enable them for individual posts and pages
+&lt;/pre&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;follow nikola handbook on how to use github pages &lt;a href="https://getnikola.com/handbook.html#id44"&gt;deploy to github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;setup emacs to edit your post and here is my functions:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;my-blog-repo&lt;/span&gt; &lt;span class="s"&gt;"~/develop/shelper.github.io"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;defun&lt;/span&gt; &lt;span class="nv"&gt;my-new-blog-post&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;title&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="s"&gt;"new blog post to shelper.github.io"&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;interactive&lt;/span&gt; &lt;span class="s"&gt;"sEnter post title: "&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;cd&lt;/span&gt; &lt;span class="nv"&gt;my-blog-repo&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;new-post-cmd&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;concat&lt;/span&gt; &lt;span class="s"&gt;"nikola new_post -f markdown -t "&lt;/span&gt; &lt;span class="s"&gt;"\""&lt;/span&gt; &lt;span class="nv"&gt;title&lt;/span&gt; &lt;span class="s"&gt;"\""&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;shell-command&lt;/span&gt; &lt;span class="nv"&gt;new-post-cmd&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;new-post-file&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;concat&lt;/span&gt; &lt;span class="nv"&gt;my-blog-repo&lt;/span&gt; 
+                          &lt;span class="s"&gt;"/posts/"&lt;/span&gt;
+                          &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;replace-regexp-in-string&lt;/span&gt; &lt;span class="s"&gt;" "&lt;/span&gt; &lt;span class="s"&gt;"-"&lt;/span&gt; &lt;span class="nv"&gt;title&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                          &lt;span class="s"&gt;".md"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;find-file&lt;/span&gt; &lt;span class="nv"&gt;new-post-file&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;global-set-key&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;kbd&lt;/span&gt; &lt;span class="s"&gt;"C-c C-p"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ss"&gt;'my-new-blog-post&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;realtime .md file html preview using &lt;a href="https://github.com/mola-T/flymd"&gt;flymd&lt;/a&gt;, I setup the flymd as below:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;;;; realtime markdown rendering&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;defun&lt;/span&gt; &lt;span class="nv"&gt;my-flymd-browser-function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;string-equal&lt;/span&gt; &lt;span class="nv"&gt;system-type&lt;/span&gt; &lt;span class="s"&gt;"windows-nt"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+      &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;url&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;concat&lt;/span&gt; &lt;span class="s"&gt;"file:/"&lt;/span&gt; &lt;span class="nv"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;string-equal&lt;/span&gt; &lt;span class="nv"&gt;system-type&lt;/span&gt; &lt;span class="s"&gt;"darwin"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+      &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nv"&gt;process-environment&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;browse-url-process-environment&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+        &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;apply&lt;/span&gt; &lt;span class="ss"&gt;'start-process&lt;/span&gt;
+                &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;concat&lt;/span&gt; &lt;span class="s"&gt;"firefox "&lt;/span&gt; &lt;span class="nv"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="no"&gt;nil&lt;/span&gt;
+                &lt;span class="s"&gt;"/usr/bin/open"&lt;/span&gt;
+                &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;list&lt;/span&gt; &lt;span class="s"&gt;"-a"&lt;/span&gt; &lt;span class="s"&gt;"firefox"&lt;/span&gt; &lt;span class="nv"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nv"&gt;browse-url-browser-function&lt;/span&gt; &lt;span class="ss"&gt;'browse-url-firefox&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+      &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;browse-url&lt;/span&gt; &lt;span class="nv"&gt;url&lt;/span&gt;&lt;span class="p"&gt;))))&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;flymd-browser-open-function&lt;/span&gt; &lt;span class="ss"&gt;'my-flymd-browser-function&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;add-hook&lt;/span&gt; &lt;span class="ss"&gt;'markdown-mode-hook&lt;/span&gt; &lt;span class="ss"&gt;'flymd-flyit&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;another thing that needs your attention is that you cannot indent code blocks, so code blocks have to start with no heading spaces or TABs&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://example.com/posts/using-emacs-for-blog-post-using-nikola-and-github-pages/</guid><pubDate>Mon, 23 May 2016 16:06:05 GMT</pubDate></item></channel></rss>

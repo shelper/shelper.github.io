@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Demo Site (Posts about research)</title><link>https://example.com/</link><description></description><atom:link href="https://example.com/categories/research.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:joe@demo.site"&gt;Your Name&lt;/a&gt; </copyright><lastBuildDate>Mon, 18 Feb 2019 02:26:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>design of a framework for scientific data processing</title><link>https://example.com/posts/design-of-a-framework-for-scientific-data-processing/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;I have beening thinking of building such a framework for a while, I started a little project called &lt;a href="http://github.com/shelper/pypeline"&gt;pypeline&lt;/a&gt;. The code on github is not up-to-date.
+And I have some new thoughts on the framework design. So this article serves as a design documents
+and welcomes any comments or suggestions. &lt;/p&gt;
+&lt;p&gt;Based on my own experience, I often want to process some data or image at multiple stage. 
+Often, I want to change some parameters of certian algorithm to see how the outcomes are changed. 
+It becomes cumbersome and difficult to check after saving a lot of intermedia data, with file names like
+&lt;code&gt;para1_value1_para1_value2...&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;I then thought about it, and decide to write a framework like a pipeline. for a multi-step process, 
+I can connect the processing function of each step and form a pipeline. I decided to use async module
+in python and if needed, use a generate as the input, so if I want to check the outcome of a multi-step process,
+I can simply write a generate to feed in the input repeatedly, and with the async feature, 
+I can change the parameters in realtime, and the outcome will change instantaneously or even real time as well. &lt;/p&gt;
+&lt;p&gt;then the next thing is to make this pipeline easier to use, e.g.,
+I used decorator to claim funtions that can be inserted into the pipeline by a single line of code. 
+I made a pipeline class with implementations of &lt;code&gt;pop()&lt;/code&gt; and &lt;code&gt;insert()&lt;/code&gt; for adding and removing functions in the pipeline
+I also plan to add input and output check for each functions, so that when I connect two functions, 
+the framework will check if the output of the first matches the input of the second. I am thinking of 
+using a separate file like the header file in &lt;code&gt;c/c++&lt;/code&gt; to describe the input and output of each function.&lt;/p&gt;
+&lt;p&gt;for instance, I have two functions to connect:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# functions.py&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f1&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f2&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;and &lt;code&gt;x, y, a, b&lt;/code&gt; are all integers, &lt;/p&gt;
+&lt;p&gt;so I can have a separate file with same name but different extension:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;# functions.dsc
+f1 = {'input': [int, int], 'output': [int, int]}
+f2 = {'input': [int, int], 'output': [int]}
+&lt;/pre&gt;
+
+
+&lt;p&gt;then when connect these two functions I can do:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;# pseudo code:
+if f1['output'] == f2['input']:
+    connect f1 and f2
+else:
+    raise FuncInputOutputMismatch()
+&lt;/pre&gt;
+
+
+&lt;p&gt;for more complicated cases, the pipeline might have branches and inter-connections within branches. 
+it of course should be one way data flow. it further reminds me the frontend library from facebook that uses one way data flow: 
+the &lt;a href="https://facebook.github.io/react/"&gt;React&lt;/a&gt;. There is also a &lt;a href="https://www.youtube.com/watch?v=xsSnOQynTHs"&gt;video&lt;/a&gt; on this.&lt;/p&gt;
+&lt;p&gt;then I did some research and found something called &lt;a href="https://github.com/gaearon/react-hot-loader"&gt;&lt;code&gt;hot loading&lt;/code&gt;&lt;/a&gt;
+it also reminds me the &lt;a href="https://www.youtube.com/watch?v=PUv66718DII"&gt;talk&lt;/a&gt; given by Bret Victor.
+it would be such a fantastic tool if some tool like this can be used for scientific data processing...&lt;/p&gt;
+&lt;p&gt;So I just wonder if there is already something similar or at least some that i can borrow code/ideas from?
+or is this kind of design idea new? i tend to think it is not, I would like to read more to get a better understanding of
+such design before i go ahead coding the framework. &lt;/p&gt;&lt;/div&gt;</description><category>javascript</category><category>python</category><category>research</category><guid>https://example.com/posts/design-of-a-framework-for-scientific-data-processing/</guid><pubDate>Sun, 29 May 2016 01:25:39 GMT</pubDate></item></channel></rss>

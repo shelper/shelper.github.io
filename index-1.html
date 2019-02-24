@@ -68,7 +68,44 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/install-pyqt-on-mac-for-matplotlib/" class="u-url">install pyqt on mac for matplotlib</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/python-module-and-packaging/" class="u-url">python module and packaging</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Your Name
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/python-module-and-packaging/" rel="bookmark">
+            <time class="published dt-published" datetime="2016-06-13T10:06:28Z" itemprop="datePublished" title="2016-06-13 10:06">2016-06-13 10:06</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/python-module-and-packaging/#disqus_thread" data-disqus-identifier="cache/posts/python-module-and-packaging.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>several things:</p>
+<ol>
+<li>when using <code>setuptools.find_packages</code>, only packages with <code>__init__.py</code> in its folder will be found</li>
+<li>only modules imported in the <code>__init__.py</code> will be indexed, means the modules will be added into the dir(module)
+   and accessable by .module_name</li>
+<li>for python 3, if one modules(py file) in the same folder of another module and relies on that module, 
+  you need to put <code>from . import module</code> at the top</li>
+<li>package name is specified in the setup.py, while the module name can be different from the package name. 
+  e.g. if you have a structure package/setup.py and  package/module/<code>__init__.py</code>, and in setup.py you set package name to be <code>package</code> then after you install that, you <code>import module</code> 
+  rather than <code>import package</code>, it is better to keep the package and module name the same.</li>
+<li>try to use template with cookiecutter to make your life easier, and at the same time, modify the <code>__init__.py</code> when needed</li>
+<li>exclude the test using <code>packages=setuptools.find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"])</code>
+</li>
+<li>to include upper level modules, e.g., dir1/dir2/module2.py wants to include dir1/module1.py, do <code>from .. import module1</code>
+</li>
+</ol>
+<p>then use <code>python setup.py sdist</code> to generate the zip and egg file and then use <code>python setup.py install</code> to install the package</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/install-pyqt-on-mac-for-matplotlib/" class="u-url">install pyqt on mac for matplotlib</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Your Name

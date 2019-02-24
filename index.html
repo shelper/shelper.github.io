@@ -12,7 +12,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://example.com/">
 <link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/orgmode-for-nikola-post/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/setup-emacs-foc-c%2B%2B-with-ccls-and-lsp/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -68,7 +68,55 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/orgmode-for-nikola-post/" class="u-url">orgmode-for-nikola-post</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/setup-emacs-foc-c%2B%2B-with-ccls-and-lsp/" class="u-url">setup emacs foc C++ with ccls and lsp</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Your Name
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/setup-emacs-foc-c%2B%2B-with-ccls-and-lsp/" rel="bookmark">
+            <time class="published dt-published" datetime="2019-02-24T03:55:52Z" itemprop="datePublished" title="2019-02-24 03:55">2019-02-24 03:55</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/setup-emacs-foc-c%2B%2B-with-ccls-and-lsp/#disqus_thread" data-disqus-identifier="cache/posts/setup-emacs-foc-c++-with-ccls-and-lsp.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>So <code>ccls</code> is a lsp wrapper for clang
+it works as a backend that indexes  source code and gives emacs index information for better navigation and refactoring of c++</p>
+<p>I have had a few issues with the tool's setup in emacs enviroment.
+and found the following things that may need extra attention</p>
+<ol>
+<li>
+<code>.ccls</code> file, this file basically does two things</li>
+<li>tell <code>ccls</code> how to index the file using <code>clang</code>
+</li>
+<li>before index the file tell <code>clang</code> how to compile and interpret the code
+as there is a mixture of options for <code>ccls</code> and arguments for <code>clang</code>, need to pay extra attention</li>
+</ol>
+<p>usually lines in <code>.ccls</code> file start with <code>%</code> is for <code>ccls</code>, and lines start with <code>-</code> is for <code>clang</code></p>
+<ol>
+<li>
+<p>c and c++ code/mode, it is better to set only for c++ as c++ is a super set of c</p>
+</li>
+<li>
+<p>company completion of header files should work without input the surrounds of header file e.g, <code>""</code> or <code>&lt;&gt;</code></p>
+</li>
+<li>some times ccls complains it cannot find header file, so you may include the root path of the header files by adding <code>-IincludePath</code> to <code>.ccls</code> files</li>
+<li>
+<p>for large projects using <code>compile_commands.json</code> to guide <code>ccls</code>indexing. you may of course set partial folder for index by setting the black list ow white list if indexing is way too slow</p>
+</li>
+<li>
+<p>setting key bindings in emacs, the priority is: <code>local-settings &gt; global-settings &gt; define-key</code></p>
+</li>
+</ol>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/orgmode-for-nikola-post/" class="u-url">orgmode-for-nikola-post</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Your Name
@@ -551,43 +599,6 @@ line 2319, in draw_artist
 </blockquote>
 <p>However, if I run the script line by line in python shell (IPython), it works and nothing is wrong. So what is the mystery behind this cached renderer? </p>
 <p>EDIT: add a line <code>fig.canvas.draw()</code> solves the problem, now the remaining question is why running it line by line in IPython shell does not cause the same error?</p>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/python-module-and-packaging/" class="u-url">python module and packaging</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Your Name
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/python-module-and-packaging/" rel="bookmark">
-            <time class="published dt-published" datetime="2016-06-13T10:06:28Z" itemprop="datePublished" title="2016-06-13 10:06">2016-06-13 10:06</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/python-module-and-packaging/#disqus_thread" data-disqus-identifier="cache/posts/python-module-and-packaging.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<p>several things:</p>
-<ol>
-<li>when using <code>setuptools.find_packages</code>, only packages with <code>__init__.py</code> in its folder will be found</li>
-<li>only modules imported in the <code>__init__.py</code> will be indexed, means the modules will be added into the dir(module)
-   and accessable by .module_name</li>
-<li>for python 3, if one modules(py file) in the same folder of another module and relies on that module, 
-  you need to put <code>from . import module</code> at the top</li>
-<li>package name is specified in the setup.py, while the module name can be different from the package name. 
-  e.g. if you have a structure package/setup.py and  package/module/<code>__init__.py</code>, and in setup.py you set package name to be <code>package</code> then after you install that, you <code>import module</code> 
-  rather than <code>import package</code>, it is better to keep the package and module name the same.</li>
-<li>try to use template with cookiecutter to make your life easier, and at the same time, modify the <code>__init__.py</code> when needed</li>
-<li>exclude the test using <code>packages=setuptools.find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"])</code>
-</li>
-<li>to include upper level modules, e.g., dir1/dir2/module2.py wants to include dir1/module1.py, do <code>from .. import module1</code>
-</li>
-</ol>
-<p>then use <code>python setup.py sdist</code> to generate the zip and egg file and then use <code>python setup.py install</code> to install the package</p>
 </div>
                 </div>
             </article>

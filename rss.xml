@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Demo Site</title><link>https://example.com/</link><description>This is a demo site for Nikola.</description><atom:link href="https://example.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:joe@demo.site"&gt;Your Name&lt;/a&gt; </copyright><lastBuildDate>Mon, 18 Feb 2019 03:04:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>orgmode-for-nikola-post</title><link>https://example.com/posts/orgmode-for-nikola-post/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;first need to setup the orgmode plugin for nikola refer to
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Demo Site</title><link>https://example.com/</link><description>This is a demo site for Nikola.</description><atom:link href="https://example.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:joe@demo.site"&gt;Your Name&lt;/a&gt; </copyright><lastBuildDate>Sun, 24 Feb 2019 04:05:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>setup emacs foc C++ with ccls and lsp</title><link>https://example.com/posts/setup-emacs-foc-c%2B%2B-with-ccls-and-lsp/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;So &lt;code&gt;ccls&lt;/code&gt; is a lsp wrapper for clang
+it works as a backend that indexes  source code and gives emacs index information for better navigation and refactoring of c++&lt;/p&gt;
+&lt;p&gt;I have had a few issues with the tool's setup in emacs enviroment.
+and found the following things that may need extra attention&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;.ccls&lt;/code&gt; file, this file basically does two things&lt;/li&gt;
+&lt;li&gt;tell &lt;code&gt;ccls&lt;/code&gt; how to index the file using &lt;code&gt;clang&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;before index the file tell &lt;code&gt;clang&lt;/code&gt; how to compile and interpret the code
+as there is a mixture of options for &lt;code&gt;ccls&lt;/code&gt; and arguments for &lt;code&gt;clang&lt;/code&gt;, need to pay extra attention&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;usually lines in &lt;code&gt;.ccls&lt;/code&gt; file start with &lt;code&gt;%&lt;/code&gt; is for &lt;code&gt;ccls&lt;/code&gt;, and lines start with &lt;code&gt;-&lt;/code&gt; is for &lt;code&gt;clang&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;c and c++ code/mode, it is better to set only for c++ as c++ is a super set of c&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;company completion of header files should work without input the surrounds of header file e.g, &lt;code&gt;""&lt;/code&gt; or &lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;some times ccls complains it cannot find header file, so you may include the root path of the header files by adding &lt;code&gt;-IincludePath&lt;/code&gt; to &lt;code&gt;.ccls&lt;/code&gt; files&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;for large projects using &lt;code&gt;compile_commands.json&lt;/code&gt; to guide &lt;code&gt;ccls&lt;/code&gt;indexing. you may of course set partial folder for index by setting the black list ow white list if indexing is way too slow&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;setting key bindings in emacs, the priority is: &lt;code&gt;local-settings &amp;gt; global-settings &amp;gt; define-key&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><guid>https://example.com/posts/setup-emacs-foc-c%2B%2B-with-ccls-and-lsp/</guid><pubDate>Sun, 24 Feb 2019 03:55:52 GMT</pubDate></item><item><title>orgmode-for-nikola-post</title><link>https://example.com/posts/orgmode-for-nikola-post/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;first need to setup the orgmode plugin for nikola refer to
 &lt;a href="https://plugins.getnikola.com/v7/orgmode/"&gt;here&lt;/a&gt;, then put this into
 init.el&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;;;; set up new nikola new post directly in emacs
@@ -291,18 +316,4 @@ line 2319, in draw_artist
     raise AttributeError(msg) AttributeError: draw_artist can only be used after an initial draw which caches the render&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;However, if I run the script line by line in python shell (IPython), it works and nothing is wrong. So what is the mystery behind this cached renderer? &lt;/p&gt;
-&lt;p&gt;EDIT: add a line &lt;code&gt;fig.canvas.draw()&lt;/code&gt; solves the problem, now the remaining question is why running it line by line in IPython shell does not cause the same error?&lt;/p&gt;&lt;/div&gt;</description><category>matplotlib</category><category>python</category><guid>https://example.com/posts/matplotlib-backend-issue/</guid><pubDate>Mon, 13 Jun 2016 10:06:28 GMT</pubDate></item><item><title>python module and packaging</title><link>https://example.com/posts/python-module-and-packaging/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;several things:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;when using &lt;code&gt;setuptools.find_packages&lt;/code&gt;, only packages with &lt;code&gt;__init__.py&lt;/code&gt; in its folder will be found&lt;/li&gt;
-&lt;li&gt;only modules imported in the &lt;code&gt;__init__.py&lt;/code&gt; will be indexed, means the modules will be added into the dir(module)
-   and accessable by .module_name&lt;/li&gt;
-&lt;li&gt;for python 3, if one modules(py file) in the same folder of another module and relies on that module, 
-  you need to put &lt;code&gt;from . import module&lt;/code&gt; at the top&lt;/li&gt;
-&lt;li&gt;package name is specified in the setup.py, while the module name can be different from the package name. 
-  e.g. if you have a structure package/setup.py and  package/module/&lt;code&gt;__init__.py&lt;/code&gt;, and in setup.py you set package name to be &lt;code&gt;package&lt;/code&gt; then after you install that, you &lt;code&gt;import module&lt;/code&gt; 
-  rather than &lt;code&gt;import package&lt;/code&gt;, it is better to keep the package and module name the same.&lt;/li&gt;
-&lt;li&gt;try to use template with cookiecutter to make your life easier, and at the same time, modify the &lt;code&gt;__init__.py&lt;/code&gt; when needed&lt;/li&gt;
-&lt;li&gt;exclude the test using &lt;code&gt;packages=setuptools.find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"])&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;to include upper level modules, e.g., dir1/dir2/module2.py wants to include dir1/module1.py, do &lt;code&gt;from .. import module1&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;then use &lt;code&gt;python setup.py sdist&lt;/code&gt; to generate the zip and egg file and then use &lt;code&gt;python setup.py install&lt;/code&gt; to install the package&lt;/p&gt;&lt;/div&gt;</description><category>python</category><guid>https://example.com/posts/python-module-and-packaging/</guid><pubDate>Mon, 13 Jun 2016 10:06:28 GMT</pubDate></item></channel></rss>
+&lt;p&gt;EDIT: add a line &lt;code&gt;fig.canvas.draw()&lt;/code&gt; solves the problem, now the remaining question is why running it line by line in IPython shell does not cause the same error?&lt;/p&gt;&lt;/div&gt;</description><category>matplotlib</category><category>python</category><guid>https://example.com/posts/matplotlib-backend-issue/</guid><pubDate>Mon, 13 Jun 2016 10:06:28 GMT</pubDate></item></channel></rss>

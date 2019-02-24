@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://example.com/</loc>
-  <lastmod>2019-02-18T03:04:00Z</lastmod>
+  <lastmod>2019-02-24T04:05:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/2016/</loc>
@@ -22,16 +22,24 @@
   <lastmod>2019-02-18T03:04:00Z</lastmod>
  </url>
  <url>
+  <loc>https://example.com/2019/</loc>
+  <lastmod>2019-02-24T04:05:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://example.com/archive.html</loc>
-  <lastmod>2019-02-18T03:04:00Z</lastmod>
+  <lastmod>2019-02-24T04:05:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/categories/</loc>
-  <lastmod>2019-02-18T02:26:00Z</lastmod>
+  <lastmod>2019-02-24T04:05:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/categories/babun/</loc>
   <lastmod>2019-02-18T02:26:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/categories/cat_programming-c%2B%2B-emacs/</loc>
+  <lastmod>2019-02-24T04:05:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/categories/cat_programming/</loc>
@@ -99,7 +107,7 @@
  </url>
  <url>
   <loc>https://example.com/index-1.html</loc>
-  <lastmod>2019-02-18T03:04:00Z</lastmod>
+  <lastmod>2019-02-24T04:05:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/posts/best-practise-for-jupyter-and-ipython/</loc>
@@ -152,6 +160,10 @@
  <url>
   <loc>https://example.com/posts/setup-babun-on-windows-for-git-and-ssh/</loc>
   <lastmod>2019-02-18T02:26:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/posts/setup-emacs-foc-c%2B%2B-with-ccls-and-lsp/</loc>
+  <lastmod>2019-02-24T04:05:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/posts/switch-recent-two-buffer-alterantively/</loc>

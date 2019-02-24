@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Demo Site (Posts about programming, c++, emacs)</title><link>https://example.com/</link><description></description><atom:link href="https://example.com/categories/cat_programming-c%2B%2B-emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:joe@demo.site"&gt;Your Name&lt;/a&gt; </copyright><lastBuildDate>Sun, 24 Feb 2019 04:05:29 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>setup emacs foc C++ with ccls and lsp</title><link>https://example.com/posts/setup-emacs-foc-c%2B%2B-with-ccls-and-lsp/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;So &lt;code&gt;ccls&lt;/code&gt; is a lsp wrapper for clang
+it works as a backend that indexes  source code and gives emacs index information for better navigation and refactoring of c++&lt;/p&gt;
+&lt;p&gt;I have had a few issues with the tool's setup in emacs enviroment.
+and found the following things that may need extra attention&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;.ccls&lt;/code&gt; file, this file basically does two things&lt;/li&gt;
+&lt;li&gt;tell &lt;code&gt;ccls&lt;/code&gt; how to index the file using &lt;code&gt;clang&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;before index the file tell &lt;code&gt;clang&lt;/code&gt; how to compile and interpret the code
+as there is a mixture of options for &lt;code&gt;ccls&lt;/code&gt; and arguments for &lt;code&gt;clang&lt;/code&gt;, need to pay extra attention&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;usually lines in &lt;code&gt;.ccls&lt;/code&gt; file start with &lt;code&gt;%&lt;/code&gt; is for &lt;code&gt;ccls&lt;/code&gt;, and lines start with &lt;code&gt;-&lt;/code&gt; is for &lt;code&gt;clang&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;c and c++ code/mode, it is better to set only for c++ as c++ is a super set of c&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;company completion of header files should work without input the surrounds of header file e.g, &lt;code&gt;""&lt;/code&gt; or &lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;some times ccls complains it cannot find header file, so you may include the root path of the header files by adding &lt;code&gt;-IincludePath&lt;/code&gt; to &lt;code&gt;.ccls&lt;/code&gt; files&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;for large projects using &lt;code&gt;compile_commands.json&lt;/code&gt; to guide &lt;code&gt;ccls&lt;/code&gt;indexing. you may of course set partial folder for index by setting the black list ow white list if indexing is way too slow&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;setting key bindings in emacs, the priority is: &lt;code&gt;local-settings &amp;gt; global-settings &amp;gt; define-key&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><guid>https://example.com/posts/setup-emacs-foc-c%2B%2B-with-ccls-and-lsp/</guid><pubDate>Sun, 24 Feb 2019 03:55:52 GMT</pubDate></item></channel></rss>

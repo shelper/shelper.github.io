@@ -10,6 +10,10 @@
   <lastmod>2019-02-18T02:26:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://example.com/categories/cat_programming-c%2B%2B-emacs.xml</loc>
+  <lastmod>2019-02-24T04:05:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://example.com/categories/cat_programming.xml</loc>
   <lastmod>2019-02-18T02:26:00Z</lastmod>
  </sitemap>
@@ -75,10 +79,10 @@
  </sitemap>
  <sitemap>
   <loc>https://example.com/rss.xml</loc>
-  <lastmod>2019-02-18T03:04:00Z</lastmod>
+  <lastmod>2019-02-24T04:05:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://example.com/sitemap.xml</loc>
-  <lastmod>2019-02-18T03:04:00Z</lastmod>
+  <lastmod>2019-02-24T04:05:00Z</lastmod>
  </sitemap>
 </sitemapindex>

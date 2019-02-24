@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Demo Site (Posts about meditation)</title><link>https://example.com/</link><description></description><atom:link href="https://example.com/categories/meditation.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:joe@demo.site"&gt;Your Name&lt;/a&gt; </copyright><lastBuildDate>Mon, 18 Feb 2019 03:04:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>orgmode-for-nikola-post</title><link>https://example.com/posts/orgmode-for-nikola-post/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;first need to setup the orgmode plugin for nikola refer to
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>To Record Meaningfuls, and To Grow with Them (Posts about meditation)</title><link>https://example.com/</link><description></description><atom:link href="https://example.com/categories/meditation.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:joe@demo.site"&gt;Zhijia&lt;/a&gt; </copyright><lastBuildDate>Sun, 24 Feb 2019 04:07:41 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>orgmode-for-nikola-post</title><link>https://example.com/posts/orgmode-for-nikola-post/</link><dc:creator>Zhijia</dc:creator><description>&lt;div&gt;&lt;p&gt;first need to setup the orgmode plugin for nikola refer to
 &lt;a href="https://plugins.getnikola.com/v7/orgmode/"&gt;here&lt;/a&gt;, then put this into
 init.el&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;;;; set up new nikola new post directly in emacs
@@ -27,7 +27,7 @@ init.el&lt;/p&gt;
 
 
 &lt;p&gt;however, it seems mac does not work for org in nikola
-refer to: &lt;a href="https://github.com/getnikola/plugins/issues/124"&gt;here&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>meditation</category><category>private</category><guid>https://example.com/posts/orgmode-for-nikola-post/</guid><pubDate>Tue, 29 May 2018 02:01:03 GMT</pubDate></item><item><title>jupyter-skills-and-tricks</title><link>https://example.com/posts/jupyter-skills-and-tricks/</link><dc:creator>Your Name</dc:creator><description>&lt;ol&gt;
+refer to: &lt;a href="https://github.com/getnikola/plugins/issues/124"&gt;here&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>meditation</category><category>private</category><guid>https://example.com/posts/orgmode-for-nikola-post/</guid><pubDate>Tue, 29 May 2018 02:01:03 GMT</pubDate></item><item><title>jupyter-skills-and-tricks</title><link>https://example.com/posts/jupyter-skills-and-tricks/</link><dc:creator>Zhijia</dc:creator><description>&lt;ol&gt;
 &lt;li&gt;use jupyterlab&lt;/li&gt;
 &lt;li&gt;use &lt;code&gt;interact&lt;/code&gt; for interactive widget&lt;/li&gt;
 &lt;li&gt;use qgrid for better dataframe display within ipython notebook,
@@ -35,7 +35,7 @@ refer to: &lt;a href="https://github.com/getnikola/plugins/issues/124"&gt;here&l
     &lt;a href="http://nbviewer.jupyter.org/github/quantopian/qgrid/blob/master/qgrid_demo.ipynb"&gt;here&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;%load_ext sql&lt;/code&gt; for sql query within the notebook, refer to
     &lt;a href="https://github.com/catherinedevlin/ipython-sql"&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</description><category>meditation</category><category>private</category><guid>https://example.com/posts/jupyter-skills-and-tricks/</guid><pubDate>Mon, 28 May 2018 02:01:03 GMT</pubDate></item><item><title>best-practise-for-jupyter-and-ipython</title><link>https://example.com/posts/best-practise-for-jupyter-and-ipython/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;A few things to setup the IPython and Jupyter for a best practise.&lt;/p&gt;
+&lt;/ol&gt;</description><category>meditation</category><category>private</category><guid>https://example.com/posts/jupyter-skills-and-tricks/</guid><pubDate>Mon, 28 May 2018 02:01:03 GMT</pubDate></item><item><title>best-practise-for-jupyter-and-ipython</title><link>https://example.com/posts/best-practise-for-jupyter-and-ipython/</link><dc:creator>Zhijia</dc:creator><description>&lt;div&gt;&lt;p&gt;A few things to setup the IPython and Jupyter for a best practise.&lt;/p&gt;
 &lt;h4&gt;IPython configuration&lt;/h4&gt;
 &lt;p&gt;Change &lt;code&gt;~/.ipython/profile_default/startup/init.ipy&lt;/code&gt; for their usage
 respectively&lt;/p&gt;
@@ -133,7 +133,7 @@ plt.ion()&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;{.bash .rundoc-block rundoc-language="sh" rundoc-session="yes" rundoc-tangle="yes"}
 pip install --upgrade jupyterthemes
-jt -t onedork -tf georgiaserif -nf droidsans -vim&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;</description><category>meditation</category><category>private</category><guid>https://example.com/posts/best-practise-for-jupyter-and-ipython/</guid><pubDate>Thu, 24 May 2018 02:01:03 GMT</pubDate></item><item><title>switch-recent-two-buffer-alterantively</title><link>https://example.com/posts/switch-recent-two-buffer-alterantively/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;so there is a post &lt;a href="http://emacsredux.com/blog/2013/04/28/switch-to-previous-buffer/"&gt;described using key chord for fast buffer switching
+jt -t onedork -tf georgiaserif -nf droidsans -vim&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;</description><category>meditation</category><category>private</category><guid>https://example.com/posts/best-practise-for-jupyter-and-ipython/</guid><pubDate>Thu, 24 May 2018 02:01:03 GMT</pubDate></item><item><title>switch-recent-two-buffer-alterantively</title><link>https://example.com/posts/switch-recent-two-buffer-alterantively/</link><dc:creator>Zhijia</dc:creator><description>&lt;div&gt;&lt;p&gt;so there is a post &lt;a href="http://emacsredux.com/blog/2013/04/28/switch-to-previous-buffer/"&gt;described using key chord for fast buffer switching
 between most recent two
 buffers&lt;/a&gt;.
 it works for most cases, but if you are using org babel mode and editing
@@ -174,7 +174,7 @@ the code is here:
         (if (derived-mode-p 'prog-mode)
             (evil-normal-state)))))
 (add-hook 'post-command-hook 'post-switch-buffer-func)
-&lt;/pre&gt;&lt;/div&gt;</description><category>meditation</category><category>private</category><guid>https://example.com/posts/switch-recent-two-buffer-alterantively/</guid><pubDate>Wed, 23 May 2018 02:01:03 GMT</pubDate></item><item><title>the sword of wisdom</title><link>https://example.com/posts/the-sword-of-wisdom/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;It is quite often that sometimes you just could not stop yourself doing something.
+&lt;/pre&gt;&lt;/div&gt;</description><category>meditation</category><category>private</category><guid>https://example.com/posts/switch-recent-two-buffer-alterantively/</guid><pubDate>Wed, 23 May 2018 02:01:03 GMT</pubDate></item><item><title>the sword of wisdom</title><link>https://example.com/posts/the-sword-of-wisdom/</link><dc:creator>Zhijia</dc:creator><description>&lt;div&gt;&lt;p&gt;It is quite often that sometimes you just could not stop yourself doing something.
 for instance, I often sit in chair and do not want to go the bathroom until i could not hold it any more...
 that happens especially when i try to solve a problem, resolving a program bug...&lt;/p&gt;
 &lt;p&gt;so, how can we change this? use the sword of wisdom!
@@ -188,7 +188,7 @@ and offer you the power to get away for desire without being obsessed by it.&lt;
 everyone can use it, as long you calm down, relax, accept and surrender to your surroundings, including people, events, and happenings, 
 completely, and put it down, by any chance, you will discover the wisdom of emptyness, you let it flows into your mind,
 and it will take you away from any strong desire or will. &lt;/p&gt;
-&lt;p&gt;It is literally a sword, that you can use all the time, although it has no form.&lt;/p&gt;&lt;/div&gt;</description><category>meditation</category><category>private</category><guid>https://example.com/posts/the-sword-of-wisdom/</guid><pubDate>Tue, 24 May 2016 02:01:03 GMT</pubDate></item><item><title>How to truly relax yourself</title><link>https://example.com/posts/how-to-truly-relax-yourself/</link><dc:creator>Your Name</dc:creator><description>&lt;div&gt;&lt;p&gt;Relax, means putting down, pushing away, forgetting things. 
+&lt;p&gt;It is literally a sword, that you can use all the time, although it has no form.&lt;/p&gt;&lt;/div&gt;</description><category>meditation</category><category>private</category><guid>https://example.com/posts/the-sword-of-wisdom/</guid><pubDate>Tue, 24 May 2016 02:01:03 GMT</pubDate></item><item><title>How to truly relax yourself</title><link>https://example.com/posts/how-to-truly-relax-yourself/</link><dc:creator>Zhijia</dc:creator><description>&lt;div&gt;&lt;p&gt;Relax, means putting down, pushing away, forgetting things. 
 Relax, is not about picking up something called "relaxation"&lt;/p&gt;
 &lt;p&gt;Relax is simply let it go, if you can, you should also let it go the thought of "let it go"&lt;/p&gt;
 &lt;p&gt;if you cannot do that, then reciting "let it go" helps you to push away other wondering thoughts,

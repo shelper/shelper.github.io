@@ -22,10 +22,10 @@
     
     <item>
       <title>setup emacs foc C&#43;&#43; with ccls and lsp</title>
-      <link>https://shelper.github.io/posts/setup-emacs-foc-c&#43;&#43;-with-ccls-and-lsp/</link>
+      <link>https://shelper.github.io/posts/setup-emacs-for-c&#43;&#43;-with-ccls-and-lsp/</link>
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://shelper.github.io/posts/setup-emacs-foc-c&#43;&#43;-with-ccls-and-lsp/</guid>
+      <guid>https://shelper.github.io/posts/setup-emacs-for-c&#43;&#43;-with-ccls-and-lsp/</guid>
       <description>So ccls is a lsp wrapper for clang it works as a backend that indexes source code and gives emacs index information for better navigation and refactoring of c++
 I have had a few issues with the tool&amp;rsquo;s setup in emacs enviroment. and found the following things that may need extra attention
  .ccls file, this file basically does two things   tell ccls how to index the file using clang before index the file tell clang how to compile and interpret the code as there is a mixture of options for ccls and arguments for clang, need to pay extra attention  usually lines in .</description>

@@ -1,11 +1,10 @@
-<!--
-.. date: 2018-05-24 02:01:03 UTC
-.. tags: meditation, private
-.. category:
-.. link:
-.. description:
-.. type: text
--->
+---
+title: best practice for jupyter and ipython
+date: 2018-05-24
+tags: ["python", "jupyter"]
+link:
+description:
+---
 
 A few things to setup the IPython and Jupyter for a best practise.
 
@@ -14,28 +13,28 @@ A few things to setup the IPython and Jupyter for a best practise.
 Change `~/.ipython/profile_default/startup/init.ipy` for their usage
 respectively
 
--   To enable versioning of the python/jupyter environment, you need to
-    `pip install version_information` and then add below, afterward for
-    each IPython notebook file I put
-    `%version_information numpy, scipy, matplotlib, pandas` to display
-    my python environment version information
+- To enable versioning of the python/jupyter environment, you need to
+  `pip install version_information` and then add below, afterward for
+  each IPython notebook file I put
+  `%version_information numpy, scipy, matplotlib, pandas` to display
+  my python environment version information
 
-``` {.python .rundoc-block rundoc-language="python" rundoc-session="yes" rundoc-tangle="yes"}
+```{.python .rundoc-block rundoc-language="python" rundoc-session="yes" rundoc-tangle="yes"}
 %load_ext version_information
 ```
 
--   To enable autoloading of modified modules in IPython, add below
+- To enable autoloading of modified modules in IPython, add below
 
-``` {.python .rundoc-block rundoc-language="python" rundoc-session="yes" rundoc-tangle="yes"}
+```{.python .rundoc-block rundoc-language="python" rundoc-session="yes" rundoc-tangle="yes"}
 %load_ext version_information
 %load_ext autoreload
 %autoreload 2
 ```
 
--   I also added the lines below just because I use them everytime I
-    open IPython
+- I also added the lines below just because I use them everytime I
+  open IPython
 
-``` {.python .rundoc-block rundoc-language="python" rundoc-session="yes" rundoc-tangle="yes"}
+```{.python .rundoc-block rundoc-language="python" rundoc-session="yes" rundoc-tangle="yes"}
 import numpy as np
 import matplotlib.pyplot as plt
 plt.ion()
@@ -43,13 +42,13 @@ plt.ion()
 
 ### Modify Jupyter notebook settings:
 
--   To enable auto conversion and saving of `.py` and `.html` files from
-    the notebook, put the following script to your Jupyter
-    configuration: `~/.jupyter/jupyter_notebook_config.py`, more details
-    can be found at
-    [here](http://jupyter-notebook.readthedocs.io/en/latest/extending/savehooks.html)
+- To enable auto conversion and saving of `.py` and `.html` files from
+  the notebook, put the following script to your Jupyter
+  configuration: `~/.jupyter/jupyter_notebook_config.py`, more details
+  can be found at
+  [here](http://jupyter-notebook.readthedocs.io/en/latest/extending/savehooks.html)
 
-``` {.python .rundoc-block rundoc-language="python" rundoc-session="yes" rundoc-tangle="yes"}
+```{.python .rundoc-block rundoc-language="python" rundoc-session="yes" rundoc-tangle="yes"}
 
 # make a script equivalent whenever the notebook is saved
 import io
@@ -101,12 +100,12 @@ c.FileContentsManager.post_save_hook = script_post_save
 
 ### For better visualization and vim keybindings
 
--   Jupyter theme can be added following
-    [here](https://github.com/dunovank/jupyter-themes), I prefer to use
-    onedork with different fonts for text and code blocks, so basically
-    want you can do is
+- Jupyter theme can be added following
+  [here](https://github.com/dunovank/jupyter-themes), I prefer to use
+  onedork with different fonts for text and code blocks, so basically
+  want you can do is
 
-``` {.bash .rundoc-block rundoc-language="sh" rundoc-session="yes" rundoc-tangle="yes"}
+```{.bash .rundoc-block rundoc-language="sh" rundoc-session="yes" rundoc-tangle="yes"}
 pip install --upgrade jupyterthemes
 jt -t onedork -tf georgiaserif -nf droidsans -vim
 ```

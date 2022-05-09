@@ -1,13 +1,11 @@
-<!-- 
-.. title: using emacs for blog post using nikola and github pages
-.. slug: using-emacs-for-blog-post-using-nikola-and-github-pages
-.. date: 2016-05-23 16:06:05 UTC
-.. tags: emacs
-.. category: programming 
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: using emacs for blog post using nikola and github pages
+date: 2016-05-23
+tags: ["emacs"]
+categories: ["programming"]
+link:
+description:
+---
 
 so it is a long story, to make it short, here is how it works step by step:
 
@@ -91,7 +89,7 @@ PAGES = (
 (cd my-blog-repo)
 (setq new-post-cmd (concat "nikola new_post -f markdown -t " "\"" title "\""))
 (shell-command new-post-cmd)
-  (setq new-post-file (concat my-blog-repo 
+  (setq new-post-file (concat my-blog-repo
                           "/posts/"
                           (replace-regexp-in-string " " "-" title)
                           ".md"))

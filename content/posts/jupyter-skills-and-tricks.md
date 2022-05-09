@@ -1,11 +1,11 @@
-<!--
-.. date: 2018-05-28 02:01:03 UTC
-.. tags: meditation, private
-.. category:
-.. link:
-.. description:
-.. type: text
--->
+---
+title: Jupyter skills and tricks
+date: 2018-05-28
+tags: ["jupyter"]
+categories: ["programming"]
+link:
+description:
+---
 
 1.  use jupyterlab
 2.  use `interact` for interactive widget

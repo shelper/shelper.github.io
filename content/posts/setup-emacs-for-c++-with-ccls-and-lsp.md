@@ -1,24 +1,22 @@
-<!--
-.. title: setup emacs foc C++ with ccls and lsp
-.. slug: setup-emacs-foc-c++-with-ccls-and-lsp
-.. date: 2019-02-24 03:55:52 UTC
-.. tags:
-.. category: programming, c++, emacs
-.. link:
-.. description:
-.. type: text
--->
+---
+title: setup emacs foc C++ with ccls and lsp
+date: 2019-02-26
+tags: ["cpp", "emacs"]
+link:
+description:
+---
 
 So `ccls` is a lsp wrapper for clang
-it works as a backend that indexes  source code and gives emacs index information for better navigation and refactoring of c++
+it works as a backend that indexes source code and gives emacs index information for better navigation and refactoring of c++
 
 I have had a few issues with the tool's setup in emacs enviroment.
 and found the following things that may need extra attention
 
 1. `.ccls` file, this file basically does two things
-  - tell `ccls` how to index the file using `clang`
-  - before index the file tell `clang` how to compile and interpret the code
-as there is a mixture of options for `ccls` and arguments for `clang`, need to pay extra attention
+
+- tell `ccls` how to index the file using `clang`
+- before index the file tell `clang` how to compile and interpret the code
+  as there is a mixture of options for `ccls` and arguments for `clang`, need to pay extra attention
 
 usually lines in `.ccls` file start with `%` is for `ccls`, and lines start with `-` is for `clang`
 

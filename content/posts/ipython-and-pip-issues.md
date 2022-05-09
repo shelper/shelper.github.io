@@ -1,15 +1,13 @@
-<!-- 
-.. title: ipython and pip issues
-.. slug: ipython-and-pip-issues
-.. date: 2016-06-09 18:31:41 UTC
-.. tags: ipython, python
-.. category: programming 
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: ipython and pip issues
+date: 2016-06-09
+tags: ["ipython", "python"]
+categories: ["programming"]
+link:
+description:
+---
 
-so I am trying to use ipython as my python shell under emacs, since i started using python in emacs, i always encounter different issues, again and again, so i will use this post as a collection of issues and solutions. 
+so I am trying to use ipython as my python shell under emacs, since i started using python in emacs, i always encounter different issues, again and again, so i will use this post as a collection of issues and solutions.
 
 **issue1:**
 
@@ -19,26 +17,29 @@ so,watch out how you name your files, and if it does happen, consider to rename 
 
 **issue2:**
 
-pip install, i once encountered that pip keeps reinstall packages, without aware of the package is already installed. 
+pip install, i once encountered that pip keeps reinstall packages, without aware of the package is already installed.
 the issue is in the pip config file (usually in `~/pip/pip.ini`) i have following line
 
 ```
 ignore-installed = true
 ```
+
 apparently, that is what this for, so remove this line solves the problem
 
 **issue3:**
 
 how to setup proxy when you are behind a corporation firewall?
-goto the config file again, and put 
+goto the config file again, and put
+
 ```
 [global]
 proxy = url:port
 ```
+
 this works for many other python based packages/software as well
 
 **issue4**
 
 when using emacs, calling `git` using shell-command seems not working well, you might want to use magit instead.
 
-PS: I will keep updating this post if I find new issues and solutions. 
+PS: I will keep updating this post if I find new issues and solutions.

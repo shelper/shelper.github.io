@@ -1,17 +1,17 @@
-<!--
-.. date: 2018-05-29 02:01:03 UTC
-.. tags: meditation, private
-.. category:
-.. link:
-.. description:
-.. type: text
--->
+---
+title: Orgmode for nikola post
+date: 2018-05-29
+tags: ["nikola", "orgmode"]
+categories: ["programming"]
+link:
+description:
+---
 
 first need to setup the orgmode plugin for nikola refer to
 [here](https://plugins.getnikola.com/v7/orgmode/), then put this into
 init.el
 
-``` {.commonlisp}
+```{.commonlisp}
 ;;; set up new nikola new post directly in emacs
 ;; does not work on windows
 (defun publish-blog-post ()

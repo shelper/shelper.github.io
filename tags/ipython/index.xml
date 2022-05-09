@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ipython on So I Write</title>
+    <link>https://shelper.github.io/tags/ipython/</link>
+    <description>Recent content in ipython on So I Write</description>
+    <image>
+      <url>https://shelper.github.io/profile.png</url>
+      <link>https://shelper.github.io/profile.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 09 Jun 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/tags/ipython/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ipython and pip issues</title>
+      <link>https://shelper.github.io/posts/ipython-and-pip-issues/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/ipython-and-pip-issues/</guid>
+      <description>so I am trying to use ipython as my python shell under emacs, since i started using python in emacs, i always encounter different issues, again and again, so i will use this post as a collection of issues and solutions.
+issue1:
+ipython shell imports quite some packages/modules/functions and as you may know, import searches current folder as well as the subfolders of the registered module, if there are file with the same name under the current folder, it overrides the file in the registered module, apparently, this causes problems of &amp;ldquo;import error, could not find &amp;hellip;&amp;rdquo;</description>
+    </item>
+    
+  </channel>
+</rss>

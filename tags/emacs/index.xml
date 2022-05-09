@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>emacs on So I Write</title>
+    <link>https://shelper.github.io/tags/emacs/</link>
+    <description>Recent content in emacs on So I Write</description>
+    <image>
+      <url>https://shelper.github.io/profile.png</url>
+      <link>https://shelper.github.io/profile.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 26 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>setup emacs foc C&#43;&#43; with ccls and lsp</title>
+      <link>https://shelper.github.io/posts/setup-emacs-foc-c&#43;&#43;-with-ccls-and-lsp/</link>
+      <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/setup-emacs-foc-c&#43;&#43;-with-ccls-and-lsp/</guid>
+      <description>So ccls is a lsp wrapper for clang it works as a backend that indexes source code and gives emacs index information for better navigation and refactoring of c++
+I have had a few issues with the tool&amp;rsquo;s setup in emacs enviroment. and found the following things that may need extra attention
+ .ccls file, this file basically does two things   tell ccls how to index the file using clang before index the file tell clang how to compile and interpret the code as there is a mixture of options for ccls and arguments for clang, need to pay extra attention  usually lines in .</description>
+    </item>
+    
+    <item>
+      <title>elisp notes</title>
+      <link>https://shelper.github.io/posts/elisp-notes/</link>
+      <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/elisp-notes/</guid>
+      <description>quote for symbols: (setq symbol) ;; is equivelent to (set &amp;#39;symbol) the quote means; keep as it is, dont try to evaluate, so if no quote, the lisp processor will try to evaluate it, means the symbol (or the first element of the list) has to be evaluatable as either a function, or a defined variable
+let vs. let*: (setq y 2) (let ((y 1) (z y)) (list y z)) ⇒ (1 2) (setq y 2) (let* ((y 1) (z y)) (list y z)) ⇒ (1 1) let* binds 1 to y immediately, while let evaluate old y as 2, then list binds 1 to the new y and pring it out</description>
+    </item>
+    
+    <item>
+      <title>setup babun on windows for git and ssh</title>
+      <link>https://shelper.github.io/posts/setup-babun-on-windows-for-git-and-ssh/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/setup-babun-on-windows-for-git-and-ssh/</guid>
+      <description>remove %HOME% (you can put it back later)
+  download and install babun
+  setup ssh, if you already have ssh keys in the ~/.ssh, copy to the ~ of babun shell and do
+  eval `ssh-agent -s`ssh-add if not, copy the ssh pub and private keys to ~/.ssh or use
+ssh-add path/to/keys if you are using proxy behind firewall you need: add proxy for babun and change the user -agent (dont know why, but works)  export http_proxy=http://gateway.</description>
+    </item>
+    
+    <item>
+      <title>using emacs for blog post using nikola and github pages</title>
+      <link>https://shelper.github.io/posts/using-emacs-for-blog-post-using-nikola-and-github-pages/</link>
+      <pubDate>Mon, 23 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/using-emacs-for-blog-post-using-nikola-and-github-pages/</guid>
+      <description>so it is a long story, to make it short, here is how it works step by step:
+ install nikola using pip install nikola markdown webassets init nikola site by nikola init --quiet folder_name change the configurations of the default to your configurations just like below diff file shows:  --- default conf.py +++ customized conf.py @@ -17,16 +17,16 @@ import time  # Data about this site -BLOG_AUTHOR = &amp;#34;Your Name&amp;#34; # (translatable) -BLOG_TITLE = &amp;#34;Demo Site&amp;#34; # (translatable) +BLOG_AUTHOR = &amp;#34;Shelper&amp;#34; # (translatable) +BLOG_TITLE = &amp;#34;The Way As It Is&amp;#34; # (translatable) # This is the main URL for your site.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>github on So I Write</title>
+    <link>https://shelper.github.io/tags/github/</link>
+    <description>Recent content in github on So I Write</description>
+    <image>
+      <url>https://shelper.github.io/profile.png</url>
+      <link>https://shelper.github.io/profile.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 09 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>setup hugo with github pages on github</title>
+      <link>https://shelper.github.io/posts/setup-hugo-with-github-pages/</link>
+      <pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/setup-hugo-with-github-pages/</guid>
+      <description>I followed this site for setting up hugo blogging on https://github.com/ using github.io, the instruction is little bit confusion, so just to clarify a little bit here.
+  the instructions there uses gh-pages branch to publish your site, this is done by the action peaceiris/actions-gh-pages@v3. however, for user/organization.github.io pages, the default branch for publishing is main. so if you use this action, you need to change your page branch to gh-pages and set the directory to /root.</description>
+    </item>
+    
+    <item>
+      <title>how to start python project on github</title>
+      <link>https://shelper.github.io/posts/how-to-start-python-project-on-github/</link>
+      <pubDate>Tue, 14 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/how-to-start-python-project-on-github/</guid>
+      <description>steps are:
+  install cookiecutter: python -m pip install cookiecutter
+  run cookiecutter to initiate a project: cookiecutter(&#39;https://github.com/audreyr/cookiecutter-pypackage.git&#39;) under the project folder
+  on github, start a new repo python_prj
+  run git init in the local project folder and commit
+  run git remote add origin git@github.com:username/projectname.git
+ using git@git requires to setup the ssh key pair, this can be found by easily google it or under FAQ of github    run git push -u origin master</description>
+    </item>
+    
+  </channel>
+</rss>

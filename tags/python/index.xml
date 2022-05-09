@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>python on So I Write</title>
+    <link>https://shelper.github.io/tags/python/</link>
+    <description>Recent content in python on So I Write</description>
+    <image>
+      <url>https://shelper.github.io/profile.png</url>
+      <link>https://shelper.github.io/profile.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 24 May 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>best practice for jupyter and ipython</title>
+      <link>https://shelper.github.io/posts/best-practise-for-jupyter-and-ipython/</link>
+      <pubDate>Thu, 24 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/best-practise-for-jupyter-and-ipython/</guid>
+      <description>A few things to setup the IPython and Jupyter for a best practise.
+IPython configuration Change ~/.ipython/profile_default/startup/init.ipy for their usage respectively
+ To enable versioning of the python/jupyter environment, you need to pip install version_information and then add below, afterward for each IPython notebook file I put %version_information numpy, scipy, matplotlib, pandas to display my python environment version information  %load_ext version_information  To enable autoloading of modified modules in IPython, add below  %load_ext version_information %load_ext autoreload %autoreload 2  I also added the lines below just because I use them everytime I open IPython  import numpy as np import matplotlib.</description>
+    </item>
+    
+    <item>
+      <title>how to start python project on github</title>
+      <link>https://shelper.github.io/posts/how-to-start-python-project-on-github/</link>
+      <pubDate>Tue, 14 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/how-to-start-python-project-on-github/</guid>
+      <description>steps are:
+  install cookiecutter: python -m pip install cookiecutter
+  run cookiecutter to initiate a project: cookiecutter(&#39;https://github.com/audreyr/cookiecutter-pypackage.git&#39;) under the project folder
+  on github, start a new repo python_prj
+  run git init in the local project folder and commit
+  run git remote add origin git@github.com:username/projectname.git
+ using git@git requires to setup the ssh key pair, this can be found by easily google it or under FAQ of github    run git push -u origin master</description>
+    </item>
+    
+    <item>
+      <title>install pyqt on mac for matplotlib</title>
+      <link>https://shelper.github.io/posts/install-pyqt-on-mac-for-matplotlib/</link>
+      <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/install-pyqt-on-mac-for-matplotlib/</guid>
+      <description>so i was trying to use matplotlib for fast image ploting and updating, and I found a post here. the matplotlib uses different backend to render the images, and due to the differences between different backend, some functions are only available for specific backend, for instance, the fig.canvas.update() is a fast way to render new images to the axes, but is only availabe to PyQt4.
+so i was trying to install pyqt4 using homebrew, it failed by saying the osx version is pre-released version and is not supported, and arises 2 errors during make process.</description>
+    </item>
+    
+    <item>
+      <title>matplotlib backend issue</title>
+      <link>https://shelper.github.io/posts/matplotlib-backend-issue/</link>
+      <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/matplotlib-backend-issue/</guid>
+      <description>using different backends for matplotlib might cause some unexpected issues: today, i am trying to run a program that uses the following function:
+plt.figure() figManager = plt.get_current_fig_manager() figManager.window.showMaximized() however, i found when using the backend of Tk, it gives error, saying get_current_fig_manager is not available, so when i switch to qt4egg, everything works well.
+how to switch the backend for matplotlib? first find the configure directory for matplotlib on your computer</description>
+    </item>
+    
+    <item>
+      <title>python module and packaging</title>
+      <link>https://shelper.github.io/posts/python-module-and-packaging/</link>
+      <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/python-module-and-packaging/</guid>
+      <description>several things:
+ when using setuptools.find_packages, only packages with __init__.py in its folder will be found only modules imported in the __init__.py will be indexed, means the modules will be added into the dir(module) and accessable by .module_name for python 3, if one modules(py file) in the same folder of another module and relies on that module, you need to put from . import module at the top package name is specified in the setup.</description>
+    </item>
+    
+    <item>
+      <title>ipython and pip issues</title>
+      <link>https://shelper.github.io/posts/ipython-and-pip-issues/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/ipython-and-pip-issues/</guid>
+      <description>so I am trying to use ipython as my python shell under emacs, since i started using python in emacs, i always encounter different issues, again and again, so i will use this post as a collection of issues and solutions.
+issue1:
+ipython shell imports quite some packages/modules/functions and as you may know, import searches current folder as well as the subfolders of the registered module, if there are file with the same name under the current folder, it overrides the file in the registered module, apparently, this causes problems of &amp;ldquo;import error, could not find &amp;hellip;&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>design of a framework for scientific data processing</title>
+      <link>https://shelper.github.io/posts/design-of-a-framework-for-scientific-data-processing/</link>
+      <pubDate>Sun, 29 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/design-of-a-framework-for-scientific-data-processing/</guid>
+      <description>I have beening thinking of building such a framework for a while, I started a little project called pypeline. The code on github is not up-to-date. And I have some new thoughts on the framework design. So this article serves as a design documents and welcomes any comments or suggestions.
+Based on my own experience, I often want to process some data or image at multiple stage. Often, I want to change some parameters of certian algorithm to see how the outcomes are changed.</description>
+    </item>
+    
+  </channel>
+</rss>

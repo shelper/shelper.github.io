@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>cpp on So I Write</title>
+    <link>https://shelper.github.io/tags/cpp/</link>
+    <description>Recent content in cpp on So I Write</description>
+    <image>
+      <url>https://shelper.github.io/profile.png</url>
+      <link>https://shelper.github.io/profile.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 26 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>setup emacs foc C&#43;&#43; with ccls and lsp</title>
+      <link>https://shelper.github.io/posts/setup-emacs-foc-c&#43;&#43;-with-ccls-and-lsp/</link>
+      <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/setup-emacs-foc-c&#43;&#43;-with-ccls-and-lsp/</guid>
+      <description>So ccls is a lsp wrapper for clang it works as a backend that indexes source code and gives emacs index information for better navigation and refactoring of c++
+I have had a few issues with the tool&amp;rsquo;s setup in emacs enviroment. and found the following things that may need extra attention
+ .ccls file, this file basically does two things   tell ccls how to index the file using clang before index the file tell clang how to compile and interpret the code as there is a mixture of options for ccls and arguments for clang, need to pay extra attention  usually lines in .</description>
+    </item>
+    
+  </channel>
+</rss>

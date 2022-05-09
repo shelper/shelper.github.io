@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>matplotlib on So I Write</title>
+    <link>https://shelper.github.io/tags/matplotlib/</link>
+    <description>Recent content in matplotlib on So I Write</description>
+    <image>
+      <url>https://shelper.github.io/profile.png</url>
+      <link>https://shelper.github.io/profile.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 13 Jun 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/tags/matplotlib/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>install pyqt on mac for matplotlib</title>
+      <link>https://shelper.github.io/posts/install-pyqt-on-mac-for-matplotlib/</link>
+      <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/install-pyqt-on-mac-for-matplotlib/</guid>
+      <description>so i was trying to use matplotlib for fast image ploting and updating, and I found a post here. the matplotlib uses different backend to render the images, and due to the differences between different backend, some functions are only available for specific backend, for instance, the fig.canvas.update() is a fast way to render new images to the axes, but is only availabe to PyQt4.
+so i was trying to install pyqt4 using homebrew, it failed by saying the osx version is pre-released version and is not supported, and arises 2 errors during make process.</description>
+    </item>
+    
+    <item>
+      <title>matplotlib backend issue</title>
+      <link>https://shelper.github.io/posts/matplotlib-backend-issue/</link>
+      <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/matplotlib-backend-issue/</guid>
+      <description>using different backends for matplotlib might cause some unexpected issues: today, i am trying to run a program that uses the following function:
+plt.figure() figManager = plt.get_current_fig_manager() figManager.window.showMaximized() however, i found when using the backend of Tk, it gives error, saying get_current_fig_manager is not available, so when i switch to qt4egg, everything works well.
+how to switch the backend for matplotlib? first find the configure directory for matplotlib on your computer</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>elisp on So I Write</title>
+    <link>https://shelper.github.io/tags/elisp/</link>
+    <description>Recent content in elisp on So I Write</description>
+    <image>
+      <url>https://shelper.github.io/profile.png</url>
+      <link>https://shelper.github.io/profile.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 13 Jun 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/tags/elisp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>elisp notes</title>
+      <link>https://shelper.github.io/posts/elisp-notes/</link>
+      <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/elisp-notes/</guid>
+      <description>quote for symbols: (setq symbol) ;; is equivelent to (set &amp;#39;symbol) the quote means; keep as it is, dont try to evaluate, so if no quote, the lisp processor will try to evaluate it, means the symbol (or the first element of the list) has to be evaluatable as either a function, or a defined variable
+let vs. let*: (setq y 2) (let ((y 1) (z y)) (list y z)) ⇒ (1 2) (setq y 2) (let* ((y 1) (z y)) (list y z)) ⇒ (1 1) let* binds 1 to y immediately, while let evaluate old y as 2, then list binds 1 to the new y and pring it out</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,14 +5,55 @@
     <link>https://shelper.github.io/posts/</link>
     <description>Recent content in Posts on So I Write</description>
     <image>
-      <url>https://shelper.github.io/papermod-cover.png</url>
-      <link>https://shelper.github.io/papermod-cover.png</link>
+      <url>https://shelper.github.io/profile.png</url>
+      <link>https://shelper.github.io/profile.png</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://shelper.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 09 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
+      <title>setup hugo with github pages on github</title>
+      <link>https://shelper.github.io/posts/setup-hugo-with-github-pages/</link>
+      <pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/setup-hugo-with-github-pages/</guid>
+      <description>I followed this site for setting up hugo blogging on https://github.com/ using github.io, the instruction is little bit confusion, so just to clarify a little bit here.
+  the instructions there uses gh-pages branch to publish your site, this is done by the action peaceiris/actions-gh-pages@v3. however, for user/organization.github.io pages, the default branch for publishing is main. so if you use this action, you need to change your page branch to gh-pages and set the directory to /root.</description>
+    </item>
+    
+    <item>
+      <title>setup emacs foc C&#43;&#43; with ccls and lsp</title>
+      <link>https://shelper.github.io/posts/setup-emacs-foc-c&#43;&#43;-with-ccls-and-lsp/</link>
+      <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/setup-emacs-foc-c&#43;&#43;-with-ccls-and-lsp/</guid>
+      <description>So ccls is a lsp wrapper for clang it works as a backend that indexes source code and gives emacs index information for better navigation and refactoring of c++
+I have had a few issues with the tool&amp;rsquo;s setup in emacs enviroment. and found the following things that may need extra attention
+ .ccls file, this file basically does two things   tell ccls how to index the file using clang before index the file tell clang how to compile and interpret the code as there is a mixture of options for ccls and arguments for clang, need to pay extra attention  usually lines in .</description>
+    </item>
+    
+    <item>
+      <title>Orgmode for nikola post</title>
+      <link>https://shelper.github.io/posts/orgmode-for-nikola-post/</link>
+      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/orgmode-for-nikola-post/</guid>
+      <description>first need to setup the orgmode plugin for nikola refer to here, then put this into init.el
+;;; set up new nikola new post directly in emacs ;; does not work on windows (defun publish-blog-post () &amp;#34;nikola github-deploy&amp;#34; (interactive) (save-buffer) (let ((my-blog-repo &amp;#34;path to your blog repo&amp;#34;))) ;; (let (my-blog-repo)) ;; (setq my-blog-repo &amp;#34;~/shelper.github.io&amp;#34;) (cd my-blog-repo) (shell-command &amp;#34;nikola github_deploy&amp;#34;)) (defun new-blog-post (title) &amp;#34;new blog post to shelper.github.io&amp;#34; (interactive &amp;#34;sEnter post title: &amp;#34;) (let ((my-blog-repo &amp;#34;path to your blog repo&amp;#34;))) (cd my-blog-repo) (setq new-post-cmd (concat &amp;#34;nikola new_post -f orgmode -t &amp;#34; &amp;#34;\&amp;#34;&amp;#34; title &amp;#34;\&amp;#34;&amp;#34;)) (shell-command new-post-cmd) (setq new-post-file (concat my-blog-repo &amp;#34;/posts/&amp;#34; (replace-regexp-in-string &amp;#34; &amp;#34; &amp;#34;-&amp;#34; title) &amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title>Jupyter skills and tricks</title>
+      <link>https://shelper.github.io/posts/jupyter-skills-and-tricks/</link>
+      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/jupyter-skills-and-tricks/</guid>
+      <description> use jupyterlab use interact for interactive widget use qgrid for better dataframe display within ipython notebook, follow instructions here %load_ext sql for sql query within the notebook, refer to here  </description>
+    </item>
+    
+    <item>
+      <title>best practice for jupyter and ipython</title>
       <link>https://shelper.github.io/posts/best-practise-for-jupyter-and-ipython/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 24 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://shelper.github.io/posts/best-practise-for-jupyter-and-ipython/</guid>
       <description>A few things to setup the IPython and Jupyter for a best practise.
@@ -21,112 +62,32 @@ IPython configuration Change ~/.ipython/profile_default/startup/init.ipy for the
     </item>
     
     <item>
-      <title></title>
-      <link>https://shelper.github.io/posts/design-of-a-framework-for-scientific-data-processing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>switch recent two buffer alternatively</title>
+      <link>https://shelper.github.io/posts/switch-recent-two-buffer-alterantively/</link>
+      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shelper.github.io/posts/design-of-a-framework-for-scientific-data-processing/</guid>
-      <description>I have beening thinking of building such a framework for a while, I started a little project called pypeline. The code on github is not up-to-date. And I have some new thoughts on the framework design. So this article serves as a design documents and welcomes any comments or suggestions.
-Based on my own experience, I often want to process some data or image at multiple stage. Often, I want to change some parameters of certian algorithm to see how the outcomes are changed.</description>
+      <guid>https://shelper.github.io/posts/switch-recent-two-buffer-alterantively/</guid>
+      <description>so there is a post described using key chord for fast buffer switching between most recent two buffers. it works for most cases, but if you are using org babel mode and editing source code in the *org src .* buffer, then this *org src .* buffer cannot be accessed by the method described here.
+so I made another function to solve this issue, and here it is:
+(defun get-next-buffer () (interactive) (if (string= (car (helm-buffer-list)) &amp;#34; *Minibuf-1*&amp;#34;) (switch-to-buffer (car (cdr (helm-buffer-list)))) (switch-to-buffer (car (helm-buffer-list))))) (key-chord-define-global &amp;#34;jk&amp;#34; &amp;#39;get-next-buffer) strangely when switching buffer using `helm-buffer-lists`, and if you exit without selecting any buffer, you gets `*Minibuf-1*` into the buffer list and will switch to minibuffer.</description>
     </item>
     
     <item>
-      <title></title>
-      <link>https://shelper.github.io/posts/elisp-notes1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>using travis CI for github repo</title>
+      <link>https://shelper.github.io/posts/using-travis-ci-for-github-repo/</link>
+      <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://shelper.github.io/posts/elisp-notes1/</guid>
-      <description>quote for symbols: (setq symbol) ;; is equivelent to (set &amp;#39;symbol) the quote means; keep as it is, dont try to evaluate, so if no quote, the lisp processor will try to evaluate it, means the symbol (or the first element of the list) has to be evaluatable as either a function, or a defined variable
-let vs. let*: (setq y 2) (let ((y 1) (z y)) (list y z)) ⇒ (1 2) (setq y 2) (let* ((y 1) (z y)) (list y z)) ⇒ (1 1) let* binds 1 to y immediately, while let evaluate old y as 2, then list binds 1 to the new y and pring it out</description>
+      <guid>https://shelper.github.io/posts/using-travis-ci-for-github-repo/</guid>
+      <description>using Nikola with Travis CI on github.io pages major reference here
+it is noticeable that instead of running
+travis login travis enable travis encrypt-file id_rsa --add we should run
+travis login travis encrypt-file id_rsa --add travis enable </description>
     </item>
     
     <item>
-      <title></title>
-      <link>https://shelper.github.io/posts/how-to-start-python-project-on-github/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://shelper.github.io/posts/how-to-start-python-project-on-github/</guid>
-      <description>steps are:
- install cookiecutter: python -m pip install cookiecutter run cookiecutter to initiate a project: cookiecutter(&#39;https://github.com/audreyr/cookiecutter-pypackage.git&#39;) under the project folder on github, start a new repo python_prj run git init in the local project folder and commit run git remote add origin git@github.com:username/projectname.git * using git@git requires to setup the ssh key pair, this can be found by easily google it or under FAQ of github run git push -u origin master  that is it, enjoy.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://shelper.github.io/posts/how-to-truly-relax-yourself/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://shelper.github.io/posts/how-to-truly-relax-yourself/</guid>
-      <description>Relax, means putting down, pushing away, forgetting things. Relax, is not about picking up something called &amp;ldquo;relaxation&amp;rdquo;
-Relax is simply let it go, if you can, you should also let it go the thought of &amp;ldquo;let it go&amp;rdquo;
-if you cannot do that, then reciting &amp;ldquo;let it go&amp;rdquo; helps you to push away other wondering thoughts, especially those thoughts bothering you, and make yourself agitated.
-so relax, is very simple that really don&amp;rsquo;t need you to do anything, yet very difficult, if you try to grab something.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://shelper.github.io/posts/install-pyqt-on-mac-for-matplotlib/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://shelper.github.io/posts/install-pyqt-on-mac-for-matplotlib/</guid>
-      <description>so i was trying to use matplotlib for fast image ploting and updating, and I found a post here. the matplotlib uses different backend to render the images, and due to the differences between different backend, some functions are only available for specific backend, for instance, the fig.canvas.update() is a fast way to render new images to the axes, but is only availabe to PyQt4.
-so i was trying to install pyqt4 using homebrew, it failed by saying the osx version is pre-released version and is not supported, and arises 2 errors during make process.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://shelper.github.io/posts/ipython-and-pip-issues/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://shelper.github.io/posts/ipython-and-pip-issues/</guid>
-      <description>so I am trying to use ipython as my python shell under emacs, since i started using python in emacs, i always encounter different issues, again and again, so i will use this post as a collection of issues and solutions.
-issue1:
-ipython shell imports quite some packages/modules/functions and as you may know, import searches current folder as well as the subfolders of the registered module, if there are file with the same name under the current folder, it overrides the file in the registered module, apparently, this causes problems of &amp;ldquo;import error, could not find &amp;hellip;&amp;rdquo;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://shelper.github.io/posts/jupyter-skills-and-tricks/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://shelper.github.io/posts/jupyter-skills-and-tricks/</guid>
-      <description> use jupyterlab use interact for interactive widget use qgrid for better dataframe display within ipython notebook, follow instructions here %load_ext sql for sql query within the notebook, refer to here  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://shelper.github.io/posts/matplotlib-backend-issue/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://shelper.github.io/posts/matplotlib-backend-issue/</guid>
-      <description>using different backends for matplotlib might cause some unexpected issues: today, i am trying to run a program that uses the following function:
-plt.figure() figManager = plt.get_current_fig_manager() figManager.window.showMaximized() however, i found when using the backend of Tk, it gives error, saying get_current_fig_manager is not available, so when i switch to qt4egg, everything works well.
-how to switch the backend for matplotlib? first find the configure directory for matplotlib on your computer</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://shelper.github.io/posts/orgmode-for-nikola-post/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://shelper.github.io/posts/orgmode-for-nikola-post/</guid>
-      <description>first need to setup the orgmode plugin for nikola refer to here, then put this into init.el
-;;; set up new nikola new post directly in emacs ;; does not work on windows (defun publish-blog-post () &amp;#34;nikola github-deploy&amp;#34; (interactive) (save-buffer) (let ((my-blog-repo &amp;#34;path to your blog repo&amp;#34;))) ;; (let (my-blog-repo)) ;; (setq my-blog-repo &amp;#34;~/shelper.github.io&amp;#34;) (cd my-blog-repo) (shell-command &amp;#34;nikola github_deploy&amp;#34;)) (defun new-blog-post (title) &amp;#34;new blog post to shelper.github.io&amp;#34; (interactive &amp;#34;sEnter post title: &amp;#34;) (let ((my-blog-repo &amp;#34;path to your blog repo&amp;#34;))) (cd my-blog-repo) (setq new-post-cmd (concat &amp;#34;nikola new_post -f orgmode -t &amp;#34; &amp;#34;\&amp;#34;&amp;#34; title &amp;#34;\&amp;#34;&amp;#34;)) (shell-command new-post-cmd) (setq new-post-file (concat my-blog-repo &amp;#34;/posts/&amp;#34; (replace-regexp-in-string &amp;#34; &amp;#34; &amp;#34;-&amp;#34; title) &amp;#34;.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://shelper.github.io/posts/python-module-and-packaging/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://shelper.github.io/posts/python-module-and-packaging/</guid>
-      <description>several things:
- when using setuptools.find_packages, only packages with __init__.py in its folder will be found only modules imported in the __init__.py will be indexed, means the modules will be added into the dir(module) and accessable by .module_name for python 3, if one modules(py file) in the same folder of another module and relies on that module, you need to put from . import module at the top package name is specified in the setup.</description>
-    </item>
-    
-    <item>
-      <title></title>
+      <title>set up nikola for markdown</title>
       <link>https://shelper.github.io/posts/set-up-nikola-for-markdown/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 09 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://shelper.github.io/posts/set-up-nikola-for-markdown/</guid>
       <description>to use nikola you need to install it with some other packages as well pip instal nikola markdown ws4py watchdog
@@ -135,9 +96,76 @@ POSTS = ( (&amp;#34;posts/*.md&amp;#34;, &amp;#34;posts&amp;#34;, &amp;#34;post.
     </item>
     
     <item>
-      <title></title>
+      <title>how to start python project on github</title>
+      <link>https://shelper.github.io/posts/how-to-start-python-project-on-github/</link>
+      <pubDate>Tue, 14 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/how-to-start-python-project-on-github/</guid>
+      <description>steps are:
+  install cookiecutter: python -m pip install cookiecutter
+  run cookiecutter to initiate a project: cookiecutter(&#39;https://github.com/audreyr/cookiecutter-pypackage.git&#39;) under the project folder
+  on github, start a new repo python_prj
+  run git init in the local project folder and commit
+  run git remote add origin git@github.com:username/projectname.git
+ using git@git requires to setup the ssh key pair, this can be found by easily google it or under FAQ of github    run git push -u origin master</description>
+    </item>
+    
+    <item>
+      <title>elisp notes</title>
+      <link>https://shelper.github.io/posts/elisp-notes/</link>
+      <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/elisp-notes/</guid>
+      <description>quote for symbols: (setq symbol) ;; is equivelent to (set &amp;#39;symbol) the quote means; keep as it is, dont try to evaluate, so if no quote, the lisp processor will try to evaluate it, means the symbol (or the first element of the list) has to be evaluatable as either a function, or a defined variable
+let vs. let*: (setq y 2) (let ((y 1) (z y)) (list y z)) ⇒ (1 2) (setq y 2) (let* ((y 1) (z y)) (list y z)) ⇒ (1 1) let* binds 1 to y immediately, while let evaluate old y as 2, then list binds 1 to the new y and pring it out</description>
+    </item>
+    
+    <item>
+      <title>install pyqt on mac for matplotlib</title>
+      <link>https://shelper.github.io/posts/install-pyqt-on-mac-for-matplotlib/</link>
+      <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/install-pyqt-on-mac-for-matplotlib/</guid>
+      <description>so i was trying to use matplotlib for fast image ploting and updating, and I found a post here. the matplotlib uses different backend to render the images, and due to the differences between different backend, some functions are only available for specific backend, for instance, the fig.canvas.update() is a fast way to render new images to the axes, but is only availabe to PyQt4.
+so i was trying to install pyqt4 using homebrew, it failed by saying the osx version is pre-released version and is not supported, and arises 2 errors during make process.</description>
+    </item>
+    
+    <item>
+      <title>matplotlib backend issue</title>
+      <link>https://shelper.github.io/posts/matplotlib-backend-issue/</link>
+      <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/matplotlib-backend-issue/</guid>
+      <description>using different backends for matplotlib might cause some unexpected issues: today, i am trying to run a program that uses the following function:
+plt.figure() figManager = plt.get_current_fig_manager() figManager.window.showMaximized() however, i found when using the backend of Tk, it gives error, saying get_current_fig_manager is not available, so when i switch to qt4egg, everything works well.
+how to switch the backend for matplotlib? first find the configure directory for matplotlib on your computer</description>
+    </item>
+    
+    <item>
+      <title>python module and packaging</title>
+      <link>https://shelper.github.io/posts/python-module-and-packaging/</link>
+      <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/python-module-and-packaging/</guid>
+      <description>several things:
+ when using setuptools.find_packages, only packages with __init__.py in its folder will be found only modules imported in the __init__.py will be indexed, means the modules will be added into the dir(module) and accessable by .module_name for python 3, if one modules(py file) in the same folder of another module and relies on that module, you need to put from . import module at the top package name is specified in the setup.</description>
+    </item>
+    
+    <item>
+      <title>ipython and pip issues</title>
+      <link>https://shelper.github.io/posts/ipython-and-pip-issues/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/ipython-and-pip-issues/</guid>
+      <description>so I am trying to use ipython as my python shell under emacs, since i started using python in emacs, i always encounter different issues, again and again, so i will use this post as a collection of issues and solutions.
+issue1:
+ipython shell imports quite some packages/modules/functions and as you may know, import searches current folder as well as the subfolders of the registered module, if there are file with the same name under the current folder, it overrides the file in the registered module, apparently, this causes problems of &amp;ldquo;import error, could not find &amp;hellip;&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>setup babun on windows for git and ssh</title>
       <link>https://shelper.github.io/posts/setup-babun-on-windows-for-git-and-ssh/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://shelper.github.io/posts/setup-babun-on-windows-for-git-and-ssh/</guid>
       <description>remove %HOME% (you can put it back later)
@@ -148,40 +176,29 @@ ssh-add path/to/keys if you are using proxy behind firewall you need: add proxy 
     </item>
     
     <item>
-      <title></title>
-      <link>https://shelper.github.io/posts/setup-emacs-foc-c&#43;&#43;-with-ccls-and-lsp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>design of a framework for scientific data processing</title>
+      <link>https://shelper.github.io/posts/design-of-a-framework-for-scientific-data-processing/</link>
+      <pubDate>Sun, 29 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://shelper.github.io/posts/setup-emacs-foc-c&#43;&#43;-with-ccls-and-lsp/</guid>
-      <description>So ccls is a lsp wrapper for clang it works as a backend that indexes source code and gives emacs index information for better navigation and refactoring of c++
-I have had a few issues with the tool&amp;rsquo;s setup in emacs enviroment. and found the following things that may need extra attention
- .ccls file, this file basically does two things   tell ccls how to index the file using clang before index the file tell clang how to compile and interpret the code as there is a mixture of options for ccls and arguments for clang, need to pay extra attention  usually lines in .</description>
+      <guid>https://shelper.github.io/posts/design-of-a-framework-for-scientific-data-processing/</guid>
+      <description>I have beening thinking of building such a framework for a while, I started a little project called pypeline. The code on github is not up-to-date. And I have some new thoughts on the framework design. So this article serves as a design documents and welcomes any comments or suggestions.
+Based on my own experience, I often want to process some data or image at multiple stage. Often, I want to change some parameters of certian algorithm to see how the outcomes are changed.</description>
     </item>
     
     <item>
-      <title></title>
-      <link>https://shelper.github.io/posts/switch-recent-two-buffer-alterantively/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://shelper.github.io/posts/switch-recent-two-buffer-alterantively/</guid>
-      <description>so there is a post described using key chord for fast buffer switching between most recent two buffers. it works for most cases, but if you are using org babel mode and editing source code in the *org src &amp;hellip; * buffer, then this *org src &amp;hellip; * buffer cannot be accessed by the method described here.
-so I made another function to solve this issue, and here it is:</description>
-    </item>
-    
-    <item>
-      <title></title>
+      <title>the sword of wisdom</title>
       <link>https://shelper.github.io/posts/the-sword-of-wisdom/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 24 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://shelper.github.io/posts/the-sword-of-wisdom/</guid>
       <description>It is quite often that sometimes you just could not stop yourself doing something. for instance, I often sit in chair and do not want to go the bathroom until i could not hold it any more&amp;hellip; that happens especially when i try to solve a problem, resolving a program bug&amp;hellip;
-so, how can we change this? use the sword of wisdom! the sword f wisdom, is a keen and sharp mind state that can penetrate in to your mind stream.</description>
+so, how can we change this? use the sword of wisdom! the sword of wisdom, is a keen and sharp mind state that can penetrate in to your mind stream.</description>
     </item>
     
     <item>
-      <title></title>
+      <title>using emacs for blog post using nikola and github pages</title>
       <link>https://shelper.github.io/posts/using-emacs-for-blog-post-using-nikola-and-github-pages/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 23 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://shelper.github.io/posts/using-emacs-for-blog-post-using-nikola-and-github-pages/</guid>
       <description>so it is a long story, to make it short, here is how it works step by step:
@@ -189,15 +206,15 @@ so, how can we change this? use the sword of wisdom! the sword f wisdom, is a ke
     </item>
     
     <item>
-      <title></title>
-      <link>https://shelper.github.io/posts/using-travis-ci-for-github-repo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>How to truly relax yourself</title>
+      <link>https://shelper.github.io/posts/how-to-truly-relax-yourself/</link>
+      <pubDate>Sat, 21 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://shelper.github.io/posts/using-travis-ci-for-github-repo/</guid>
-      <description>using Nikola with Travis CI on github.io pages major reference here
-it is noticeable that instead of running
-travis login travis enable travis encrypt-file id_rsa --add we should run
-travis login travis encrypt-file id_rsa --add travis enable </description>
+      <guid>https://shelper.github.io/posts/how-to-truly-relax-yourself/</guid>
+      <description>Relax, means putting down, pushing away, forgetting things. Relax, is not about picking up something called &amp;ldquo;relaxation&amp;rdquo;
+Relax is simply let it go, if you can, you should also let it go the thought of &amp;ldquo;let it go&amp;rdquo;
+if you cannot do that, then reciting &amp;ldquo;let it go&amp;rdquo; helps you to push away other wondering thoughts, especially those thoughts bothering you, and make yourself agitated.
+so relax, is very simple that really don&amp;rsquo;t need you to do anything, yet very difficult, if you try to grab something.</description>
     </item>
     
   </channel>

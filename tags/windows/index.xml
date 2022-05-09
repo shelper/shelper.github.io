@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>windows on So I Write</title>
+    <link>https://shelper.github.io/tags/windows/</link>
+    <description>Recent content in windows on So I Write</description>
+    <image>
+      <url>https://shelper.github.io/profile.png</url>
+      <link>https://shelper.github.io/profile.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 09 Jun 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>setup babun on windows for git and ssh</title>
+      <link>https://shelper.github.io/posts/setup-babun-on-windows-for-git-and-ssh/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/setup-babun-on-windows-for-git-and-ssh/</guid>
+      <description>remove %HOME% (you can put it back later)
+  download and install babun
+  setup ssh, if you already have ssh keys in the ~/.ssh, copy to the ~ of babun shell and do
+  eval `ssh-agent -s`ssh-add if not, copy the ssh pub and private keys to ~/.ssh or use
+ssh-add path/to/keys if you are using proxy behind firewall you need: add proxy for babun and change the user -agent (dont know why, but works)  export http_proxy=http://gateway.</description>
+    </item>
+    
+  </channel>
+</rss>

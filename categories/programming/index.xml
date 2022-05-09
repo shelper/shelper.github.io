@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>programming on So I Write</title>
+    <link>https://shelper.github.io/categories/programming/</link>
+    <description>Recent content in programming on So I Write</description>
+    <image>
+      <url>https://shelper.github.io/profile.png</url>
+      <link>https://shelper.github.io/profile.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 29 May 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Orgmode for nikola post</title>
+      <link>https://shelper.github.io/posts/orgmode-for-nikola-post/</link>
+      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/orgmode-for-nikola-post/</guid>
+      <description>first need to setup the orgmode plugin for nikola refer to here, then put this into init.el
+;;; set up new nikola new post directly in emacs ;; does not work on windows (defun publish-blog-post () &amp;#34;nikola github-deploy&amp;#34; (interactive) (save-buffer) (let ((my-blog-repo &amp;#34;path to your blog repo&amp;#34;))) ;; (let (my-blog-repo)) ;; (setq my-blog-repo &amp;#34;~/shelper.github.io&amp;#34;) (cd my-blog-repo) (shell-command &amp;#34;nikola github_deploy&amp;#34;)) (defun new-blog-post (title) &amp;#34;new blog post to shelper.github.io&amp;#34; (interactive &amp;#34;sEnter post title: &amp;#34;) (let ((my-blog-repo &amp;#34;path to your blog repo&amp;#34;))) (cd my-blog-repo) (setq new-post-cmd (concat &amp;#34;nikola new_post -f orgmode -t &amp;#34; &amp;#34;\&amp;#34;&amp;#34; title &amp;#34;\&amp;#34;&amp;#34;)) (shell-command new-post-cmd) (setq new-post-file (concat my-blog-repo &amp;#34;/posts/&amp;#34; (replace-regexp-in-string &amp;#34; &amp;#34; &amp;#34;-&amp;#34; title) &amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title>Jupyter skills and tricks</title>
+      <link>https://shelper.github.io/posts/jupyter-skills-and-tricks/</link>
+      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/jupyter-skills-and-tricks/</guid>
+      <description> use jupyterlab use interact for interactive widget use qgrid for better dataframe display within ipython notebook, follow instructions here %load_ext sql for sql query within the notebook, refer to here  </description>
+    </item>
+    
+    <item>
+      <title>switch recent two buffer alternatively</title>
+      <link>https://shelper.github.io/posts/switch-recent-two-buffer-alterantively/</link>
+      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/switch-recent-two-buffer-alterantively/</guid>
+      <description>so there is a post described using key chord for fast buffer switching between most recent two buffers. it works for most cases, but if you are using org babel mode and editing source code in the *org src .* buffer, then this *org src .* buffer cannot be accessed by the method described here.
+so I made another function to solve this issue, and here it is:
+(defun get-next-buffer () (interactive) (if (string= (car (helm-buffer-list)) &amp;#34; *Minibuf-1*&amp;#34;) (switch-to-buffer (car (cdr (helm-buffer-list)))) (switch-to-buffer (car (helm-buffer-list))))) (key-chord-define-global &amp;#34;jk&amp;#34; &amp;#39;get-next-buffer) strangely when switching buffer using `helm-buffer-lists`, and if you exit without selecting any buffer, you gets `*Minibuf-1*` into the buffer list and will switch to minibuffer.</description>
+    </item>
+    
+    <item>
+      <title>using travis CI for github repo</title>
+      <link>https://shelper.github.io/posts/using-travis-ci-for-github-repo/</link>
+      <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/using-travis-ci-for-github-repo/</guid>
+      <description>using Nikola with Travis CI on github.io pages major reference here
+it is noticeable that instead of running
+travis login travis enable travis encrypt-file id_rsa --add we should run
+travis login travis encrypt-file id_rsa --add travis enable </description>
+    </item>
+    
+    <item>
+      <title>set up nikola for markdown</title>
+      <link>https://shelper.github.io/posts/set-up-nikola-for-markdown/</link>
+      <pubDate>Thu, 09 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/set-up-nikola-for-markdown/</guid>
+      <description>to use nikola you need to install it with some other packages as well pip instal nikola markdown ws4py watchdog
+then to enable markdown, you need to change the conf.py variable POSTS and PAGES
+POSTS = ( (&amp;#34;posts/*.md&amp;#34;, &amp;#34;posts&amp;#34;, &amp;#34;post.tmpl&amp;#34;), (&amp;#34;posts/*.rst&amp;#34;, &amp;#34;posts&amp;#34;, &amp;#34;post.tmpl&amp;#34;), (&amp;#34;posts/*.txt&amp;#34;, &amp;#34;posts&amp;#34;, &amp;#34;post.tmpl&amp;#34;), (&amp;#34;posts/*.html&amp;#34;, &amp;#34;posts&amp;#34;, &amp;#34;post.tmpl&amp;#34;), ) PAGES = ( (&amp;#34;pages/*.md&amp;#34;, &amp;#34;pages&amp;#34;, &amp;#34;story.tmpl&amp;#34;), (&amp;#34;pages/*.rst&amp;#34;, &amp;#34;pages&amp;#34;, &amp;#34;story.tmpl&amp;#34;), (&amp;#34;pages/*.txt&amp;#34;, &amp;#34;pages&amp;#34;, &amp;#34;story.tmpl&amp;#34;), (&amp;#34;pages/*.html&amp;#34;, &amp;#34;pages&amp;#34;, &amp;#34;story.tmpl&amp;#34;), ) you may also need to change the github settings for easy github deploy</description>
+    </item>
+    
+    <item>
+      <title>how to start python project on github</title>
+      <link>https://shelper.github.io/posts/how-to-start-python-project-on-github/</link>
+      <pubDate>Tue, 14 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/how-to-start-python-project-on-github/</guid>
+      <description>steps are:
+  install cookiecutter: python -m pip install cookiecutter
+  run cookiecutter to initiate a project: cookiecutter(&#39;https://github.com/audreyr/cookiecutter-pypackage.git&#39;) under the project folder
+  on github, start a new repo python_prj
+  run git init in the local project folder and commit
+  run git remote add origin git@github.com:username/projectname.git
+ using git@git requires to setup the ssh key pair, this can be found by easily google it or under FAQ of github    run git push -u origin master</description>
+    </item>
+    
+    <item>
+      <title>elisp notes</title>
+      <link>https://shelper.github.io/posts/elisp-notes/</link>
+      <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/elisp-notes/</guid>
+      <description>quote for symbols: (setq symbol) ;; is equivelent to (set &amp;#39;symbol) the quote means; keep as it is, dont try to evaluate, so if no quote, the lisp processor will try to evaluate it, means the symbol (or the first element of the list) has to be evaluatable as either a function, or a defined variable
+let vs. let*: (setq y 2) (let ((y 1) (z y)) (list y z)) ⇒ (1 2) (setq y 2) (let* ((y 1) (z y)) (list y z)) ⇒ (1 1) let* binds 1 to y immediately, while let evaluate old y as 2, then list binds 1 to the new y and pring it out</description>
+    </item>
+    
+    <item>
+      <title>install pyqt on mac for matplotlib</title>
+      <link>https://shelper.github.io/posts/install-pyqt-on-mac-for-matplotlib/</link>
+      <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/install-pyqt-on-mac-for-matplotlib/</guid>
+      <description>so i was trying to use matplotlib for fast image ploting and updating, and I found a post here. the matplotlib uses different backend to render the images, and due to the differences between different backend, some functions are only available for specific backend, for instance, the fig.canvas.update() is a fast way to render new images to the axes, but is only availabe to PyQt4.
+so i was trying to install pyqt4 using homebrew, it failed by saying the osx version is pre-released version and is not supported, and arises 2 errors during make process.</description>
+    </item>
+    
+    <item>
+      <title>matplotlib backend issue</title>
+      <link>https://shelper.github.io/posts/matplotlib-backend-issue/</link>
+      <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/matplotlib-backend-issue/</guid>
+      <description>using different backends for matplotlib might cause some unexpected issues: today, i am trying to run a program that uses the following function:
+plt.figure() figManager = plt.get_current_fig_manager() figManager.window.showMaximized() however, i found when using the backend of Tk, it gives error, saying get_current_fig_manager is not available, so when i switch to qt4egg, everything works well.
+how to switch the backend for matplotlib? first find the configure directory for matplotlib on your computer</description>
+    </item>
+    
+    <item>
+      <title>python module and packaging</title>
+      <link>https://shelper.github.io/posts/python-module-and-packaging/</link>
+      <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/python-module-and-packaging/</guid>
+      <description>several things:
+ when using setuptools.find_packages, only packages with __init__.py in its folder will be found only modules imported in the __init__.py will be indexed, means the modules will be added into the dir(module) and accessable by .module_name for python 3, if one modules(py file) in the same folder of another module and relies on that module, you need to put from . import module at the top package name is specified in the setup.</description>
+    </item>
+    
+    <item>
+      <title>ipython and pip issues</title>
+      <link>https://shelper.github.io/posts/ipython-and-pip-issues/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/ipython-and-pip-issues/</guid>
+      <description>so I am trying to use ipython as my python shell under emacs, since i started using python in emacs, i always encounter different issues, again and again, so i will use this post as a collection of issues and solutions.
+issue1:
+ipython shell imports quite some packages/modules/functions and as you may know, import searches current folder as well as the subfolders of the registered module, if there are file with the same name under the current folder, it overrides the file in the registered module, apparently, this causes problems of &amp;ldquo;import error, could not find &amp;hellip;&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>setup babun on windows for git and ssh</title>
+      <link>https://shelper.github.io/posts/setup-babun-on-windows-for-git-and-ssh/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/setup-babun-on-windows-for-git-and-ssh/</guid>
+      <description>remove %HOME% (you can put it back later)
+  download and install babun
+  setup ssh, if you already have ssh keys in the ~/.ssh, copy to the ~ of babun shell and do
+  eval `ssh-agent -s`ssh-add if not, copy the ssh pub and private keys to ~/.ssh or use
+ssh-add path/to/keys if you are using proxy behind firewall you need: add proxy for babun and change the user -agent (dont know why, but works)  export http_proxy=http://gateway.</description>
+    </item>
+    
+    <item>
+      <title>design of a framework for scientific data processing</title>
+      <link>https://shelper.github.io/posts/design-of-a-framework-for-scientific-data-processing/</link>
+      <pubDate>Sun, 29 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/design-of-a-framework-for-scientific-data-processing/</guid>
+      <description>I have beening thinking of building such a framework for a while, I started a little project called pypeline. The code on github is not up-to-date. And I have some new thoughts on the framework design. So this article serves as a design documents and welcomes any comments or suggestions.
+Based on my own experience, I often want to process some data or image at multiple stage. Often, I want to change some parameters of certian algorithm to see how the outcomes are changed.</description>
+    </item>
+    
+    <item>
+      <title>using emacs for blog post using nikola and github pages</title>
+      <link>https://shelper.github.io/posts/using-emacs-for-blog-post-using-nikola-and-github-pages/</link>
+      <pubDate>Mon, 23 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/using-emacs-for-blog-post-using-nikola-and-github-pages/</guid>
+      <description>so it is a long story, to make it short, here is how it works step by step:
+ install nikola using pip install nikola markdown webassets init nikola site by nikola init --quiet folder_name change the configurations of the default to your configurations just like below diff file shows:  --- default conf.py +++ customized conf.py @@ -17,16 +17,16 @@ import time  # Data about this site -BLOG_AUTHOR = &amp;#34;Your Name&amp;#34; # (translatable) -BLOG_TITLE = &amp;#34;Demo Site&amp;#34; # (translatable) +BLOG_AUTHOR = &amp;#34;Shelper&amp;#34; # (translatable) +BLOG_TITLE = &amp;#34;The Way As It Is&amp;#34; # (translatable) # This is the main URL for your site.</description>
+    </item>
+    
+  </channel>
+</rss>

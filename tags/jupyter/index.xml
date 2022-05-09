@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>jupyter on So I Write</title>
+    <link>https://shelper.github.io/tags/jupyter/</link>
+    <description>Recent content in jupyter on So I Write</description>
+    <image>
+      <url>https://shelper.github.io/profile.png</url>
+      <link>https://shelper.github.io/profile.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 28 May 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/tags/jupyter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jupyter skills and tricks</title>
+      <link>https://shelper.github.io/posts/jupyter-skills-and-tricks/</link>
+      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/jupyter-skills-and-tricks/</guid>
+      <description> use jupyterlab use interact for interactive widget use qgrid for better dataframe display within ipython notebook, follow instructions here %load_ext sql for sql query within the notebook, refer to here  </description>
+    </item>
+    
+    <item>
+      <title>best practice for jupyter and ipython</title>
+      <link>https://shelper.github.io/posts/best-practise-for-jupyter-and-ipython/</link>
+      <pubDate>Thu, 24 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/best-practise-for-jupyter-and-ipython/</guid>
+      <description>A few things to setup the IPython and Jupyter for a best practise.
+IPython configuration Change ~/.ipython/profile_default/startup/init.ipy for their usage respectively
+ To enable versioning of the python/jupyter environment, you need to pip install version_information and then add below, afterward for each IPython notebook file I put %version_information numpy, scipy, matplotlib, pandas to display my python environment version information  %load_ext version_information  To enable autoloading of modified modules in IPython, add below  %load_ext version_information %load_ext autoreload %autoreload 2  I also added the lines below just because I use them everytime I open IPython  import numpy as np import matplotlib.</description>
+    </item>
+    
+  </channel>
+</rss>

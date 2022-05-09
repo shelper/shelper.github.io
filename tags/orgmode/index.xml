@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>orgmode on So I Write</title>
+    <link>https://shelper.github.io/tags/orgmode/</link>
+    <description>Recent content in orgmode on So I Write</description>
+    <image>
+      <url>https://shelper.github.io/profile.png</url>
+      <link>https://shelper.github.io/profile.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 29 May 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/tags/orgmode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Orgmode for nikola post</title>
+      <link>https://shelper.github.io/posts/orgmode-for-nikola-post/</link>
+      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/orgmode-for-nikola-post/</guid>
+      <description>first need to setup the orgmode plugin for nikola refer to here, then put this into init.el
+;;; set up new nikola new post directly in emacs ;; does not work on windows (defun publish-blog-post () &amp;#34;nikola github-deploy&amp;#34; (interactive) (save-buffer) (let ((my-blog-repo &amp;#34;path to your blog repo&amp;#34;))) ;; (let (my-blog-repo)) ;; (setq my-blog-repo &amp;#34;~/shelper.github.io&amp;#34;) (cd my-blog-repo) (shell-command &amp;#34;nikola github_deploy&amp;#34;)) (defun new-blog-post (title) &amp;#34;new blog post to shelper.github.io&amp;#34; (interactive &amp;#34;sEnter post title: &amp;#34;) (let ((my-blog-repo &amp;#34;path to your blog repo&amp;#34;))) (cd my-blog-repo) (setq new-post-cmd (concat &amp;#34;nikola new_post -f orgmode -t &amp;#34; &amp;#34;\&amp;#34;&amp;#34; title &amp;#34;\&amp;#34;&amp;#34;)) (shell-command new-post-cmd) (setq new-post-file (concat my-blog-repo &amp;#34;/posts/&amp;#34; (replace-regexp-in-string &amp;#34; &amp;#34; &amp;#34;-&amp;#34; title) &amp;#34;.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>javascript on So I Write</title>
+    <link>https://shelper.github.io/tags/javascript/</link>
+    <description>Recent content in javascript on So I Write</description>
+    <image>
+      <url>https://shelper.github.io/profile.png</url>
+      <link>https://shelper.github.io/profile.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 29 May 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>design of a framework for scientific data processing</title>
+      <link>https://shelper.github.io/posts/design-of-a-framework-for-scientific-data-processing/</link>
+      <pubDate>Sun, 29 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/design-of-a-framework-for-scientific-data-processing/</guid>
+      <description>I have beening thinking of building such a framework for a while, I started a little project called pypeline. The code on github is not up-to-date. And I have some new thoughts on the framework design. So this article serves as a design documents and welcomes any comments or suggestions.
+Based on my own experience, I often want to process some data or image at multiple stage. Often, I want to change some parameters of certian algorithm to see how the outcomes are changed.</description>
+    </item>
+    
+  </channel>
+</rss>

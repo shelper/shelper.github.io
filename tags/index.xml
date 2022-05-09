@@ -5,9 +5,199 @@
     <link>https://shelper.github.io/tags/</link>
     <description>Recent content in Tags on So I Write</description>
     <image>
-      <url>https://shelper.github.io/papermod-cover.png</url>
-      <link>https://shelper.github.io/papermod-cover.png</link>
+      <url>https://shelper.github.io/profile.png</url>
+      <link>https://shelper.github.io/profile.png</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://shelper.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 09 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>area</title>
+      <link>https://shelper.github.io/tags/area/</link>
+      <pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/area/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://shelper.github.io/tags/blog/</link>
+      <pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://shelper.github.io/tags/github/</link>
+      <pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://shelper.github.io/tags/hugo/</link>
+      <pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cpp</title>
+      <link>https://shelper.github.io/tags/cpp/</link>
+      <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/cpp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emacs</title>
+      <link>https://shelper.github.io/tags/emacs/</link>
+      <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nikola</title>
+      <link>https://shelper.github.io/tags/nikola/</link>
+      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/nikola/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>orgmode</title>
+      <link>https://shelper.github.io/tags/orgmode/</link>
+      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/orgmode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jupyter</title>
+      <link>https://shelper.github.io/tags/jupyter/</link>
+      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/jupyter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://shelper.github.io/tags/python/</link>
+      <pubDate>Thu, 24 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://shelper.github.io/tags/git/</link>
+      <pubDate>Tue, 14 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>elisp</title>
+      <link>https://shelper.github.io/tags/elisp/</link>
+      <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/elisp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>matplotlib</title>
+      <link>https://shelper.github.io/tags/matplotlib/</link>
+      <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/matplotlib/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pyqt</title>
+      <link>https://shelper.github.io/tags/pyqt/</link>
+      <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/pyqt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>babun</title>
+      <link>https://shelper.github.io/tags/babun/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/babun/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ipython</title>
+      <link>https://shelper.github.io/tags/ipython/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/ipython/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>https://shelper.github.io/tags/ssh/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows</title>
+      <link>https://shelper.github.io/tags/windows/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://shelper.github.io/tags/javascript/</link>
+      <pubDate>Sun, 29 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>research</title>
+      <link>https://shelper.github.io/tags/research/</link>
+      <pubDate>Sun, 29 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>practice</title>
+      <link>https://shelper.github.io/tags/practice/</link>
+      <pubDate>Tue, 24 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/practice/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

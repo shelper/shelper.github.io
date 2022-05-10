@@ -100,6 +100,7 @@ params:
     defaultTheme: auto
     # disableThemeToggle: true
     ShowShareButtons: true
+    ShareButtons: ["twitter", "linkedin", "facebook", "reddit"]
     ShowReadingTime: true
     # disableSpecial1stPost: true
     displayFullLangName: true
@@ -132,7 +133,7 @@ params:
         Content: >
             Welcome to my page!
             Feel free to share the contents if you think they are useful.
-            Buy my a coffee if you want to appreciate my posts :)
+            Buy my a ☕ if you want to appreciate my posts :)
 
     socialIcons:
         - name: linkedin
@@ -141,7 +142,7 @@ params:
           url: "https://github.com/shelper"
         - name: RSS
           url: "index.xml"
-        - name: KoFi
+        - name: buymeacoffee
           url: "https://www.buymeacoffee.com/shelper"
 
     editPost:

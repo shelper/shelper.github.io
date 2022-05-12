@@ -9,11 +9,11 @@
       <link>https://shelper.github.io/profile.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 10 May 2022 22:53:27 -0400</lastBuildDate><atom:link href="https://shelper.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 May 2022 13:03:05 -0400</lastBuildDate><atom:link href="https://shelper.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs in WSL2</title>
       <link>https://shelper.github.io/posts/setup-emacs-in-wsl2/</link>
-      <pubDate>Tue, 10 May 2022 22:53:27 -0400</pubDate>
+      <pubDate>Thu, 12 May 2022 13:03:05 -0400</pubDate>
       
       <guid>https://shelper.github.io/posts/setup-emacs-in-wsl2/</guid>
       <description>Using Emacs on windows is always an imperfect experience, luckly windows10 comes with WSL2 now, which lets you install Emacs in WSL2 and use it on windows now. I did some hacking to make the experience little bit better, which includes:

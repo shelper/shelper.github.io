@@ -9,16 +9,15 @@
       <link>https://shelper.github.io/profile.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 10 May 2022 10:44:47 -0400</lastBuildDate><atom:link href="https://shelper.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 May 2022 22:53:27 -0400</lastBuildDate><atom:link href="https://shelper.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs in WSL2</title>
       <link>https://shelper.github.io/posts/setup-emacs-in-wsl2/</link>
-      <pubDate>Tue, 10 May 2022 10:44:47 -0400</pubDate>
+      <pubDate>Tue, 10 May 2022 22:53:27 -0400</pubDate>
       
       <guid>https://shelper.github.io/posts/setup-emacs-in-wsl2/</guid>
-      <description>this is for setting up emacs in WSL2
-  in order to add a context menu to open windows files in WSL2, i created a python file with content below:
-import sys import subprocess import os if __name__ == &amp;#34;__main__&amp;#34;: file_name = sys.argv[1] file_name = os.path.abspath(file_name) file_name = file_name.replace(&amp;#34;C:\\&amp;#34;, &amp;#34;/mnt/c/&amp;#34;) file_name = file_name.replace(&amp;#34;\\&amp;#34;, &amp;#34;/&amp;#34;) print(file_name) command = [ &amp;#34;C:/Windows/System32/wsl.exe&amp;#34;, &amp;#34;-d&amp;#34;, &amp;#34;Ubuntu&amp;#34;, &amp;#34;emacsclient&amp;#34;, &amp;#34;-n&amp;#34;, file_name, ] subprocess.Popen(command, shell=True)   then i setup the context menu by the following reg file:</description>
+      <description>Using Emacs on windows is always an imperfect experience, luckly windows10 comes with WSL2 now, which lets you install Emacs in WSL2 and use it on windows now. I did some hacking to make the experience little bit better, which includes:
+ open any file on windows in emacs@wsl2 setup org-capture on chrome on windows and capture notes using emacs@wsl2 open links in org-mode in emacs@wsl2 using windows default apps. e.</description>
     </item>
     
     <item>

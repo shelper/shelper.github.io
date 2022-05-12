@@ -1,7 +1,7 @@
 +++
 title = "Emacs in WSL2"
 author = ["shelper"]
-lastmod = 2022-05-12T13:03:05-04:00
+lastmod = 2022-05-12T14:40:14-04:00
 tags = ["emacs"]
 draft = false
 weight = 1001
@@ -96,14 +96,16 @@ if __name__ == "__main__":
 
 -   then i setup the context menu by the following reg file:
 
-    > Windows Registry Editor Version 5.00
-    >
-    > [HKEY_CLASSES_ROOT\\\*\shell\Open in WSL Emacs]
-    > @="WSL Emacs"
-    > "icon"="\\"C:\\\Users\\\username\\\scoop\\\apps\\\emacs\\\current\\\share\\\icons\\\hicolor\\\scalable\\\apps\\\emacs.ico\\""
-    >
-    > [HKEY_CLASSES_ROOT\\\*\shell\Open in WSL Emacs\Command]
-    > @="\\"C:\\\Users\\\username\\\scoop\\\apps\\\python\\\current\\\pythonw.exe\\" \\"C:\\\Path\\&rarr;\\\wsl_emacs.py\\" \\"%1\\""
+    ```nil
+    Windows Registry Editor Version 5.00
+
+    [HKEY_CLASSES_ROOT\*\shell\Open in WSL Emacs]
+    @="WSL Emacs"
+    "icon"="\"C:\\Users\\username\\scoop\\apps\\emacs\\current\\share\\icons\\hicolor\\scalable\\apps\\emacs.ico\""
+
+    [HKEY_CLASSES_ROOT\*\shell\Open in WSL Emacs\Command]
+    @="\"C:\\Users\\username\\scoop\\apps\\python\\current\\pythonw.exe\" \"C:\\Path\\to\\wsl_emacs.py\" \"%1\""
+    ```
 
 This works fine on windows as long you have `pythonw.exe` and you have the icon file specified above exists
 if you use `python.exe` instead of `pythonw.exe`, it still works but will always generate a cmd window when you call emacs@wsl2.
@@ -113,18 +115,20 @@ if you use `python.exe` instead of `pythonw.exe`, it still works but will always
 
 if you already have the above script `wsl_emacs.py` in place, then it is relatively simple, just run the reg file below
 
-> Windows Registry Editor Version 5.00
->
-> [HKEY_CLASSES_ROOT\org-protocol]
-> @="URL:Org Protocol"
-> "URL Protocol"=""
->
-> [HKEY_CLASSES_ROOT\org-protocol\shell]
->
-> [HKEY_CLASSES_ROOT\org-protocol\shell\open]
->
-> [HKEY_CLASSES_ROOT\org-protocol\shell\open\command]
-> @="\\"C:\\\Users\\\username\\\scoop\\\apps\\\python\\\current\\\pythonw.exe\\" \\"C:\\\Path\\&rarr;\\\wsl_emacs.py\\" \\"%1\\""
+```nil
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\org-protocol]
+@="URL:Org Protocol"
+"URL Protocol"=""
+
+[HKEY_CLASSES_ROOT\org-protocol\shell]
+
+[HKEY_CLASSES_ROOT\org-protocol\shell\open]
+
+[HKEY_CLASSES_ROOT\org-protocol\shell\open\command]
+@="\"C:\\Users\\username\\scoop\\apps\\python\\current\\pythonw.exe\" \"C:\\Path\\to\\wsl_emacs.py\" \"%1\""
+```
 
 of coures you need to install the [org-capture extension](https://chrome.google.com/webstore/detail/org-capture/kkkjlfejijcjgjllecmnejhogpbcigdc), and add your own capture template for org-capture, see more details at [here](https://orgmode.org/worg/org-contrib/org-protocol.html)
 
@@ -265,10 +269,12 @@ os.system(command)
 
 then I create the context menu `WSL Path` by the registry file
 
-> Windows Registry Editor Version 5.00
->
-> [HKEY_CLASSES_ROOT\\\*\shell\Copy WSL path]
-> @="WSL Path"
->
-> [HKEY_CLASSES_ROOT\\\*\shell\Copy WSL path\Command]
-> @="\\"C:\\\Users\\\username\\\scoop\\\apps\\\python\\\current\\\pythonw.exe\\" \\"C:\\\path\\&rarr;\\\wsl_path.py\\" \\"%1\\""
+```nil
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\Copy WSL path]
+@="WSL Path"
+
+[HKEY_CLASSES_ROOT\*\shell\Copy WSL path\Command]
+@="\"C:\\Users\\username\\scoop\\apps\\python\\current\\pythonw.exe\" \"C:\\path\\to\\wsl_path.py\" \"%1\""
+```

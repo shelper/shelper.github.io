@@ -10,7 +10,7 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
-# googleAnalytics: UA-123-45
+googleAnalytics: UA-123-45
 
 minify:
     disableXML: true
@@ -102,14 +102,16 @@ params:
     ShowShareButtons: true
     ShareButtons: ["twitter", "linkedin", "facebook", "reddit"]
     ShowReadingTime: true
-    # disableSpecial1stPost: true
+    disableSpecial1stPost: true
     displayFullLangName: true
     ShowPostNavLinks: true
     ShowBreadCrumbs: true
     ShowCodeCopyButtons: true
     ShowRssButtonInSectionTermList: true
     ShowToc: true
-    # TocOpen: true
+    TocOpen: true
+    disableScrollToTop: true
+    BuyMeCoffee: true
     # comments: false
     images: ["profile.png"]
 
@@ -133,7 +135,7 @@ params:
         Content: >
             Welcome to my page!
             Feel free to share the contents if you think they are useful.
-            Buy my a ☕ if you want to appreciate my posts :)
+            Buy me a ☕ if you want to appreciate my posts :)
 
     socialIcons:
         - name: linkedin

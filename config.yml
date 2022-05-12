@@ -11,6 +11,7 @@ buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
 googleAnalytics: UA-123-45
+disqusShortname: shelper
 
 minify:
     disableXML: true
@@ -112,7 +113,7 @@ params:
     TocOpen: true
     disableScrollToTop: true
     BuyMeCoffee: true
-    # comments: false
+    comments: true
     images: ["profile.png"]
 
     profileMode:

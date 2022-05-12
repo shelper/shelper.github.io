@@ -1,7 +1,7 @@
 +++
 title = "Emacs in WSL2"
 author = ["shelper"]
-lastmod = 2022-05-10T22:53:27-04:00
+lastmod = 2022-05-12T13:03:05-04:00
 tags = ["emacs"]
 draft = false
 weight = 1001
@@ -16,6 +16,7 @@ I did some hacking to make the experience little bit better, which includes:
 4.  copy paste sharing between windows and wsl2
 5.  fix for some keyboard shortcuts that's been screened by windows by default
 6.  setup outlook to create outlook links(uuid based) for emails/meetings/contacts in outlook, then open links in org-mode using outlook
+7.  insert files into emacs@wsl2
 
 lets go into the steps for each of the above fixes
 
@@ -242,3 +243,32 @@ this is annoying, what i did is i remap this C-shift-0 to something i dont use w
                                                         (w32-shell-execute "open" (concat "outlook:" id)))
                                                        )))
     ```
+
+
+## insert windows files into emacs@wsl2 {#insert-windows-files-into-emacs-wsl2}
+
+since emacs runs in wsl, we cannot drag and drop files between windows and emacs@wsl2. so i wrote a simple script to get the path of files in windows, and convert it to path in wsl2
+
+```python
+import os
+import sys
+
+file_path = os.path.abspath(sys.argv[-1]).replace("\\", "/").replace("C:", "/mnt/c")
+
+wsl_path_prefix = "//wsl$/Ubuntu/"
+if file_path.startswith(wsl_path_prefix):
+    file_path = file_path.replace(wsl_path_prefix, "/")
+
+command = "echo " + file_path.strip() + "| clip"
+os.system(command)
+```
+
+then I create the context menu `WSL Path` by the registry file
+
+> Windows Registry Editor Version 5.00
+>
+> [HKEY_CLASSES_ROOT\\\*\shell\Copy WSL path]
+> @="WSL Path"
+>
+> [HKEY_CLASSES_ROOT\\\*\shell\Copy WSL path\Command]
+> @="\\"C:\\\Users\\\username\\\scoop\\\apps\\\python\\\current\\\pythonw.exe\\" \\"C:\\\path\\&rarr;\\\wsl_path.py\\" \\"%1\\""

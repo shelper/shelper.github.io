@@ -1,7 +1,7 @@
 +++
 title = "Emacs in WSL2"
 author = ["shelper"]
-lastmod = 2022-05-12T14:40:14-04:00
+lastmod = 2022-05-13T10:51:21-04:00
 tags = ["emacs"]
 draft = false
 weight = 1001
@@ -278,3 +278,24 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\*\shell\Copy WSL path\Command]
 @="\"C:\\Users\\username\\scoop\\apps\\python\\current\\pythonw.exe\" \"C:\\path\\to\\wsl_path.py\" \"%1\""
 ```
+
+
+## share clipboard between windows host and WSL2 {#share-clipboard-between-windows-host-and-wsl2}
+
+this is done by using powershell to get clipboard image saved and read the image into xclip for clipboard access in WSL2
+
+```emacs-lisp
+(defun win2wsl-clipped-image()
+  "use powershell to save the clipped image to wsl and load it to xclip"
+  (let* ((powershell "/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe")
+         (file-name "//wsl$/Ubuntu/home/mpnv38/tmp/clip_win2wsl.png")
+         (file-name-wsl "~/tmp/clip_win2wsl.png")
+         )
+    (shell-command (concat powershell " -command \"(Get-Clipboard -Format Image).Save(\\\"" file-name "\\\")\""))
+    (call-process-shell-command (concat "xclip -selection clipboard -t image/png -i " file-name-wsl))
+    )
+  )
+(advice-add 'org-download-clipboard :before #'win2wsl-clipped-image)
+```
+
+This is it, let me know in comments if you have any question or suggestion!

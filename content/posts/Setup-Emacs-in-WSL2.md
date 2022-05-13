@@ -291,7 +291,7 @@ this is done by using powershell to get clipboard image saved and read the image
          (file-name "//wsl$/Ubuntu/home/mpnv38/tmp/clip_win2wsl.png")
          (file-name-wsl "~/tmp/clip_win2wsl.png")
          )
-    (shell-command (concat powershell " -command \"(Get-Clipboard -Format Image).Save(\\\"" file-name "\\\")\""))
+    (shell-command (concat powershell " -noprofile -command \"(Get-Clipboard -Format Image).Save(\\\"" file-name "\\\")\""))
     (call-process-shell-command (concat "xclip -selection clipboard -t image/png -i " file-name-wsl))
     )
   )

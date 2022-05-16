@@ -227,5 +227,15 @@ if you cannot do that, then reciting &amp;ldquo;let it go&amp;rdquo; helps you t
 so relax, is very simple that really don&amp;rsquo;t need you to do anything, yet very difficult, if you try to grab something.</description>
     </item>
     
+    <item>
+      <title>Migrating to new python version with lots of dependencies</title>
+      <link>https://shelper.github.io/posts/migrating-to-new-python-version/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/migrating-to-new-python-version/</guid>
+      <description>so i am using poetry to manage my venv for a project that relies on dozens of PYPI packages. i first thought it would be relatively easy to migrate python3.7 to the latest 3.10. but i was wrong, and i spent hours to fix it. Here is what i&amp;rsquo;ve learned.
+first of all, you need to intaall pyenv for multiple version management, a caveat here is that if you use the suggested method to setup (through curl https://pyenv.</description>
+    </item>
+    
   </channel>
 </rss>

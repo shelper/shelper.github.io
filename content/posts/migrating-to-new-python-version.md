@@ -1,6 +1,7 @@
 +++
 title = "Migrating to new python version with lots of dependencies"
 author = ["shelper"]
+date = 2022-05-16
 lastmod = 2022-05-16T09:06:11-04:00
 tags = ["python"]
 draft = false

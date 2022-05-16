@@ -1,6 +1,7 @@
 +++
 title = "Emacs in WSL2"
 author = ["shelper"]
+date = 2022-05-13
 lastmod = 2022-05-13T10:51:21-04:00
 tags = ["emacs"]
 draft = false

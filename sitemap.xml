@@ -8,16 +8,22 @@
     <loc>https://shelper.github.io/posts/setup-hugo-with-github-pages/</loc>
     <lastmod>2022-05-09T14:44:28-04:00</lastmod>
   </url><url>
-    <loc>https://shelper.github.io/tags/emacs/</loc>
-    <lastmod>2022-05-13T10:51:21-04:00</lastmod>
+    <loc>https://shelper.github.io/posts/migrating-to-new-python-version/</loc>
+    <lastmod>2022-05-15T23:00:24-04:00</lastmod>
   </url><url>
     <loc>https://shelper.github.io/posts/</loc>
-    <lastmod>2022-05-13T10:51:21-04:00</lastmod>
+    <lastmod>2022-05-15T23:00:24-04:00</lastmod>
+  </url><url>
+    <loc>https://shelper.github.io/tags/python/</loc>
+    <lastmod>2022-05-15T23:00:24-04:00</lastmod>
   </url><url>
     <loc>https://shelper.github.io/</loc>
-    <lastmod>2022-05-13T10:51:21-04:00</lastmod>
+    <lastmod>2022-05-15T23:00:24-04:00</lastmod>
   </url><url>
     <loc>https://shelper.github.io/tags/</loc>
+    <lastmod>2022-05-15T23:00:24-04:00</lastmod>
+  </url><url>
+    <loc>https://shelper.github.io/tags/emacs/</loc>
     <lastmod>2022-05-13T10:51:21-04:00</lastmod>
   </url><url>
     <loc>https://shelper.github.io/tags/area/</loc>
@@ -60,9 +66,6 @@
     <lastmod>2018-05-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shelper.github.io/posts/best-practise-for-jupyter-and-ipython/</loc>
-    <lastmod>2018-05-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shelper.github.io/tags/python/</loc>
     <lastmod>2018-05-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shelper.github.io/posts/switch-recent-two-buffer-alterantively/</loc>
@@ -144,8 +147,6 @@
     <lastmod>2016-05-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shelper.github.io/archives/</loc>
-  </url><url>
-    <loc>https://shelper.github.io/posts/migrating-to-new-python-version/</loc>
   </url><url>
     <loc>https://shelper.github.io/search/</loc>
   </url><url>

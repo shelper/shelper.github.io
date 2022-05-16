@@ -9,7 +9,17 @@
       <link>https://shelper.github.io/profile.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 24 May 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 May 2022 23:00:24 -0400</lastBuildDate><atom:link href="https://shelper.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Migrating to new python version with lots of dependencies</title>
+      <link>https://shelper.github.io/posts/migrating-to-new-python-version/</link>
+      <pubDate>Sun, 15 May 2022 23:00:24 -0400</pubDate>
+      
+      <guid>https://shelper.github.io/posts/migrating-to-new-python-version/</guid>
+      <description>so i am using poetry to manage my venv for a project that relies on dozens of PYPI packages. i first thought it would be relatively easy to migrate python3.7 to the latest 3.10. but i was wrong, and i spent hours to fix it. Here is what i&amp;rsquo;ve learned.
+first of all, you need to intaall pyenv for multiple version management, a caveat here is that if you use the suggested method to setup (through curl https://pyenv.</description>
+    </item>
+    
     <item>
       <title>best practice for jupyter and ipython</title>
       <link>https://shelper.github.io/posts/best-practise-for-jupyter-and-ipython/</link>
@@ -86,16 +96,6 @@ ipython shell imports quite some packages/modules/functions and as you may know,
       <guid>https://shelper.github.io/posts/design-of-a-framework-for-scientific-data-processing/</guid>
       <description>I have beening thinking of building such a framework for a while, I started a little project called pypeline. The code on github is not up-to-date. And I have some new thoughts on the framework design. So this article serves as a design documents and welcomes any comments or suggestions.
 Based on my own experience, I often want to process some data or image at multiple stage. Often, I want to change some parameters of certian algorithm to see how the outcomes are changed.</description>
-    </item>
-    
-    <item>
-      <title>Migrating to new python version with lots of dependencies</title>
-      <link>https://shelper.github.io/posts/migrating-to-new-python-version/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://shelper.github.io/posts/migrating-to-new-python-version/</guid>
-      <description>so i am using poetry to manage my venv for a project that relies on dozens of PYPI packages. i first thought it would be relatively easy to migrate python3.7 to the latest 3.10. but i was wrong, and i spent hours to fix it. Here is what i&amp;rsquo;ve learned.
-first of all, you need to intaall pyenv for multiple version management, a caveat here is that if you use the suggested method to setup (through curl https://pyenv.</description>
     </item>
     
   </channel>

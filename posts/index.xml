@@ -9,7 +9,7 @@
       <link>https://shelper.github.io/profile.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 13 May 2022 10:51:21 -0400</lastBuildDate><atom:link href="https://shelper.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 May 2022 23:00:24 -0400</lastBuildDate><atom:link href="https://shelper.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs in WSL2</title>
       <link>https://shelper.github.io/posts/setup-emacs-in-wsl2/</link>
@@ -28,6 +28,16 @@
       <guid>https://shelper.github.io/posts/setup-hugo-with-github-pages/</guid>
       <description>I followed this site for setting up hugo blogging on https://github.com/ using github.io, the instruction is little bit confusion, so just to clarify a little bit here.
   the instructions there uses gh-pages branch to publish your site, this is done by the action peaceiris/actions-gh-pages@v3. however, for user/organization.github.io pages, the default branch for publishing is main. so if you use this action, you need to change your page branch to gh-pages and set the directory to /root.</description>
+    </item>
+    
+    <item>
+      <title>Migrating to new python version with lots of dependencies</title>
+      <link>https://shelper.github.io/posts/migrating-to-new-python-version/</link>
+      <pubDate>Sun, 15 May 2022 23:00:24 -0400</pubDate>
+      
+      <guid>https://shelper.github.io/posts/migrating-to-new-python-version/</guid>
+      <description>so i am using poetry to manage my venv for a project that relies on dozens of PYPI packages. i first thought it would be relatively easy to migrate python3.7 to the latest 3.10. but i was wrong, and i spent hours to fix it. Here is what i&amp;rsquo;ve learned.
+first of all, you need to intaall pyenv for multiple version management, a caveat here is that if you use the suggested method to setup (through curl https://pyenv.</description>
     </item>
     
     <item>
@@ -225,16 +235,6 @@ so, how can we change this? use the sword of wisdom! the sword of wisdom, is a k
 Relax is simply let it go, if you can, you should also let it go the thought of &amp;ldquo;let it go&amp;rdquo;
 if you cannot do that, then reciting &amp;ldquo;let it go&amp;rdquo; helps you to push away other wondering thoughts, especially those thoughts bothering you, and make yourself agitated.
 so relax, is very simple that really don&amp;rsquo;t need you to do anything, yet very difficult, if you try to grab something.</description>
-    </item>
-    
-    <item>
-      <title>Migrating to new python version with lots of dependencies</title>
-      <link>https://shelper.github.io/posts/migrating-to-new-python-version/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://shelper.github.io/posts/migrating-to-new-python-version/</guid>
-      <description>so i am using poetry to manage my venv for a project that relies on dozens of PYPI packages. i first thought it would be relatively easy to migrate python3.7 to the latest 3.10. but i was wrong, and i spent hours to fix it. Here is what i&amp;rsquo;ve learned.
-first of all, you need to intaall pyenv for multiple version management, a caveat here is that if you use the suggested method to setup (through curl https://pyenv.</description>
     </item>
     
   </channel>

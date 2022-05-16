@@ -1,10 +1,10 @@
 +++
 title = "Migrating to new python version with lots of dependencies"
 author = ["shelper"]
-date = 2022-05-15
-lastmod = 2022-05-15T23:00:24-04:00
+lastmod = 2022-05-16T09:06:11-04:00
 tags = ["python"]
 draft = false
+weight = 1001
 +++
 
 so i am using poetry to manage my venv for a project that relies on dozens of PYPI packages. i first thought it would be relatively easy to migrate python3.7 to the latest 3.10. but i was wrong, and i spent hours to fix it. Here is what i've learned.

@@ -1,6 +1,7 @@
 +++
 title = "Migrating to new python version with lots of dependencies"
 author = ["shelper"]
+lastmod = 2022-05-15T23:00:24-04:00
 tags = ["python"]
 draft = false
 +++
@@ -12,3 +13,5 @@ first of all, you need to intaall [pyenv]({{< relref "#pyenv" >}}) for multiple 
 now you can enter poetry shell and run poetry install to set the project up. however, if you use lots of packages, there might be dependencies to be resovled, and according to [poetry](https://github.com/python-poetry/poetry/issues/2094), this may takes long time. and sometimes even fails. For me i used the latest python3.10, but the numpy i specified in my poetry.lock file is an older version that does not supports 3.10, i then got strange errors that fail the installation.
 
 So the solution is keep the poetry.lock file, but run poetry install, if some package failed, run poetry update package-name. if things get complicated, it maybe is a better idea to add packages gradually.
+
+another thing with pyenv is the `_sqlite3` package, you may got error `ModuleNotFoundError: No module named '_sqlite3'`, and the solution is to `sudo apt install libsqlite3-dev` and then reinstall the python with pyenv

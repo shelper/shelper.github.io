@@ -17,7 +17,7 @@
       
       <guid>https://shelper.github.io/posts/setup-emacs-in-wsl2/</guid>
       <description>Using Emacs on windows is always an imperfect experience, luckly windows10 comes with WSL2 now, which lets you install Emacs in WSL2 and use it on windows now. I did some hacking to make the experience little bit better, which includes:
- open any file on windows in emacs@wsl2 setup org-capture on chrome on windows and capture notes using emacs@wsl2 open links in org-mode in emacs@wsl2 using windows default apps. e.</description>
+open any file on windows in emacs@wsl2 setup org-capture on chrome on windows and capture notes using emacs@wsl2 open links in org-mode in emacs@wsl2 using windows default apps. e.g., open https links using chrome on windows, open document links in MS-office on windows, etc.</description>
     </item>
     
     <item>
@@ -28,7 +28,7 @@
       <guid>https://shelper.github.io/posts/setup-emacs-for-c&#43;&#43;-with-ccls-and-lsp/</guid>
       <description>So ccls is a lsp wrapper for clang it works as a backend that indexes source code and gives emacs index information for better navigation and refactoring of c++
 I have had a few issues with the tool&amp;rsquo;s setup in emacs enviroment. and found the following things that may need extra attention
- .ccls file, this file basically does two things   tell ccls how to index the file using clang before index the file tell clang how to compile and interpret the code as there is a mixture of options for ccls and arguments for clang, need to pay extra attention  usually lines in .</description>
+.ccls file, this file basically does two things tell ccls how to index the file using clang before index the file tell clang how to compile and interpret the code as there is a mixture of options for ccls and arguments for clang, need to pay extra attention usually lines in .</description>
     </item>
     
     <item>
@@ -48,10 +48,10 @@ let vs. let*: (setq y 2) (let ((y 1) (z y)) (list y z)) ⇒ (1 2) (setq y 2) (le
       
       <guid>https://shelper.github.io/posts/setup-babun-on-windows-for-git-and-ssh/</guid>
       <description>remove %HOME% (you can put it back later)
-  download and install babun
-  setup ssh, if you already have ssh keys in the ~/.ssh, copy to the ~ of babun shell and do
-  eval `ssh-agent -s`ssh-add if not, copy the ssh pub and private keys to ~/.ssh or use
-ssh-add path/to/keys if you are using proxy behind firewall you need: add proxy for babun and change the user -agent (dont know why, but works)  export http_proxy=http://gateway.</description>
+download and install babun
+setup ssh, if you already have ssh keys in the ~/.ssh, copy to the ~ of babun shell and do
+eval `ssh-agent -s`ssh-add if not, copy the ssh pub and private keys to ~/.ssh or use
+ssh-add path/to/keys if you are using proxy behind firewall you need: add proxy for babun and change the user -agent (dont know why, but works) export http_proxy=http://gateway.</description>
     </item>
     
     <item>
@@ -61,7 +61,7 @@ ssh-add path/to/keys if you are using proxy behind firewall you need: add proxy 
       
       <guid>https://shelper.github.io/posts/using-emacs-for-blog-post-using-nikola-and-github-pages/</guid>
       <description>so it is a long story, to make it short, here is how it works step by step:
- install nikola using pip install nikola markdown webassets init nikola site by nikola init --quiet folder_name change the configurations of the default to your configurations just like below diff file shows:  --- default conf.py +++ customized conf.py @@ -17,16 +17,16 @@ import time  # Data about this site -BLOG_AUTHOR = &amp;#34;Your Name&amp;#34; # (translatable) -BLOG_TITLE = &amp;#34;Demo Site&amp;#34; # (translatable) +BLOG_AUTHOR = &amp;#34;Shelper&amp;#34; # (translatable) +BLOG_TITLE = &amp;#34;The Way As It Is&amp;#34; # (translatable) # This is the main URL for your site.</description>
+install nikola using pip install nikola markdown webassets init nikola site by nikola init --quiet folder_name change the configurations of the default to your configurations just like below diff file shows: --- default conf.py +++ customized conf.py @@ -17,16 +17,16 @@ import time # Data about this site -BLOG_AUTHOR = &amp;#34;Your Name&amp;#34; # (translatable) -BLOG_TITLE = &amp;#34;Demo Site&amp;#34; # (translatable) +BLOG_AUTHOR = &amp;#34;Shelper&amp;#34; # (translatable) +BLOG_TITLE = &amp;#34;The Way As It Is&amp;#34; # (translatable) # This is the main URL for your site.</description>
     </item>
     
   </channel>

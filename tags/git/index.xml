@@ -17,12 +17,12 @@
       
       <guid>https://shelper.github.io/posts/how-to-start-python-project-on-github/</guid>
       <description>steps are:
-  install cookiecutter: python -m pip install cookiecutter
-  run cookiecutter to initiate a project: cookiecutter(&#39;https://github.com/audreyr/cookiecutter-pypackage.git&#39;) under the project folder
-  on github, start a new repo python_prj
-  run git init in the local project folder and commit
-  run git remote add origin git@github.com:username/projectname.git
- using git@git requires to setup the ssh key pair, this can be found by easily google it or under FAQ of github    run git push -u origin master</description>
+install cookiecutter: python -m pip install cookiecutter
+run cookiecutter to initiate a project: cookiecutter(&#39;https://github.com/audreyr/cookiecutter-pypackage.git&#39;) under the project folder
+on github, start a new repo python_prj
+run git init in the local project folder and commit
+run git remote add origin git@github.com:username/projectname.git
+using git@git requires to setup the ssh key pair, this can be found by easily google it or under FAQ of github run git push -u origin master</description>
     </item>
     
     <item>
@@ -32,10 +32,10 @@
       
       <guid>https://shelper.github.io/posts/setup-babun-on-windows-for-git-and-ssh/</guid>
       <description>remove %HOME% (you can put it back later)
-  download and install babun
-  setup ssh, if you already have ssh keys in the ~/.ssh, copy to the ~ of babun shell and do
-  eval `ssh-agent -s`ssh-add if not, copy the ssh pub and private keys to ~/.ssh or use
-ssh-add path/to/keys if you are using proxy behind firewall you need: add proxy for babun and change the user -agent (dont know why, but works)  export http_proxy=http://gateway.</description>
+download and install babun
+setup ssh, if you already have ssh keys in the ~/.ssh, copy to the ~ of babun shell and do
+eval `ssh-agent -s`ssh-add if not, copy the ssh pub and private keys to ~/.ssh or use
+ssh-add path/to/keys if you are using proxy behind firewall you need: add proxy for babun and change the user -agent (dont know why, but works) export http_proxy=http://gateway.</description>
     </item>
     
   </channel>

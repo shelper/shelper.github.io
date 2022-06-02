@@ -16,7 +16,7 @@
       <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://shelper.github.io/posts/jupyter-skills-and-tricks/</guid>
-      <description> use jupyterlab use interact for interactive widget use qgrid for better dataframe display within ipython notebook, follow instructions here %load_ext sql for sql query within the notebook, refer to here  </description>
+      <description> use jupyterlab use interact for interactive widget use qgrid for better dataframe display within ipython notebook, follow instructions here %load_ext sql for sql query within the notebook, refer to here </description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       <guid>https://shelper.github.io/posts/best-practise-for-jupyter-and-ipython/</guid>
       <description>A few things to setup the IPython and Jupyter for a best practise.
 IPython configuration Change ~/.ipython/profile_default/startup/init.ipy for their usage respectively
- To enable versioning of the python/jupyter environment, you need to pip install version_information and then add below, afterward for each IPython notebook file I put %version_information numpy, scipy, matplotlib, pandas to display my python environment version information  %load_ext version_information  To enable autoloading of modified modules in IPython, add below  %load_ext version_information %load_ext autoreload %autoreload 2  I also added the lines below just because I use them everytime I open IPython  import numpy as np import matplotlib.</description>
+To enable versioning of the python/jupyter environment, you need to pip install version_information and then add below, afterward for each IPython notebook file I put %version_information numpy, scipy, matplotlib, pandas to display my python environment version information %load_ext version_information To enable autoloading of modified modules in IPython, add below %load_ext version_information %load_ext autoreload %autoreload 2 I also added the lines below just because I use them everytime I open IPython import numpy as np import matplotlib.</description>
     </item>
     
   </channel>

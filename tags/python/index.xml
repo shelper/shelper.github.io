@@ -9,7 +9,7 @@
       <link>https://shelper.github.io/profile.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Jun 2022 21:10:46 -0400</lastBuildDate><atom:link href="https://shelper.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Migrating to new python version with lots of dependencies</title>
       <link>https://shelper.github.io/posts/migrating-to-new-python-version/</link>
@@ -17,7 +17,17 @@
       
       <guid>https://shelper.github.io/posts/migrating-to-new-python-version/</guid>
       <description>so i am using poetry to manage my venv for a project that relies on dozens of PYPI packages. i first thought it would be relatively easy to migrate python3.7 to the latest 3.10. but i was wrong, and i spent hours to fix it. Here is what i&amp;rsquo;ve learned.
-first of all, you need to intaall pyenv for multiple version management, a caveat here is that if you use the suggested method to setup (through curl https://pyenv.</description>
+first of all, you need to install pyenv for multiple version management, a caveat here is that if you use the suggested method to setup (through curl https://pyenv.</description>
+    </item>
+    
+    <item>
+      <title>Setup Modern Python development</title>
+      <link>https://shelper.github.io/posts/setup-modern-python-development/</link>
+      <pubDate>Wed, 01 Jun 2022 21:10:46 -0400</pubDate>
+      
+      <guid>https://shelper.github.io/posts/setup-modern-python-development/</guid>
+      <description>First, you need to install pyenv so you can have multiple version of python in your system. then for projects that does not need packaging, you can use pyenv-virtualenv to setup requirements.txt for project based venv.
+Second, you need to install pipx, so it installs some shared tools for the whole system. After setting up pipx (using certain version of python specified by pyenv), it is a good practice to fix the python interpreter for pipx so that when you have your default python changed, your pipx does not break.</description>
     </item>
     
     <item>
@@ -28,7 +38,7 @@ first of all, you need to intaall pyenv for multiple version management, a cavea
       <guid>https://shelper.github.io/posts/best-practise-for-jupyter-and-ipython/</guid>
       <description>A few things to setup the IPython and Jupyter for a best practise.
 IPython configuration Change ~/.ipython/profile_default/startup/init.ipy for their usage respectively
- To enable versioning of the python/jupyter environment, you need to pip install version_information and then add below, afterward for each IPython notebook file I put %version_information numpy, scipy, matplotlib, pandas to display my python environment version information  %load_ext version_information  To enable autoloading of modified modules in IPython, add below  %load_ext version_information %load_ext autoreload %autoreload 2  I also added the lines below just because I use them everytime I open IPython  import numpy as np import matplotlib.</description>
+To enable versioning of the python/jupyter environment, you need to pip install version_information and then add below, afterward for each IPython notebook file I put %version_information numpy, scipy, matplotlib, pandas to display my python environment version information %load_ext version_information To enable autoloading of modified modules in IPython, add below %load_ext version_information %load_ext autoreload %autoreload 2 I also added the lines below just because I use them everytime I open IPython import numpy as np import matplotlib.</description>
     </item>
     
     <item>
@@ -38,12 +48,12 @@ IPython configuration Change ~/.ipython/profile_default/startup/init.ipy for the
       
       <guid>https://shelper.github.io/posts/how-to-start-python-project-on-github/</guid>
       <description>steps are:
-  install cookiecutter: python -m pip install cookiecutter
-  run cookiecutter to initiate a project: cookiecutter(&#39;https://github.com/audreyr/cookiecutter-pypackage.git&#39;) under the project folder
-  on github, start a new repo python_prj
-  run git init in the local project folder and commit
-  run git remote add origin git@github.com:username/projectname.git
- using git@git requires to setup the ssh key pair, this can be found by easily google it or under FAQ of github    run git push -u origin master</description>
+install cookiecutter: python -m pip install cookiecutter
+run cookiecutter to initiate a project: cookiecutter(&#39;https://github.com/audreyr/cookiecutter-pypackage.git&#39;) under the project folder
+on github, start a new repo python_prj
+run git init in the local project folder and commit
+run git remote add origin git@github.com:username/projectname.git
+using git@git requires to setup the ssh key pair, this can be found by easily google it or under FAQ of github run git push -u origin master</description>
     </item>
     
     <item>
@@ -74,7 +84,7 @@ how to switch the backend for matplotlib? first find the configure directory for
       
       <guid>https://shelper.github.io/posts/python-module-and-packaging/</guid>
       <description>several things:
- when using setuptools.find_packages, only packages with __init__.py in its folder will be found only modules imported in the __init__.py will be indexed, means the modules will be added into the dir(module) and accessable by .module_name for python 3, if one modules(py file) in the same folder of another module and relies on that module, you need to put from . import module at the top package name is specified in the setup.</description>
+when using setuptools.find_packages, only packages with __init__.py in its folder will be found only modules imported in the __init__.py will be indexed, means the modules will be added into the dir(module) and accessable by .module_name for python 3, if one modules(py file) in the same folder of another module and relies on that module, you need to put from . import module at the top package name is specified in the setup.</description>
     </item>
     
     <item>

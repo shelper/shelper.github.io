@@ -26,7 +26,7 @@
       <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://shelper.github.io/posts/jupyter-skills-and-tricks/</guid>
-      <description> use jupyterlab use interact for interactive widget use qgrid for better dataframe display within ipython notebook, follow instructions here %load_ext sql for sql query within the notebook, refer to here  </description>
+      <description> use jupyterlab use interact for interactive widget use qgrid for better dataframe display within ipython notebook, follow instructions here %load_ext sql for sql query within the notebook, refer to here </description>
     </item>
     
     <item>
@@ -70,12 +70,12 @@ POSTS = ( (&amp;#34;posts/*.md&amp;#34;, &amp;#34;posts&amp;#34;, &amp;#34;post.
       
       <guid>https://shelper.github.io/posts/how-to-start-python-project-on-github/</guid>
       <description>steps are:
-  install cookiecutter: python -m pip install cookiecutter
-  run cookiecutter to initiate a project: cookiecutter(&#39;https://github.com/audreyr/cookiecutter-pypackage.git&#39;) under the project folder
-  on github, start a new repo python_prj
-  run git init in the local project folder and commit
-  run git remote add origin git@github.com:username/projectname.git
- using git@git requires to setup the ssh key pair, this can be found by easily google it or under FAQ of github    run git push -u origin master</description>
+install cookiecutter: python -m pip install cookiecutter
+run cookiecutter to initiate a project: cookiecutter(&#39;https://github.com/audreyr/cookiecutter-pypackage.git&#39;) under the project folder
+on github, start a new repo python_prj
+run git init in the local project folder and commit
+run git remote add origin git@github.com:username/projectname.git
+using git@git requires to setup the ssh key pair, this can be found by easily google it or under FAQ of github run git push -u origin master</description>
     </item>
     
     <item>
@@ -116,7 +116,7 @@ how to switch the backend for matplotlib? first find the configure directory for
       
       <guid>https://shelper.github.io/posts/python-module-and-packaging/</guid>
       <description>several things:
- when using setuptools.find_packages, only packages with __init__.py in its folder will be found only modules imported in the __init__.py will be indexed, means the modules will be added into the dir(module) and accessable by .module_name for python 3, if one modules(py file) in the same folder of another module and relies on that module, you need to put from . import module at the top package name is specified in the setup.</description>
+when using setuptools.find_packages, only packages with __init__.py in its folder will be found only modules imported in the __init__.py will be indexed, means the modules will be added into the dir(module) and accessable by .module_name for python 3, if one modules(py file) in the same folder of another module and relies on that module, you need to put from . import module at the top package name is specified in the setup.</description>
     </item>
     
     <item>
@@ -137,10 +137,10 @@ ipython shell imports quite some packages/modules/functions and as you may know,
       
       <guid>https://shelper.github.io/posts/setup-babun-on-windows-for-git-and-ssh/</guid>
       <description>remove %HOME% (you can put it back later)
-  download and install babun
-  setup ssh, if you already have ssh keys in the ~/.ssh, copy to the ~ of babun shell and do
-  eval `ssh-agent -s`ssh-add if not, copy the ssh pub and private keys to ~/.ssh or use
-ssh-add path/to/keys if you are using proxy behind firewall you need: add proxy for babun and change the user -agent (dont know why, but works)  export http_proxy=http://gateway.</description>
+download and install babun
+setup ssh, if you already have ssh keys in the ~/.ssh, copy to the ~ of babun shell and do
+eval `ssh-agent -s`ssh-add if not, copy the ssh pub and private keys to ~/.ssh or use
+ssh-add path/to/keys if you are using proxy behind firewall you need: add proxy for babun and change the user -agent (dont know why, but works) export http_proxy=http://gateway.</description>
     </item>
     
     <item>
@@ -160,7 +160,7 @@ Based on my own experience, I often want to process some data or image at multip
       
       <guid>https://shelper.github.io/posts/using-emacs-for-blog-post-using-nikola-and-github-pages/</guid>
       <description>so it is a long story, to make it short, here is how it works step by step:
- install nikola using pip install nikola markdown webassets init nikola site by nikola init --quiet folder_name change the configurations of the default to your configurations just like below diff file shows:  --- default conf.py +++ customized conf.py @@ -17,16 +17,16 @@ import time  # Data about this site -BLOG_AUTHOR = &amp;#34;Your Name&amp;#34; # (translatable) -BLOG_TITLE = &amp;#34;Demo Site&amp;#34; # (translatable) +BLOG_AUTHOR = &amp;#34;Shelper&amp;#34; # (translatable) +BLOG_TITLE = &amp;#34;The Way As It Is&amp;#34; # (translatable) # This is the main URL for your site.</description>
+install nikola using pip install nikola markdown webassets init nikola site by nikola init --quiet folder_name change the configurations of the default to your configurations just like below diff file shows: --- default conf.py +++ customized conf.py @@ -17,16 +17,16 @@ import time # Data about this site -BLOG_AUTHOR = &amp;#34;Your Name&amp;#34; # (translatable) -BLOG_TITLE = &amp;#34;Demo Site&amp;#34; # (translatable) +BLOG_AUTHOR = &amp;#34;Shelper&amp;#34; # (translatable) +BLOG_TITLE = &amp;#34;The Way As It Is&amp;#34; # (translatable) # This is the main URL for your site.</description>
     </item>
     
   </channel>

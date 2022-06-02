@@ -9,7 +9,7 @@
       <link>https://shelper.github.io/profile.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Jun 2022 21:10:46 -0400</lastBuildDate><atom:link href="https://shelper.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Migrating to new python version with lots of dependencies</title>
       <link>https://shelper.github.io/posts/migrating-to-new-python-version/</link>
@@ -17,7 +17,7 @@
       
       <guid>https://shelper.github.io/posts/migrating-to-new-python-version/</guid>
       <description>so i am using poetry to manage my venv for a project that relies on dozens of PYPI packages. i first thought it would be relatively easy to migrate python3.7 to the latest 3.10. but i was wrong, and i spent hours to fix it. Here is what i&amp;rsquo;ve learned.
-first of all, you need to intaall pyenv for multiple version management, a caveat here is that if you use the suggested method to setup (through curl https://pyenv.</description>
+first of all, you need to install pyenv for multiple version management, a caveat here is that if you use the suggested method to setup (through curl https://pyenv.</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@ first of all, you need to intaall pyenv for multiple version management, a cavea
       
       <guid>https://shelper.github.io/posts/setup-emacs-in-wsl2/</guid>
       <description>Using Emacs on windows is always an imperfect experience, luckly windows10 comes with WSL2 now, which lets you install Emacs in WSL2 and use it on windows now. I did some hacking to make the experience little bit better, which includes:
- open any file on windows in emacs@wsl2 setup org-capture on chrome on windows and capture notes using emacs@wsl2 open links in org-mode in emacs@wsl2 using windows default apps. e.</description>
+open any file on windows in emacs@wsl2 setup org-capture on chrome on windows and capture notes using emacs@wsl2 open links in org-mode in emacs@wsl2 using windows default apps. e.g., open https links using chrome on windows, open document links in MS-office on windows, etc.</description>
     </item>
     
     <item>
@@ -37,7 +37,17 @@ first of all, you need to intaall pyenv for multiple version management, a cavea
       
       <guid>https://shelper.github.io/posts/setup-hugo-with-github-pages/</guid>
       <description>I followed this site for setting up hugo blogging on https://github.com/ using github.io, the instruction is little bit confusion, so just to clarify a little bit here.
-  the instructions there uses gh-pages branch to publish your site, this is done by the action peaceiris/actions-gh-pages@v3. however, for user/organization.github.io pages, the default branch for publishing is main. so if you use this action, you need to change your page branch to gh-pages and set the directory to /root.</description>
+the instructions there uses gh-pages branch to publish your site, this is done by the action peaceiris/actions-gh-pages@v3. however, for user/organization.github.io pages, the default branch for publishing is main. so if you use this action, you need to change your page branch to gh-pages and set the directory to /root.</description>
+    </item>
+    
+    <item>
+      <title>Setup Modern Python development</title>
+      <link>https://shelper.github.io/posts/setup-modern-python-development/</link>
+      <pubDate>Wed, 01 Jun 2022 21:10:46 -0400</pubDate>
+      
+      <guid>https://shelper.github.io/posts/setup-modern-python-development/</guid>
+      <description>First, you need to install pyenv so you can have multiple version of python in your system. then for projects that does not need packaging, you can use pyenv-virtualenv to setup requirements.txt for project based venv.
+Second, you need to install pipx, so it installs some shared tools for the whole system. After setting up pipx (using certain version of python specified by pyenv), it is a good practice to fix the python interpreter for pipx so that when you have your default python changed, your pipx does not break.</description>
     </item>
     
     <item>
@@ -48,7 +58,7 @@ first of all, you need to intaall pyenv for multiple version management, a cavea
       <guid>https://shelper.github.io/posts/setup-emacs-for-c&#43;&#43;-with-ccls-and-lsp/</guid>
       <description>So ccls is a lsp wrapper for clang it works as a backend that indexes source code and gives emacs index information for better navigation and refactoring of c++
 I have had a few issues with the tool&amp;rsquo;s setup in emacs enviroment. and found the following things that may need extra attention
- .ccls file, this file basically does two things   tell ccls how to index the file using clang before index the file tell clang how to compile and interpret the code as there is a mixture of options for ccls and arguments for clang, need to pay extra attention  usually lines in .</description>
+.ccls file, this file basically does two things tell ccls how to index the file using clang before index the file tell clang how to compile and interpret the code as there is a mixture of options for ccls and arguments for clang, need to pay extra attention usually lines in .</description>
     </item>
     
     <item>
@@ -67,7 +77,7 @@ I have had a few issues with the tool&amp;rsquo;s setup in emacs enviroment. and
       <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://shelper.github.io/posts/jupyter-skills-and-tricks/</guid>
-      <description> use jupyterlab use interact for interactive widget use qgrid for better dataframe display within ipython notebook, follow instructions here %load_ext sql for sql query within the notebook, refer to here  </description>
+      <description> use jupyterlab use interact for interactive widget use qgrid for better dataframe display within ipython notebook, follow instructions here %load_ext sql for sql query within the notebook, refer to here </description>
     </item>
     
     <item>
@@ -78,7 +88,7 @@ I have had a few issues with the tool&amp;rsquo;s setup in emacs enviroment. and
       <guid>https://shelper.github.io/posts/best-practise-for-jupyter-and-ipython/</guid>
       <description>A few things to setup the IPython and Jupyter for a best practise.
 IPython configuration Change ~/.ipython/profile_default/startup/init.ipy for their usage respectively
- To enable versioning of the python/jupyter environment, you need to pip install version_information and then add below, afterward for each IPython notebook file I put %version_information numpy, scipy, matplotlib, pandas to display my python environment version information  %load_ext version_information  To enable autoloading of modified modules in IPython, add below  %load_ext version_information %load_ext autoreload %autoreload 2  I also added the lines below just because I use them everytime I open IPython  import numpy as np import matplotlib.</description>
+To enable versioning of the python/jupyter environment, you need to pip install version_information and then add below, afterward for each IPython notebook file I put %version_information numpy, scipy, matplotlib, pandas to display my python environment version information %load_ext version_information To enable autoloading of modified modules in IPython, add below %load_ext version_information %load_ext autoreload %autoreload 2 I also added the lines below just because I use them everytime I open IPython import numpy as np import matplotlib.</description>
     </item>
     
     <item>
@@ -122,12 +132,12 @@ POSTS = ( (&amp;#34;posts/*.md&amp;#34;, &amp;#34;posts&amp;#34;, &amp;#34;post.
       
       <guid>https://shelper.github.io/posts/how-to-start-python-project-on-github/</guid>
       <description>steps are:
-  install cookiecutter: python -m pip install cookiecutter
-  run cookiecutter to initiate a project: cookiecutter(&#39;https://github.com/audreyr/cookiecutter-pypackage.git&#39;) under the project folder
-  on github, start a new repo python_prj
-  run git init in the local project folder and commit
-  run git remote add origin git@github.com:username/projectname.git
- using git@git requires to setup the ssh key pair, this can be found by easily google it or under FAQ of github    run git push -u origin master</description>
+install cookiecutter: python -m pip install cookiecutter
+run cookiecutter to initiate a project: cookiecutter(&#39;https://github.com/audreyr/cookiecutter-pypackage.git&#39;) under the project folder
+on github, start a new repo python_prj
+run git init in the local project folder and commit
+run git remote add origin git@github.com:username/projectname.git
+using git@git requires to setup the ssh key pair, this can be found by easily google it or under FAQ of github run git push -u origin master</description>
     </item>
     
     <item>
@@ -168,7 +178,7 @@ how to switch the backend for matplotlib? first find the configure directory for
       
       <guid>https://shelper.github.io/posts/python-module-and-packaging/</guid>
       <description>several things:
- when using setuptools.find_packages, only packages with __init__.py in its folder will be found only modules imported in the __init__.py will be indexed, means the modules will be added into the dir(module) and accessable by .module_name for python 3, if one modules(py file) in the same folder of another module and relies on that module, you need to put from . import module at the top package name is specified in the setup.</description>
+when using setuptools.find_packages, only packages with __init__.py in its folder will be found only modules imported in the __init__.py will be indexed, means the modules will be added into the dir(module) and accessable by .module_name for python 3, if one modules(py file) in the same folder of another module and relies on that module, you need to put from . import module at the top package name is specified in the setup.</description>
     </item>
     
     <item>
@@ -189,10 +199,10 @@ ipython shell imports quite some packages/modules/functions and as you may know,
       
       <guid>https://shelper.github.io/posts/setup-babun-on-windows-for-git-and-ssh/</guid>
       <description>remove %HOME% (you can put it back later)
-  download and install babun
-  setup ssh, if you already have ssh keys in the ~/.ssh, copy to the ~ of babun shell and do
-  eval `ssh-agent -s`ssh-add if not, copy the ssh pub and private keys to ~/.ssh or use
-ssh-add path/to/keys if you are using proxy behind firewall you need: add proxy for babun and change the user -agent (dont know why, but works)  export http_proxy=http://gateway.</description>
+download and install babun
+setup ssh, if you already have ssh keys in the ~/.ssh, copy to the ~ of babun shell and do
+eval `ssh-agent -s`ssh-add if not, copy the ssh pub and private keys to ~/.ssh or use
+ssh-add path/to/keys if you are using proxy behind firewall you need: add proxy for babun and change the user -agent (dont know why, but works) export http_proxy=http://gateway.</description>
     </item>
     
     <item>
@@ -222,7 +232,7 @@ so, how can we change this? use the sword of wisdom! the sword of wisdom, is a k
       
       <guid>https://shelper.github.io/posts/using-emacs-for-blog-post-using-nikola-and-github-pages/</guid>
       <description>so it is a long story, to make it short, here is how it works step by step:
- install nikola using pip install nikola markdown webassets init nikola site by nikola init --quiet folder_name change the configurations of the default to your configurations just like below diff file shows:  --- default conf.py +++ customized conf.py @@ -17,16 +17,16 @@ import time  # Data about this site -BLOG_AUTHOR = &amp;#34;Your Name&amp;#34; # (translatable) -BLOG_TITLE = &amp;#34;Demo Site&amp;#34; # (translatable) +BLOG_AUTHOR = &amp;#34;Shelper&amp;#34; # (translatable) +BLOG_TITLE = &amp;#34;The Way As It Is&amp;#34; # (translatable) # This is the main URL for your site.</description>
+install nikola using pip install nikola markdown webassets init nikola site by nikola init --quiet folder_name change the configurations of the default to your configurations just like below diff file shows: --- default conf.py +++ customized conf.py @@ -17,16 +17,16 @@ import time # Data about this site -BLOG_AUTHOR = &amp;#34;Your Name&amp;#34; # (translatable) -BLOG_TITLE = &amp;#34;Demo Site&amp;#34; # (translatable) +BLOG_AUTHOR = &amp;#34;Shelper&amp;#34; # (translatable) +BLOG_TITLE = &amp;#34;The Way As It Is&amp;#34; # (translatable) # This is the main URL for your site.</description>
     </item>
     
     <item>

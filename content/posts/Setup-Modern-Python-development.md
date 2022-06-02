@@ -1,10 +1,10 @@
 +++
 title = "Setup Modern Python development"
 author = ["shelper"]
-lastmod = 2022-06-01T21:50:31-04:00
+date = 2022-06-01T21:57:00-04:00
+lastmod = 2022-06-01T22:16:06-04:00
 tags = ["python"]
 draft = false
-weight = 1002
 +++
 
 First, you need to install [pyenv]({{< relref "#pyenv" >}}) so you can have multiple version of python in your system. then for projects that does not need packaging, you can use `pyenv-virtualenv` to setup `requirements.txt` for project based venv.

@@ -9,7 +9,7 @@
       <link>https://shelper.github.io/profile.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 01 Jun 2022 21:50:31 -0400</lastBuildDate><atom:link href="https://shelper.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Jun 2022 21:57:00 -0400</lastBuildDate><atom:link href="https://shelper.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Migrating to new python version with lots of dependencies</title>
       <link>https://shelper.github.io/posts/migrating-to-new-python-version/</link>
@@ -23,7 +23,7 @@ first of all, you need to install pyenv for multiple version management, a cavea
     <item>
       <title>Setup Modern Python development</title>
       <link>https://shelper.github.io/posts/setup-modern-python-development/</link>
-      <pubDate>Wed, 01 Jun 2022 21:50:31 -0400</pubDate>
+      <pubDate>Wed, 01 Jun 2022 21:57:00 -0400</pubDate>
       
       <guid>https://shelper.github.io/posts/setup-modern-python-development/</guid>
       <description>First, you need to install pyenv so you can have multiple version of python in your system. then for projects that does not need packaging, you can use pyenv-virtualenv to setup requirements.txt for project based venv.

@@ -139,7 +139,7 @@ ipython shell imports quite some packages/modules/functions and as you may know,
       <description>remove %HOME% (you can put it back later)
 download and install babun
 setup ssh, if you already have ssh keys in the ~/.ssh, copy to the ~ of babun shell and do
-eval `ssh-agent -s`ssh-add if not, copy the ssh pub and private keys to ~/.ssh or use
+eval `ssh-agent -s` ssh-add if not, copy the ssh pub and private keys to ~/.ssh or use
 ssh-add path/to/keys if you are using proxy behind firewall you need: add proxy for babun and change the user -agent (dont know why, but works) export http_proxy=http://gateway.</description>
     </item>
     

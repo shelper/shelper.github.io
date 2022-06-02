@@ -11,6 +11,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 01 Jun 2022 21:57:00 -0400</lastBuildDate><atom:link href="https://shelper.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Setup Modern Python development</title>
+      <link>https://shelper.github.io/posts/setup-modern-python-development/</link>
+      <pubDate>Wed, 01 Jun 2022 21:57:00 -0400</pubDate>
+      
+      <guid>https://shelper.github.io/posts/setup-modern-python-development/</guid>
+      <description>First, you need to install pyenv so you can have multiple version of python in your system. then for projects that does not need packaging, you can use pyenv-virtualenv to setup requirements.txt for project based venv.
+Second, you need to install pipx, so it installs some shared tools for the whole system. After setting up pipx (using certain version of python specified by pyenv), pipx reuses the python interpreter on which pipx was installed, so if you upgrade python and got the previous one removed, pipx will fail.</description>
+    </item>
+    
+    <item>
       <title>Migrating to new python version with lots of dependencies</title>
       <link>https://shelper.github.io/posts/migrating-to-new-python-version/</link>
       <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
@@ -38,16 +48,6 @@ open any file on windows in emacs@wsl2 setup org-capture on chrome on windows an
       <guid>https://shelper.github.io/posts/setup-hugo-with-github-pages/</guid>
       <description>I followed this site for setting up hugo blogging on https://github.com/ using github.io, the instruction is little bit confusion, so just to clarify a little bit here.
 the instructions there uses gh-pages branch to publish your site, this is done by the action peaceiris/actions-gh-pages@v3. however, for user/organization.github.io pages, the default branch for publishing is main. so if you use this action, you need to change your page branch to gh-pages and set the directory to /root.</description>
-    </item>
-    
-    <item>
-      <title>Setup Modern Python development</title>
-      <link>https://shelper.github.io/posts/setup-modern-python-development/</link>
-      <pubDate>Wed, 01 Jun 2022 21:57:00 -0400</pubDate>
-      
-      <guid>https://shelper.github.io/posts/setup-modern-python-development/</guid>
-      <description>First, you need to install pyenv so you can have multiple version of python in your system. then for projects that does not need packaging, you can use pyenv-virtualenv to setup requirements.txt for project based venv.
-Second, you need to install pipx, so it installs some shared tools for the whole system. After setting up pipx (using certain version of python specified by pyenv), pipx reuses the python interpreter on which pipx was installed, so if you upgrade python and got the previous one removed, pipx will fail.</description>
     </item>
     
     <item>

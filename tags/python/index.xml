@@ -11,16 +11,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 01 Jun 2022 21:57:00 -0400</lastBuildDate><atom:link href="https://shelper.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Migrating to new python version with lots of dependencies</title>
-      <link>https://shelper.github.io/posts/migrating-to-new-python-version/</link>
-      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://shelper.github.io/posts/migrating-to-new-python-version/</guid>
-      <description>so i am using poetry to manage my venv for a project that relies on dozens of PYPI packages. i first thought it would be relatively easy to migrate python3.7 to the latest 3.10. but i was wrong, and i spent hours to fix it. Here is what i&amp;rsquo;ve learned.
-first of all, you need to install pyenv for multiple version management, a caveat here is that if you use the suggested method to setup (through curl https://pyenv.</description>
-    </item>
-    
-    <item>
       <title>Setup Modern Python development</title>
       <link>https://shelper.github.io/posts/setup-modern-python-development/</link>
       <pubDate>Wed, 01 Jun 2022 21:57:00 -0400</pubDate>
@@ -28,6 +18,16 @@ first of all, you need to install pyenv for multiple version management, a cavea
       <guid>https://shelper.github.io/posts/setup-modern-python-development/</guid>
       <description>First, you need to install pyenv so you can have multiple version of python in your system. then for projects that does not need packaging, you can use pyenv-virtualenv to setup requirements.txt for project based venv.
 Second, you need to install pipx, so it installs some shared tools for the whole system. After setting up pipx (using certain version of python specified by pyenv), pipx reuses the python interpreter on which pipx was installed, so if you upgrade python and got the previous one removed, pipx will fail.</description>
+    </item>
+    
+    <item>
+      <title>Migrating to new python version with lots of dependencies</title>
+      <link>https://shelper.github.io/posts/migrating-to-new-python-version/</link>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/migrating-to-new-python-version/</guid>
+      <description>so i am using poetry to manage my venv for a project that relies on dozens of PYPI packages. i first thought it would be relatively easy to migrate python3.7 to the latest 3.10. but i was wrong, and i spent hours to fix it. Here is what i&amp;rsquo;ve learned.
+first of all, you need to install pyenv for multiple version management, a caveat here is that if you use the suggested method to setup (through curl https://pyenv.</description>
     </item>
     
     <item>

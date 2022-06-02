@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://shelper.github.io/posts/setup-modern-python-development/</loc>
+    <lastmod>2022-06-01T22:46:33-04:00</lastmod>
+  </url><url>
     <loc>https://shelper.github.io/posts/migrating-to-new-python-version/</loc>
     <lastmod>2022-05-16T09:06:11-04:00</lastmod>
   </url><url>
@@ -12,19 +15,16 @@
     <lastmod>2022-05-09T14:44:28-04:00</lastmod>
   </url><url>
     <loc>https://shelper.github.io/posts/</loc>
-    <lastmod>2022-06-01T22:16:06-04:00</lastmod>
+    <lastmod>2022-06-01T22:46:33-04:00</lastmod>
   </url><url>
     <loc>https://shelper.github.io/tags/python/</loc>
-    <lastmod>2022-06-01T22:16:06-04:00</lastmod>
-  </url><url>
-    <loc>https://shelper.github.io/posts/setup-modern-python-development/</loc>
-    <lastmod>2022-06-01T22:16:06-04:00</lastmod>
+    <lastmod>2022-06-01T22:46:33-04:00</lastmod>
   </url><url>
     <loc>https://shelper.github.io/</loc>
-    <lastmod>2022-06-01T22:16:06-04:00</lastmod>
+    <lastmod>2022-06-01T22:46:33-04:00</lastmod>
   </url><url>
     <loc>https://shelper.github.io/tags/</loc>
-    <lastmod>2022-06-01T22:16:06-04:00</lastmod>
+    <lastmod>2022-06-01T22:46:33-04:00</lastmod>
   </url><url>
     <loc>https://shelper.github.io/tags/emacs/</loc>
     <lastmod>2022-05-13T10:51:21-04:00</lastmod>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>consciousness on So I Write</title>
+    <link>https://shelper.github.io/tags/consciousness/</link>
+    <description>Recent content in consciousness on So I Write</description>
+    <image>
+      <url>https://shelper.github.io/profile.png</url>
+      <link>https://shelper.github.io/profile.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 15 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/tags/consciousness/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Universe as an Evolving Pattern: Buddhism, Quantum Randomness, and Consciousness</title>
+      <link>https://shelper.github.io/posts/universe-as-an-evolving-pattern-buddhism-quantum-consciousness/</link>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/universe-as-an-evolving-pattern-buddhism-quantum-consciousness/</guid>
+      <description>A speculative thought experiment connecting Conway&amp;#39;s Game of Life, quantum randomness, dependent origination, consciousness, meditation, and Buddhist awakening.</description>
+    </item>
+    
+  </channel>
+</rss>

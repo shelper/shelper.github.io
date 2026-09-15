@@ -1,0 +1,1 @@
+{{ define "main" }}<main class="listing"><div class="section-top"><h1>{{ .Title }}</h1></div><div class="chips term-list">{{ range .Data.Terms.Alphabetical }}<a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }} <span class="muted">{{ .Count }}</span></a>{{ end }}</div></main>{{ end }}

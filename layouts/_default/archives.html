@@ -1,0 +1,1 @@
+{{ define "main" }}<main class="listing"><div class="section-top"><h1>The archive</h1><span class="mono">{{ len (where site.RegularPages "Section" "posts") }} ENTRIES</span></div>{{ range (where site.RegularPages "Section" "posts").GroupByDate "2006" }}<h2 class="year">{{ .Key }}</h2>{{ range .Pages }}{{ partial "notebook-row.html" . }}{{ end }}{{ end }}</main>{{ end }}

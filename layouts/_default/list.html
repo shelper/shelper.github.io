@@ -1,0 +1,1 @@
+{{ define "main" }}<main class="listing"><div class="section-top"><h1>{{ .Title }}</h1><span class="mono">{{ len .Pages }} ENTRIES</span></div>{{ .Content }}{{ range (.Paginate .Pages).Pages }}{{ partial "notebook-row.html" . }}{{ end }}{{ partial "notebook-pagination.html" . }}</main>{{ end }}

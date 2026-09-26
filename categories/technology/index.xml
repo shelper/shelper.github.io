@@ -11,6 +11,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 26 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/categories/technology/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>An AI That Learns to Build Its Own Specialists</title>
+      <link>https://shelper.github.io/posts/an-ai-that-learns-to-build-its-own-specialists/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/an-ai-that-learns-to-build-its-own-specialists/</guid>
+      <description>From cloud-to-edge distillation to a foundation model that creates, evaluates, and coordinates specialized models.</description>
+    </item>
+    
+    <item>
       <title>From Next-Token Prediction to Persistent World Models: Notes on the Future of AI</title>
       <link>https://shelper.github.io/posts/from-next-token-prediction-to-persistent-world-models/</link>
       <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>

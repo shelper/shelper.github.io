@@ -11,6 +11,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 26 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>agents</title>
+      <link>https://shelper.github.io/tags/agents/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/agents/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>artificial intelligence</title>
       <link>https://shelper.github.io/tags/artificial-intelligence/</link>
       <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
@@ -38,6 +47,24 @@
     </item>
     
     <item>
+      <title>edge ai</title>
+      <link>https://shelper.github.io/tags/edge-ai/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/edge-ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>knowledge distillation</title>
+      <link>https://shelper.github.io/tags/knowledge-distillation/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/knowledge-distillation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>language models</title>
       <link>https://shelper.github.io/tags/language-models/</link>
       <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
@@ -47,11 +74,29 @@
     </item>
     
     <item>
+      <title>meta-learning</title>
+      <link>https://shelper.github.io/tags/meta-learning/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/meta-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>scene graphs</title>
       <link>https://shelper.github.io/tags/scene-graphs/</link>
       <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
       
       <guid>https://shelper.github.io/tags/scene-graphs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>small models</title>
+      <link>https://shelper.github.io/tags/small-models/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/small-models/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>artificial intelligence on So I Write</title>
+    <link>https://shelper.github.io/tags/artificial-intelligence/</link>
+    <description>Recent content in artificial intelligence on So I Write</description>
+    <image>
+      <url>https://shelper.github.io/profile.png</url>
+      <link>https://shelper.github.io/profile.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 26 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/tags/artificial-intelligence/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>From Next-Token Prediction to Persistent World Models: Notes on the Future of AI</title>
+      <link>https://shelper.github.io/posts/from-next-token-prediction-to-persistent-world-models/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/from-next-token-prediction-to-persistent-world-models/</guid>
+      <description>A discussion that began with Transformer inference and diffusion language models, then led to a persistent, queryable world-state architecture for computer vision.</description>
+    </item>
+    
+  </channel>
+</rss>

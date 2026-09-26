@@ -3,8 +3,11 @@ title: "An AI That Learns to Build Its Own Specialists"
 date: 2026-09-26
 tags: ["artificial intelligence", "small models", "knowledge distillation", "edge ai", "agents", "meta-learning"]
 categories: ["technology"]
+series: ["AI Beyond the Model"]
 description: "From cloud-to-edge distillation to a foundation model that creates, evaluates, and coordinates specialized models."
 ---
+
+*Part 4 of [AI Beyond the Model](/series/ai-beyond-the-model/).*
 
 I have been thinking about a different way to organize AI. Instead of asking one ever-larger model to perform every task directly, what if the large model learned to **create, teach, select, and coordinate specialists**?
 
@@ -172,7 +175,15 @@ My view is that the interesting unit of future AI may be neither a single giant 
 
 The strongest version of this idea approaches meta-learning: a system that learns how to learn new domains, not just how to answer within domains it already knows. Calling that a path toward AGI is a hypothesis, not a conclusion. The engineering path is clearer: define contracts, collect evidence, create specialists where repetition justifies them, evaluate independently, and make the whole system capable of revising its own choices.
 
-A large model does not have to be the worker for every task. Its most important contribution may be learning **which workers to build, what to teach them, and when to trust them**.
+A large model does not have to be the worker for every task. Its most important contribution may be learning **which workers to build, what to teach them, and when to trust them**. [Part 5 asks whether AI could also learn how to design the search itself](/posts/can-ai-learn-how-to-search/).
+
+## Series reading guide
+
+1. [From Next-Token Prediction to Persistent World Models](/posts/from-next-token-prediction-to-persistent-world-models/) — inference leads to a persistent world state.
+2. [The Representation Layer Physical AI Needs](/posts/the-representation-layer-physical-ai-needs/) — shared semantics, contracts, history, and runtime.
+3. [A Graph as a Model Harness](/posts/a-graph-as-a-model-harness/) — structured context corrects and teaches perception.
+4. [An AI That Learns to Build Its Own Specialists](/posts/an-ai-that-learns-to-build-its-own-specialists/) — a foundation model develops and coordinates specialized capabilities.
+5. [Can AI Learn How to Search?](/posts/can-ai-learn-how-to-search/) — the remaining challenge of discovering useful abstractions and strategies.
 
 ### Further reading
 

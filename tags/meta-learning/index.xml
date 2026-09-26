@@ -19,5 +19,14 @@
       <description>From cloud-to-edge distillation to a foundation model that creates, evaluates, and coordinates specialized models.</description>
     </item>
     
+    <item>
+      <title>Can AI Learn How to Search?</title>
+      <link>https://shelper.github.io/posts/can-ai-learn-how-to-search/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/can-ai-learn-how-to-search/</guid>
+      <description>Beyond selecting tools and training specialists: can an AI discover useful abstractions, search strategies, and ways to learn?</description>
+    </item>
+    
   </channel>
 </rss>

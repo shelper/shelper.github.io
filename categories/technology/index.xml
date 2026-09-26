@@ -11,6 +11,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 26 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/categories/technology/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>A Graph as a Model Harness: Let Context Correct Vision</title>
+      <link>https://shelper.github.io/posts/a-graph-as-a-model-harness/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/a-graph-as-a-model-harness/</guid>
+      <description>A concrete retail example in which structured relationships constrain, rerank, evaluate, and teach visual models.</description>
+    </item>
+    
+    <item>
       <title>An AI That Learns to Build Its Own Specialists</title>
       <link>https://shelper.github.io/posts/an-ai-that-learns-to-build-its-own-specialists/</link>
       <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
@@ -20,12 +29,30 @@
     </item>
     
     <item>
+      <title>Can AI Learn How to Search?</title>
+      <link>https://shelper.github.io/posts/can-ai-learn-how-to-search/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/can-ai-learn-how-to-search/</guid>
+      <description>Beyond selecting tools and training specialists: can an AI discover useful abstractions, search strategies, and ways to learn?</description>
+    </item>
+    
+    <item>
       <title>From Next-Token Prediction to Persistent World Models: Notes on the Future of AI</title>
       <link>https://shelper.github.io/posts/from-next-token-prediction-to-persistent-world-models/</link>
       <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
       
       <guid>https://shelper.github.io/posts/from-next-token-prediction-to-persistent-world-models/</guid>
       <description>A discussion that began with Transformer inference and diffusion language models, then led to a persistent, queryable world-state architecture for computer vision.</description>
+    </item>
+    
+    <item>
+      <title>The Representation Layer Physical AI Needs</title>
+      <link>https://shelper.github.io/posts/the-representation-layer-physical-ai-needs/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/the-representation-layer-physical-ai-needs/</guid>
+      <description>How layered world representations, capability contracts, composition, and an observable runtime can connect sensors to agents.</description>
     </item>
     
   </channel>

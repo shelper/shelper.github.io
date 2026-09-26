@@ -20,6 +20,15 @@
     </item>
     
     <item>
+      <title>agi</title>
+      <link>https://shelper.github.io/tags/agi/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/agi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>artificial intelligence</title>
       <link>https://shelper.github.io/tags/artificial-intelligence/</link>
       <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
@@ -38,6 +47,15 @@
     </item>
     
     <item>
+      <title>data architecture</title>
+      <link>https://shelper.github.io/tags/data-architecture/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/data-architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>deep learning</title>
       <link>https://shelper.github.io/tags/deep-learning/</link>
       <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
@@ -52,6 +70,24 @@
       <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
       
       <guid>https://shelper.github.io/tags/edge-ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>external memory</title>
+      <link>https://shelper.github.io/tags/external-memory/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/external-memory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>inductive bias</title>
+      <link>https://shelper.github.io/tags/inductive-bias/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/inductive-bias/</guid>
       <description></description>
     </item>
     
@@ -83,6 +119,51 @@
     </item>
     
     <item>
+      <title>model evaluation</title>
+      <link>https://shelper.github.io/tags/model-evaluation/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/model-evaluation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>optimization</title>
+      <link>https://shelper.github.io/tags/optimization/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/optimization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>physical ai</title>
+      <link>https://shelper.github.io/tags/physical-ai/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/physical-ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>retail</title>
+      <link>https://shelper.github.io/tags/retail/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/retail/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>robotics</title>
+      <link>https://shelper.github.io/tags/robotics/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/robotics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>scene graphs</title>
       <link>https://shelper.github.io/tags/scene-graphs/</link>
       <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
@@ -92,11 +173,29 @@
     </item>
     
     <item>
+      <title>search</title>
+      <link>https://shelper.github.io/tags/search/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>small models</title>
       <link>https://shelper.github.io/tags/small-models/</link>
       <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
       
       <guid>https://shelper.github.io/tags/small-models/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>structured data</title>
+      <link>https://shelper.github.io/tags/structured-data/</link>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/structured-data/</guid>
       <description></description>
     </item>
     

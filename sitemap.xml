@@ -14,7 +14,16 @@
     <loc>https://shelper.github.io/posts/setup-hugo-with-github-pages/</loc>
     <lastmod>2022-05-09T14:44:28-04:00</lastmod>
   </url><url>
+    <loc>https://shelper.github.io/posts/a-graph-as-a-model-harness/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://shelper.github.io/tags/agents/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shelper.github.io/tags/agi/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shelper.github.io/series/ai-beyond-the-model/</loc>
     <lastmod>2026-09-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shelper.github.io/posts/an-ai-that-learns-to-build-its-own-specialists/</loc>
@@ -23,10 +32,16 @@
     <loc>https://shelper.github.io/tags/artificial-intelligence/</loc>
     <lastmod>2026-09-26T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://shelper.github.io/posts/can-ai-learn-how-to-search/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://shelper.github.io/categories/</loc>
     <lastmod>2026-09-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shelper.github.io/tags/computer-vision/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shelper.github.io/tags/data-architecture/</loc>
     <lastmod>2026-09-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shelper.github.io/tags/deep-learning/</loc>
@@ -35,7 +50,13 @@
     <loc>https://shelper.github.io/tags/edge-ai/</loc>
     <lastmod>2026-09-26T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://shelper.github.io/tags/external-memory/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://shelper.github.io/posts/from-next-token-prediction-to-persistent-world-models/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shelper.github.io/tags/inductive-bias/</loc>
     <lastmod>2026-09-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shelper.github.io/tags/knowledge-distillation/</loc>
@@ -47,10 +68,31 @@
     <loc>https://shelper.github.io/tags/meta-learning/</loc>
     <lastmod>2026-09-26T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://shelper.github.io/tags/model-evaluation/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shelper.github.io/tags/optimization/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shelper.github.io/tags/physical-ai/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://shelper.github.io/posts/</loc>
     <lastmod>2026-09-26T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://shelper.github.io/tags/retail/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shelper.github.io/tags/robotics/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://shelper.github.io/tags/scene-graphs/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shelper.github.io/tags/search/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shelper.github.io/series/</loc>
     <lastmod>2026-09-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shelper.github.io/tags/small-models/</loc>
@@ -59,10 +101,16 @@
     <loc>https://shelper.github.io/</loc>
     <lastmod>2026-09-26T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://shelper.github.io/tags/structured-data/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://shelper.github.io/tags/</loc>
     <lastmod>2026-09-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shelper.github.io/categories/technology/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shelper.github.io/posts/the-representation-layer-physical-ai-needs/</loc>
     <lastmod>2026-09-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shelper.github.io/tags/world-models/</loc>
@@ -215,7 +263,5 @@
     <loc>https://shelper.github.io/archives/</loc>
   </url><url>
     <loc>https://shelper.github.io/search/</loc>
-  </url><url>
-    <loc>https://shelper.github.io/series/</loc>
   </url>
 </urlset>

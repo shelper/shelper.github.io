@@ -3,8 +3,11 @@ title: "From Next-Token Prediction to Persistent World Models: Notes on the Futu
 date: 2026-09-26
 tags: ["artificial intelligence", "deep learning", "language models", "computer vision", "world models", "scene graphs"]
 categories: ["technology"]
+series: ["AI Beyond the Model"]
 description: "A discussion that began with Transformer inference and diffusion language models, then led to a persistent, queryable world-state architecture for computer vision."
 ---
+
+*Part 1 of [AI Beyond the Model](/series/ai-beyond-the-model/).*
 
 On September 2 and 3, I had a conversation that began with a practical question: if so many language models seem to share the same architecture, why can one inference engine run so many of them? It ended somewhere less practical and more interesting: perhaps the next step in AI is not one model that directly answers every question about its input, but a system that builds and maintains a model of the world, then lets other components reason over it.
 
@@ -191,7 +194,15 @@ I began by wondering why apparently different language models could run on simil
 
 Those questions are connected by a shift in perspective. A model is a powerful component, but the behavior we care about comes from the whole loop: sensing, proposing, checking, remembering, revising, querying, and acting. The future may include better Transformers, diffusion models, hybrid generators, and new latent reasoning methods. In parallel, it may depend just as much on building systems that can maintain an accountable, revisable picture of the world over time.
 
-That is the part I want to explore next.
+That is the part I want to explore next. [Part 2 develops the representation layer needed by this world-state system](/posts/the-representation-layer-physical-ai-needs/).
+
+## Series reading guide
+
+1. [From Next-Token Prediction to Persistent World Models](/posts/from-next-token-prediction-to-persistent-world-models/) — inference leads to a persistent world state.
+2. [The Representation Layer Physical AI Needs](/posts/the-representation-layer-physical-ai-needs/) — shared semantics, contracts, history, and runtime.
+3. [A Graph as a Model Harness](/posts/a-graph-as-a-model-harness/) — structured context corrects and teaches perception.
+4. [An AI That Learns to Build Its Own Specialists](/posts/an-ai-that-learns-to-build-its-own-specialists/) — a foundation model develops and coordinates specialized capabilities.
+5. [Can AI Learn How to Search?](/posts/can-ai-learn-how-to-search/) — the remaining challenge of discovering useful abstractions and strategies.
 
 ### Further reading
 

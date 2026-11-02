@@ -10,7 +10,7 @@ A thought has been on my mind: what if we are still looking at AI too much like 
 
 We often discuss progress in terms of the next model: its benchmark scores, reasoning ability, context window, or parameter count. These things matter. But I suspect that language models and today's agents are only the beginning. The more consequential evolution may be in how AI systems organize work, share knowledge, use tools, and build on one another's results.
 
-The analogy I find useful is human society.
+The analogy I find useful is human society—and especially the way science has evolved its methods, instruments, and institutions over time.
 
 ## The intelligence of an individual and the intelligence of a civilization
 
@@ -19,6 +19,44 @@ Human civilization can do things today that would have seemed impossible ten tho
 What clearly changed is the **system around the individual**. Language, writing, mathematics, science, engineering, institutions, and communication made it possible to preserve knowledge and build on it across generations. Each person inherits tools and understanding that no individual could recreate in a lifetime.
 
 The same distinction may become essential for AI. A model has capabilities and limits, but a system built around it can also have memory, tools, specialists, verification, and ways to pass experience between tasks. Even if improvements in a single model eventually slow down, the system as a whole could continue to improve through better organization.
+
+## How science itself evolved
+
+The history of science suggests that progress is not just the accumulation of answers. It is also the evolution of the *process for finding answers*.
+
+Consider astronomy. Better instruments made observations possible that earlier thinkers could not make. Mathematics provided a language for expressing and comparing explanations. Observations could then challenge an existing theory, while a better theory suggested new observations. Printing and scientific communication made it easier for others to inspect, repeat, dispute, and extend the work.
+
+Modern science took shape over centuries, and its progress was neither a straight line nor the product of a single invention. What interests me is the reinforcing relationship among several capabilities:
+
+- **Observation and instruments** reveal phenomena that were previously inaccessible.
+- **Shared representation**, such as mathematics, lets people express results precisely and connect ideas across fields.
+- **Experiments and replication** help distinguish an attractive explanation from one that survives contact with evidence.
+- **Publication and education** carry methods and results beyond their original discoverers.
+- **Specialization and collaboration** make problems tractable that are too large for any one person.
+- **Better tools** make the next generation of instruments, experiments, and theories possible.
+
+The resulting feedback loop is as important as any individual discovery. A microscope can reveal a new phenomenon; a theory makes sense of the observation; that understanding helps design a better instrument. Knowledge changes the tools used to produce more knowledge.
+
+## What this history suggests for AI
+
+I expect AI systems to inherit the results of human science, but also to inherit and extend the *methods* that made science productive.
+
+An AI agent can use equations, scientific literature, code, datasets, laboratory instruments, and validated software because generations of researchers made those things available. That existing foundation is part of why AI does not have to start from scratch. Over time, agents may also help improve the tools themselves: design an experiment, build a new analysis method, detect a measurement error, or propose a better simulation.
+
+The parallel is suggestive:
+
+| Human scientific development | A possible AI counterpart |
+|---|---|
+| Instruments expand observation | Sensors, software tools, and access to experimental data |
+| Mathematics and writing preserve ideas | Structured representations, code, and shared knowledge |
+| Researchers specialize and collaborate | Agents and specialized models coordinate around a task |
+| Experiments challenge a theory | Automated tests, simulation, and real-world measurement |
+| Publication and replication propagate results | Reusable artifacts with provenance and independent evaluation |
+| Scientific methods improve over time | Systems improve their own workflows, tools, and evaluation |
+
+These are analogies, not one-to-one equivalences. An AI system running many tests is not automatically doing good science. It must ask meaningful questions, account for uncertainty, and confront evidence that might show its assumptions are wrong. Human scientific institutions also involve incentives, disagreement, and judgment that are not automatically reproduced by sharing files among agents.
+
+The strongest possibility is a partnership between the two histories: **human science gives AI its tools and accumulated knowledge; AI helps researchers use and improve those tools; the improved tools then make new discoveries possible.** That is the cycle I expect to matter, whether or not any individual model becomes dramatically more capable.
 
 ## From models to agents to an organization of capabilities
 

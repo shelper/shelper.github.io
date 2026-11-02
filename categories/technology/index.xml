@@ -9,7 +9,16 @@
       <link>https://shelper.github.io/profile.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 26 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Will Evolve Like a Society, Not Just a Model</title>
+      <link>https://shelper.github.io/posts/ai-will-evolve-like-a-society/</link>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/ai-will-evolve-like-a-society/</guid>
+      <description>Why AI progress may increasingly depend on collaboration, shared knowledge, executable tools, and simulation—not just stronger language models.</description>
+    </item>
+    
     <item>
       <title>A Graph as a Model Harness: Let Context Correct Vision</title>
       <link>https://shelper.github.io/posts/a-graph-as-a-model-harness/</link>

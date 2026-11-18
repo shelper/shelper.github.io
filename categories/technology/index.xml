@@ -9,7 +9,16 @@
       <link>https://shelper.github.io/profile.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 02 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Graph-Constrained Micro-Agents: A Model Harness for Reliable Intelligence</title>
+      <link>https://shelper.github.io/posts/graph-constrained-micro-agents/</link>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/graph-constrained-micro-agents/</guid>
+      <description>A proposal for domain-specific agents built around graph-constrained reasoning, structured graph diffs, deterministic execution, and small language models.</description>
+    </item>
+    
     <item>
       <title>AI Will Evolve Like a Society, Not Just a Model</title>
       <link>https://shelper.github.io/posts/ai-will-evolve-like-a-society/</link>

@@ -19,5 +19,14 @@
       <description>A proposal for domain-specific agents built around graph-constrained reasoning, structured graph diffs, deterministic execution, and small language models.</description>
     </item>
     
+    <item>
+      <title>Recursive Abstraction: Could Intelligence Be Fractal?</title>
+      <link>https://shelper.github.io/posts/recursive-abstraction-could-intelligence-be-fractal/</link>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/posts/recursive-abstraction-could-intelligence-be-fractal/</guid>
+      <description>A hypothesis about how intelligence grows through repeated composition, encapsulation, and reuse of a small set of cognitive operations—and why the resulting structure might be fractal-like.</description>
+    </item>
+    
   </channel>
 </rss>

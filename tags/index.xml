@@ -11,11 +11,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 18 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://shelper.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>abstraction</title>
+      <link>https://shelper.github.io/tags/abstraction/</link>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/abstraction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>agents</title>
       <link>https://shelper.github.io/tags/agents/</link>
       <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://shelper.github.io/tags/agents/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AI agents</title>
+      <link>https://shelper.github.io/tags/ai-agents/</link>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/ai-agents/</guid>
       <description></description>
     </item>
     
@@ -29,11 +47,29 @@
     </item>
     
     <item>
+      <title>cognitive science</title>
+      <link>https://shelper.github.io/tags/cognitive-science/</link>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/cognitive-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>event sourcing</title>
       <link>https://shelper.github.io/tags/event-sourcing/</link>
       <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://shelper.github.io/tags/event-sourcing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fractals</title>
+      <link>https://shelper.github.io/tags/fractals/</link>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/fractals/</guid>
       <description></description>
     </item>
     
@@ -52,6 +88,24 @@
       <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://shelper.github.io/tags/graphs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>intelligence</title>
+      <link>https://shelper.github.io/tags/intelligence/</link>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/intelligence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LLMs</title>
+      <link>https://shelper.github.io/tags/llms/</link>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://shelper.github.io/tags/llms/</guid>
       <description></description>
     </item>
     

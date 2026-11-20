@@ -122,25 +122,13 @@ A functional view of graph evolution is:
 G_next = reduce(G_current, accepted_event)
 ```
 
-The reducer is ideally deterministic and side-effect-free. Given the same graph version and accepted event, it produces the same next state. This resembles Clojure's emphasis on immutable values and pure transformations.
+The reducer is ideally deterministic and side-effect-free. Given the same graph version and accepted event, it produces the same next state. This makes state transitions explicit and testable, without depending on any particular implementation language.
 
 **Event sourcing** complements it by storing a sequence of accepted events, not only the latest mutable state. Snapshots can make reconstruction practical. The event log supports audit, diagnosis, and replay; compensating events and versioned projections may be safer than pretending that every external side effect can simply be undone.
 
 We should also be precise about replay. Replaying **recorded model outputs and tool results** through a deterministic reducer can reproduce a graph projection. Re-running a live LLM or an external tool may produce a different result. Record prompts or serialized graph views, model versions, proposed diffs, validation decisions, tool outcomes, and correlation IDs when reproducibility matters.
 
 Persistent data structures can make successive graph versions cheap to represent through structural sharing. The cost and implementation details still need measurement, especially for large spatial or temporal graphs.
-
-## What belongs to Clojure, Rust, and Mojo?
-
-The choice of programming language is secondary to the protocol, but language design affects how naturally we can implement it.
-
-**Clojure-style functional programming** is appealing for the control plane: immutable snapshots, transformations, rules, and event-driven composition. Its core benefit here is reducing the amount of hidden state a developer must mentally track.
-
-**Rust and Mojo-style ownership** addresses a different problem: controlled access to memory and resources. Ownership and borrowing can enable efficient buffer reuse and avoid some classes of memory errors, but neither automatically guarantees pure functions or correct business transitions.
-
-**Mojo** is interesting for computational hot paths such as vision kernels, geometry, vector operations, and hardware-specialized numerical work. A functional *interface* can expose clean transformations while an optimized implementation reuses storage where safe. That is an architectural goal, not a claim that Mojo already offers Clojure-like persistent data structures or automatic in-place optimization for every pipeline.
-
-In other words, avoid making one language responsible for everything. Start with a stable graph protocol and optimize measured bottlenecks later.
 
 ## The micro-agent as a typed component
 
